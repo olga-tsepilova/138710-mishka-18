@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог товаров. Мишка - Интернет-магазин игрушек ручной работы</title>
+  </head>
+  <body>
+    <!-- ================= шапка проекта  ================= -->
+    <header class="main-header">
+      <a class="logo-link main-header__logo-link" href="/">
+        <img class="logo-img main-header__logo-img" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35" src="https://via.placeholder.com/86x35">
+      </a>
+      <button class="nav__toggle" type="button">Открыть меню</button>
+      <nav class="nav main-header__nav">
+        <ul class="nav__list ">
+          <li class="nav__list-item">
+            <a class="nav__list-link nav__list-link--active" href="/">
+              Каталог товаров
+            </a>
+          </li>
+          <li class="nav__list-item">
+            <a class="nav__list-link" href="/">
+              Вязание на заказ
+            </a>
+          </li>
+
+          <!--
+          * Если это поиск - форма
+           <li class="nav__list-item">
+            <form>
+              <fieldset class="search page-header__search">
+                <input class="search__input" type="text" placeholder="Поиск по сайту">
+              </fieldset>
+            </form>
+          </li>
+          -->
+          <li class="nav__list-item nav__list-item--search">
+            <a class="nav__list-link" href="/">
+              Поиск по сайту
+            </a>
+          </li>
+          <li class="nav__list-item nav__list-item--basket">
+            <a class="nav__list-link" href="/">
+              Корзина пока пуста
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- ================= /шапка проекта  ================= -->
+
+    <!-- =================  основной контент   ================= -->
+    <main class="main-content">
+      <h1 class="main-title">
+         Каталог товаров
+      </h1>
+
+      <!-- каталог -->
+      <ul class="catalog-list">
+        <li class="catalog-list__item">
+          <img class="catalog-list__item-img" alt="Зайчик-попрыгайчик" width="260" height="195" src="https://via.placeholder.com/260x195">
+          <h2 class="catalog-list__item-tit">Зайчик-попрыгайчик</h2>
+          <p class="catalog-list__item-descr">Рост 30 см, вес 200 г</p>
+          <strong class="catalog-list__item-cost">1 200 руб</strong>
+          <a class="catalog-list__item-tobasket">Добавить в корзину</a>
+        </li>
+
+        <li class="catalog-list__item">
+          <img class="catalog-list__item-img" alt="Корзинка для белья" width="260" height="195" src="https://via.placeholder.com/260x195">
+          <h2 class="catalog-list__item-tit">Корзинка для белья</h2>
+          <p class="catalog-list__item-descr">Диаметр 15 см, высота 10 см</p>
+          <strong class="catalog-list__item-cost">690 руб</strong>
+          <a class="catalog-list__item-tobasket">Добавить в корзину</a>
+        </li>
+
+        <li class="catalog-list__item">
+          <img class="catalog-list__item-img" alt="Большая корзинка для игрушек" width="260" height="195" src="https://via.placeholder.com/260x195">
+          <h2 class="catalog-list__item-tit">Большая корзинка для игрушек</h2>
+          <p class="catalog-list__item-descr">Диаметр 30 см, высота 30 см</p>
+          <strong class="catalog-list__item-cost">1 500 руб</strong>
+          <a class="catalog-list__item-tobasket">Добавить в корзину</a>
+        </li>
+      </ul>
+      <!-- /каталог -->
+
+
+      <!-- блок с видео -->
+      <section class="block-data video">
+        <header class="block-header">
+          <h3 class="block-header__title">
+            Процесс производства
+          </h3>
+        </header>
+
+        <div class="video__block">
+          <video class="video__block-file" width="0" height="0" controls  poster="http://www.webestools.com/page/media/videoTag/BigBuckBunny.png">
+            <source src="http://www.webestools.com/page/media/videoTag/BigBuckBunny.mp4" type="video/mp4">
+            <source src="http://www.webestools.com/page/media/videoTag/BigBuckBunny.ogg" type="video/ogg">
+            <source src="http://www.webestools.com/page/media/videoTag/BigBuckBunny.webm" type="video/webm">
+            Your browser does not support the video tag or the file format of this video. <a href="http://www.webestools.com/">http://www.webestools.com/</a>
+          </video>
+        </div>
+        <p class="video__block-description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+      </section>
+      <!-- /блок с видео -->
+      <a class="button button-link" href="/">
+        Сделать заказ
+      </a>
+    </main>
+    <!-- =================  /основной контент   ================= -->
+
+
+    <!-- =================  подвал проекта   ================= -->
+    <footer class="main-footer">
+      <ul class="social main-footer__social">
+        <li class="social__item">
+          <a class="social__icon social__icon-instagram" href="/" target="_blank">
+            Мы в instagram
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__icon social__icon-fb" href="/" target="_blank">
+            Мы в facebook
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__icon social__icon-tw" href="/" target="_blank">
+            Мы в twitter
+          </a>
+        </li>
+      </ul>
+      <div class="developer">
+        Разработано
+        <a class="developer__logo">
+          HTML-academy
+        </a>
+      </div>
+    </footer>
+    <!-- =================  /подвал проекта   ================= -->
+
+
+    <!-- модалка заказа -->
+    <div class="modal">
+      <div class="order-form">
+        <form action="https://echo.htmlacademy.ru">
+          <header class="block-header">
+            <h3 class="block-header__title">
+              Добавить в корзину
+            </h3>
+          </header>
+          <fieldset class="order-form__item">
+            <legend class="order-form__item-tit">Выберите размер:</legend>
+
+            <label class="order-form__item-element">
+              <input  class="order-form__radio-input" type="radio" name="size" value="size-s">
+              <span class="order-form__item-element-value">s</span>
+            </label>
+            <label class="order-form__item-element">
+              <input class="order-form__radio-input" type="radio" name="size" value="size-m">
+              <span class="order-form__item-element-value"></span> m
+            </label>
+            <label class="order-form__item-element">
+              <input class="order-form__radio-input" type="radio" name="size" value="size-l">
+              <span class="order-form__item-element-value">l</span>
+            </label>
+          </fieldset>
+          <button class="button">Добавить</button>
+        </form>
+      </div>
+    </div>
+    <!-- /модалка заказа -->
+  </body>
+</html>
+
