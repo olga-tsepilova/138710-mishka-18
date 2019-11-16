@@ -7,12 +7,12 @@
   <body>
     <!-- ================= шапка проекта  ================= -->
     <header class="main-header">
-      <a class="logo-link main-header__logo-link" href="/">
-        <img class="logo-img main-header__logo-img" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35" src="https://via.placeholder.com/86x35">
+      <a class="main-header__logo-link" href="/">
+        <img class="main-header__logo-img logo" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35" src="https://via.placeholder.com/86x35">
       </a>
-      <button class="nav__toggle" type="button">Открыть меню</button>
-      <nav class="nav main-header__nav">
-        <ul class="nav__list ">
+      <button class="nav__toggle" type="button" aria-label="Открыть меню"></button>
+      <nav class="main-header__nav nav">
+        <ul class="nav__list">
           <li class="nav__list-item">
             <a class="nav__list-link nav__list-link--active" href="/">
               Каталог товаров
@@ -28,7 +28,7 @@
           * Если это поиск - форма
            <li class="nav__list-item">
             <form>
-              <fieldset class="search page-header__search">
+              <fieldset class="page-header__search search">
                 <input class="search__input" type="text" placeholder="Поиск по сайту">
               </fieldset>
             </form>
@@ -51,20 +51,19 @@
 
     <!-- =================  основной контент   ================= -->
     <main class="main-content">
-      <h1 class="main-title main-title--index">
+      <h1 class="main-content-title main-content-title--index">
         Милые штуки ручной работы для дома
       </h1>
-
       <!-- меню каталог -->
       <nav class="catalog-nav">
         <ul class="catalog-nav__list">
           <li class="catalog-nav__item">
-            <a class="catalog-nav__product catalog-list__product--interior" href="/">
+            <a class="catalog-nav__product catalog-nav__product--interior" href="/">
               Предметы интерьера
             </a>
           </li>
           <li class="catalog-nav__item">
-            <a class="catalog-nav__product catalog-list__product--toys" href="/">
+            <a class="catalog-nav__product catalog-nav__product--toys" href="/">
               Детские игрушки
             </a>
           </li>
@@ -73,10 +72,10 @@
       <!-- / меню каталог -->
 
       <!-- товар недели -->
-      <section class="block-data product-week">
-        <header class="block-data__header product-week__header">
-          <h2 class="block-data__title product-week__header-title">
-            <a class="product-week__header-link" href="/">Вязаные корзинки</a>
+      <section class="content-box product-week">
+        <header class="content-box-header product-week__header">
+          <h2 class="content-box-header__title product-week__header-title">
+            <a class="product-week__header-title-link" href="/">Вязаные корзинки</a>
           </h2>
           <strong class="product-week__header-mark">Товар недели</strong>
         </header>
@@ -101,16 +100,16 @@
         <div class="product-cost">
           Цена: 990 руб.
         </div>
-        <a class="button button-link" href="/">
+        <a class="button button--outline" href="/">
           Заказать
         </a>
       </section>
       <!-- /товар недели -->
 
       <!-- о нас -->
-      <section class="block-data about-us">
-        <header class="block-data__header">
-          <h3 class="block-data__title">
+      <section class="content-box">
+        <header class="content-box-header">
+          <h3 class="content-box-header__title">
             Коротко о нас:
           </h3>
         </header>
@@ -126,41 +125,31 @@
       <!-- /о нас -->
 
       <!-- отзывы -->
-      <section class="block-data reviews">
-        <header class="block-data__header">
-          <h3 class="block-data__title">
+      <section class="content-box">
+        <header class="content-box-header">
+          <h3 class="content-box-header__title">
             Отзывы
           </h3>
         </header>
         <!-- слайдер -->
-        <div class="slider slider-reviews">
+        <div class="slider">
 
             <!-- слайдер item -->
-            <div class="slider__item">
-              <blockquote class="reviews__blockquote">
-                <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-                <cite class="reviews__author">Анастасия Красильникова</cite>
-                <a class="reviews__link" href="/" target="_blank">@misssssiskras</a>
+            <div class="slider__item slider-reviews-item">
+              <blockquote class="slider-reviews-item__blockquote">
+                <p class="slider-reviews-item__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+                <cite class="slider-reviews-item__author">Анастасия Красильникова</cite>
+                <a class="slider-reviews-item__link" href="/" target="_blank">@misssssiskras</a>
               </blockquote>
             </div>
           <!-- слайдер item -->
 
           <!-- слайдер item -->
-          <div class="slider__item">
-            <blockquote class="reviews__blockquote">
-              <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-              <cite class="reviews__author">Анастасия Красильникова</cite>
-              <a class="reviews__link" href="/" target="_blank">@misssssiskras</a>
-            </blockquote>
-          </div>
-          <!-- слайдер item -->
-
-          <!-- слайдер item -->
-          <div class="slider__item">
-            <blockquote class="reviews__blockquote">
-              <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-              <cite class="reviews__author">Анастасия Красильникова</cite>
-              <a class="reviews__link" href="/" target="_blank">@misssssiskras</a>
+          <div class="slider__item slider-reviews-item">
+            <blockquote class="slider-reviews-item__blockquote">
+              <p class="slider-reviews-item__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+              <cite class="slider-reviews-item__author">Анастасия Красильникова</cite>
+              <a class="slider-reviews-item__link" href="/" target="_blank">@misssssiskras</a>
             </blockquote>
           </div>
           <!-- слайдер item -->
@@ -172,47 +161,52 @@
         </div>
         <!-- /слайдер -->
 
-        <a class="button button-link" href="/">
+        <a class="button button--outline" href="/">
           Написать
         </a>
       </section>
       <!-- /отзывы -->
 
       <!-- контакты -->
-      <section class="block-data contacts">
-        <header class="block-data__header">
-          <h4 class="block-data__title block-header__title-contacts">
+      <section class="content-box">
+        <header class="content-box-header">
+          <h4 class="content-box-header__title">
             Контакты
           </h4>
         </header>
 
         <!-- микроразметка адрес-->
-        <div itemscope itemtype="http://schema.org/Organization">
-          <span itemprop="name">Мишка - Интернет-магазин игрушек ручной работы</span>
+        <div class="contact-box" itemscope itemtype="http://schema.org/Organization">
+          <span class="visually-hidden" itemprop="name">Мишка - Интернет-магазин игрушек ручной работы</span>
 
-          e-mail:
-          <a class="email-link" itemprop="email" href="mailto:info@mimimishkashop.ru">
+          <span class="contact-box__parameter">e-mail:</span>
+          <a class="contact-box__value email-link" itemprop="email" href="mailto:info@mimimishkashop.ru">
             info@mimimishkashop.ru
           </a>
 
           <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-            адрес:
-            <span itemprop="addressLocality">г. Санкт-Петербург</span>,
-            <span itemprop="streetAddress">ул. Большая Конюшенная, д. 19/8, офис 101</span>
+            <span class="contact-box__parameter">адрес:</span>
+            <div class="contact-box__value">
+              <span class="contact-box__value-item" itemprop="addressLocality">г. Санкт-Петербург</span>,
+              <span class="contact-box__value-item" itemprop="streetAddress">ул. Большая Конюшенная, д. 19/8, офис 101</span>
+            </div>
+
           </div>
           <!-- по требованию яндекса телефон должен быть -->
-          <span itemprop="telephone">777777</span>
+          <span class="visually-hidden" itemprop="telephone">+700000000</span>
         </div>
         <!-- /микроразметка адрес-->
 
         <!-- карта -->
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7014966a2e67f8e45e4851db99dc62c41430ed64d6c78179b68acc75dabeeb75&amp;source=constructor" width="320" height="270"></iframe>
+        <div class="map-box">
+        <iframe class="map-box__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A7014966a2e67f8e45e4851db99dc62c41430ed64d6c78179b68acc75dabeeb75&amp;source=constructor" width="320" height="270"></iframe>
+
         <!-- /карта -->
         <!-- получить метку со своей иконкой  https://tech.yandex.ru/maps/jsbox/2.1/?from=techmapsmain
              нужно регистрироваться как девелопер проекта
              -->
-
-        <a class="button button-link" href="/">
+        </div>
+        <a class="button button--outline" href="/">
           Напишите нам
         </a>
       </section>
@@ -241,10 +235,10 @@
           </a>
         </li>
       </ul>
-      <div class="developer">
-        Разработано
-        <a class="developer__logo">
-          HTML-academy
+      <div class="main-footer__developer developer">
+        <span class="developer__text">Разработано</span>
+        <a class="developer__link" aria-label="Переход на страницу HTML-academy">
+          <img class="developer__logo" src="https://via.placeholder.com/86x35" alt="HTML-academy">
         </a>
       </div>
     </footer>
@@ -254,13 +248,13 @@
     <div class="modal">
       <div class="order-form">
         <form action="https://echo.htmlacademy.ru">
-          <header class="block-header">
-            <h3 class="block-header__title">
+          <header class="content-box-header">
+            <h4 class="content-box-header__title video-title">
               Добавить в корзину
-            </h3>
+            </h4>
           </header>
           <fieldset class="order-form__item">
-            <legend class="order-form__item-tit">Выберите размер:</legend>
+            <legend class="order-form__item-title">Выберите размер:</legend>
 
             <label class="order-form__item-element">
               <input  class="order-form__radio-input" type="radio" name="size" value="size-s">
@@ -275,7 +269,7 @@
               <span class="order-form__item-element-value">l</span>
             </label>
           </fieldset>
-          <button class="button">Добавить</button>
+          <button class="button button--green">Добавить</button>
         </form>
       </div>
     </div>
