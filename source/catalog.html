@@ -48,32 +48,38 @@
       <ul class="catalog">
         <li class="catalog__item">
           <div class="img-wrapper catalog__img-wrapper">
-            <img class="catalog__item-img" alt="Зайчик-попрыгайчик" width="260" height="195" src="https://via.placeholder.com/260x195">
+            <img class="catalog__img" alt="Зайчик-попрыгайчик" width="260" height="195" src="https://via.placeholder.com/260x195">
           </div>
-          <h2 class="catalog__item-title">Зайчик-попрыгайчик</h2>
-          <p class="catalog__item-descr">Рост 30 см, вес 200 г</p>
-          <strong class="catalog__item-cost">1 200 руб</strong>
-          <a class="catalog__item-tobasket" aria-label="Добавить в корзину"></a>
+          <h2 class="catalog__title">Зайчик-попрыгайчик</h2>
+          <p class="catalog__descr">Рост 30 см, вес 200 г</p>
+          <div class="catalog__pricetag">
+            <strong class="catalog__cost">1 200 руб</strong>
+            <a class="catalog__tobasket" aria-label="Добавить в корзину"></a>
+          </div>
         </li>
 
         <li class="catalog__item">
           <div class="img-wrapper catalog__img-wrapper">
-            <img class="catalog__item-img" alt="Корзинка для белья" width="260" height="195" src="https://via.placeholder.com/260x195">
+            <img class="catalog__img" alt="Корзинка для белья" width="260" height="195" src="https://via.placeholder.com/260x195">
           </div>
-          <h2 class="catalog__item-title">Корзинка для белья</h2>
-          <p class="catalog__item-descr">Диаметр 15 см, высота 10 см</p>
-          <strong class="catalog__item-cost">690 руб</strong>
-          <a class="catalog__item-tobasket" aria-label="Добавить в корзину"></a>
+          <h2 class="catalog__title">Корзинка для белья</h2>
+          <p class="catalog__descr">Диаметр 15 см, высота 10 см</p>
+          <div class="catalog__pricetag">
+            <strong class="catalog__cost">690 руб</strong>
+            <a class="catalog__tobasket" aria-label="Добавить в корзину"></a>
+          </div>
         </li>
 
         <li class="catalog__item">
           <div class="img-wrapper catalog__img-wrapper">
-            <img class="catalog__item-img" alt="Большая корзинка для игрушек" width="260" height="195" src="https://via.placeholder.com/260x195">
+            <img class="catalog__img" alt="Большая корзинка для игрушек" width="260" height="195" src="https://via.placeholder.com/260x195">
           </div>
-          <h2 class="catalog__item-title">Большая корзинка для игрушек</h2>
-          <p class="catalog__item-descr">Диаметр 30 см, высота 30 см</p>
-          <strong class="catalog__item-cost">1 500 руб</strong>
-          <a class="catalog__item-tobasket" aria-label="Добавить в корзину"></a>
+          <h2 class="catalog__title">Большая корзинка для игрушек</h2>
+          <p class="catalog__descr">Диаметр 30 см, высота 30 см</p>
+          <div class="catalog__pricetag">
+            <strong class="catalog__cost">1 500 руб</strong>
+            <a class="catalog__tobasket" aria-label="Добавить в корзину"></a>
+          </div>
         </li>
       </ul>
       <!-- /каталог -->
@@ -137,19 +143,19 @@
             </h4>
           </header>
           <fieldset class="order-form__item">
-            <legend class="order-form__item-title">Выберите размер:</legend>
+            <legend class="order-form__title">Выберите размер:</legend>
 
-            <label class="order-form__item-element">
+            <label class="order-form__element">
               <input  class="order-form__radio-input" type="radio" name="size" value="size-s">
-              <span class="order-form__item-element-value">s</span>
+              <span class="order-form__element-value">s</span>
             </label>
-            <label class="order-form__item-element">
+            <label class="order-form__element">
               <input class="order-form__radio-input" type="radio" name="size" value="size-m">
-              <span class="order-form__item-element-value"></span> m
+              <span class="order-form__element-value"></span> m
             </label>
-            <label class="order-form__item-element">
+            <label class="order-form__element">
               <input class="order-form__radio-input" type="radio" name="size" value="size-l">
-              <span class="order-form__item-element-value">l</span>
+              <span class="order-form__element-value">l</span>
             </label>
           </fieldset>
           <button class="button button--green">Добавить</button>
