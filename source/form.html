@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Вязание на заказ | Мишка - Интернет-магазин игрушек ручной работы</title>
+  </head>
+  <body>
+  <!-- ================= шапка проекта  ================= -->
+  <header class="main-header">
+    <a class="main-header__logo-link" href="index.html">
+      <img class="main-header__logo-img logo" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35" src="https://via.placeholder.com/86x35">
+    </a>
+    <button class="nav__toggle" type="button" aria-label="Открыть меню"></button>
+    <nav class="main-header__nav nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link nav__link--active" href="catalog.html">
+            Каталог товаров
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link">
+            Вязание на заказ
+          </a>
+        </li>
+        <li class="nav__item nav__item--search">
+          <a class="nav__link" href="/">
+            Поиск по сайту
+          </a>
+        </li>
+        <li class="nav__item nav__item--basket">
+          <a class="nav__link" href="/">
+            Корзина пока пуста
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- ================= /шапка проекта  ================= -->
+
+    <!-- =================  основной контент   ================= -->
+    <main class="main-content">
+      <h1 class="main-content-title main-content-title--index">
+        Вязание на заказ
+      </h1>
+
+      <!-- форма заказа нового изделия -->
+      <section class="content-box">
+          <p class="content-box-description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+
+          <form class="full-order-form" action="https://echo.htmlacademy.ru" method="post">
+
+            <!-- тип: Аксессуар / игрушка-->
+            <fieldset class="full-order-form__fieldset">
+              <legend class="full-order-form__title">Тип</legend>
+
+              <label class="full-order-form__element">
+                <input class="full-order-form__radio-input" type="radio" name="product-
+type" value="product-type-accessory" checked>
+                <span class="full-order-form__element-value">Аксессуар для
+интерьера</span>
+              </label>
+              <label class="full-order-form__element">
+                <input class="full-order-form__radio-input" type="radio" name="product-
+type" value="product-type-toy">
+                <span class="full-order-form__element-value">Детская игрушка</span>
+              </label>
+            </fieldset>
+            <!-- /тип: Аксессуар / игрушка-->
+
+            <!-- Цвет-->
+            <fieldset class="full-order-form">
+              <legend class="full-order-form__item-title">Цвет</legend>
+
+              <label class="full-order-form__item-element">
+                <input  class="full-order-form__checkbox-input" type="checkbox" name="product-
+color" value="product-color-white" checked>
+                <span class="full-order-form__item-element-value">Белый</span>
+              </label>
+              <label class="full-order-form__item-element">
+                <input  class="full-order-form__checkbox-input" type="checkbox" name="product-
+color" value="product-color-gray" checked>
+                <span class="full-order-form__item-element-value">Серый</span>
+              </label>
+              <label class="full-order-form__item-element">
+                <input  class="full-order-form__checkbox-input" type="checkbox" name="product-
+color" value="product-color-tiffany">
+                <span class="full-order-form__item-element-value">«Тиффани»</span>
+              </label>
+              <label class="full-order-form__item-element">
+                <input  class="full-order-form__checkbox-input" type="checkbox" name="product-
+color" value="product-color-black">
+                <span class="full-order-form__item-element-value">Черный</span>
+              </label>
+              <label class="full-order-form__item-element">
+                <input  class="full-order-form__checkbox-input" type="checkbox" name="product-
+color" value="product-color-pink">
+                <span class="full-order-form__item-element-value">Розовый</span>
+              </label>
+              <label class="full-order-form__item-element">
+                <input  class="full-order-form__checkbox-input" type="checkbox" name="product-
+color" value="product-color-orange">
+                <span class="full-order-form__item-element-value">Оранжевый</span>
+              </label>
+            </fieldset>
+            <!-- /Цвет-->
+
+
+            <!-- ФИО-->
+            <fieldset class="full-order-form">
+              <legend class="full-order-form__item-title">ФИО</legend>
+
+              <label class="full-order-form__item-element">
+                <span class="full-order-form__item-element-value full-order-form__text-input-value">Имя:</span>
+                <input class="full-order-form__text-input" type="text" name="customer-name" placeholder="Введите ваше имя*" required>
+              </label>
+              <label class="full-order-form__item-element">
+                <span class="full-order-form__item-element-value full-order-form__text-input-value">Фамилия:</span>
+                <input class="full-order-form__text-input" type="text" name="customer-name" placeholder="Укажите фамилию*" required>
+              </label>
+              <label class="full-order-form__item-element">
+                <span class="full-order-form__item-element-value full-order-form__text-input-value">Отчество:</span>
+                <input class="full-order-form__text-input" type="text" name="customer-name" placeholder="Отчество, если желаете">
+              </label>
+            </fieldset>
+            <!-- /ФИО-->
+
+
+            <!-- тел-->
+            <fieldset class="full-order-form">
+              <legend class="full-order-form__item-title">тел</legend>
+
+              <label class="full-order-form__item-element">
+                <input class="full-order-form__text-input full-order-form__text-input--phone" type="tel" name="customer-name" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+              </label>
+            </fieldset>
+            <!-- /тел-->
+
+            <!-- E-mail-->
+            <fieldset class="full-order-form">
+              <legend class="full-order-form__item-title">E-mail</legend>
+
+              <label class="full-order-form__item-element">
+                <input class="full-order-form__text-input full-order-form__text-input--email" type="email" name="customer-name" placeholder="Ваш Email*" required>
+              </label>
+            </fieldset>
+            <!-- /E-mail-->
+
+            <!-- комментарий к заказу -->
+            <fieldset class="full-order-form">
+              <legend class="full-order-form__item-title">Доп</legend>
+
+              <label class="full-order-form__item-element">
+                <textarea  class="full-order-form__textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              </label>
+            </fieldset>
+            <!-- /комментарий к заказу -->
+
+            <p class="full-order-form__remark">*Поля обязательны для заполнения</p>
+
+            <button class="button button--outline">Отправить заказ</button>
+          </form>
+      </section>
+      <!-- /форма заказа нового изделия -->
+    </main>
+    <!-- =================  /основной контент   ================= -->
+
+
+    <!-- =================  подвал проекта   ================= -->
+    <footer class="main-footer">
+      <section class="social-box">
+        <h2 class="visually-hidden">Мишка в соцсетях</h2>
+        <ul class="social-box__list main-footer__social-box">
+          <li class="social-box__item">
+            <a class="social__link social__link--instagram" href="/" target="_blank" aria-label="Мы в instagram"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="/" target="_blank" aria-label="Мы в facebook"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="/" target="_blank" aria-label="Мы в twitter"></a>
+          </li>
+        </ul>
+      </section>
+
+      <div class="main-footer__developer developer">
+        <span class="developer__text">Разработано</span>
+        <a class="developer__link" aria-label="Переход на страницу HTML-academy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <img class="developer__logo" src="https://via.placeholder.com/86x35" alt="HTML-academy">
+        </a>
+      </div>
+    </footer>
+    <!-- =================  /подвал проекта   ================= -->
+
+  </body>
+</html>

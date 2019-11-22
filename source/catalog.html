@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог товаров | Мишка - Интернет-магазин игрушек ручной работы</title>
+  </head>
+  <body>
+  <!-- ================= шапка проекта  ================= -->
+  <header class="main-header">
+    <a class="main-header__logo-link" href="index.html">
+      <img class="main-header__logo-img logo" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35" src="https://via.placeholder.com/86x35">
+    </a>
+    <button class="nav__toggle" type="button" aria-label="Открыть меню"></button>
+    <nav class="main-header__nav nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link nav__link--active">
+            Каталог товаров
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="form.html">
+            Вязание на заказ
+          </a>
+        </li>
+        <li class="nav__item nav__item--search">
+          <a class="nav__link" href="/">
+            Поиск по сайту
+          </a>
+        </li>
+        <li class="nav__item nav__item--basket">
+          <a class="nav__link" href="/">
+            Корзина пока пуста
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- ================= /шапка проекта  ================= -->
+
+    <!-- =================  основной контент   ================= -->
+    <main class="main-content">
+      <h1 class="main-content-title main-content-title--index">
+        Каталог товаров
+      </h1>
+
+      <!-- каталог -->
+      <ul class="catalog">
+        <li class="catalog__item">
+          <a class="img-wrapper catalog__img-wrapper" href="/">
+            <img class="catalog__img" alt="Зайчик-попрыгайчик" width="260" height="195" src="https://via.placeholder.com/260x195">
+          </a>
+          <h2 class="catalog__title">
+            <a class="catalog__link" href="/">Зайчик-попрыгайчик</a>
+          </h2>
+          <p class="catalog__descr">Рост 30 см, вес 200 г</p>
+          <div class="catalog__pricetag">
+            <strong class="catalog__cost">1 200 руб</strong>
+            <a class="catalog__tobasket" aria-label="Добавить в корзину" href="/"></a>
+          </div>
+        </li>
+
+        <li class="catalog__item">
+          <a class="img-wrapper catalog__img-wrapper" href="/">
+            <img class="catalog__img" alt="Корзинка для белья" width="260" height="195" src="https://via.placeholder.com/260x195">
+          </a>
+          <h2 class="catalog__title">
+            <a class="catalog__link" href="/">Корзинка для белья</a>
+          </h2>
+          <p class="catalog__descr">Диаметр 15 см, высота 10 см</p>
+          <div class="catalog__pricetag">
+            <strong class="catalog__cost">690 руб</strong>
+            <a class="catalog__tobasket" aria-label="Добавить в корзину" href="/"></a>
+          </div>
+        </li>
+
+        <li class="catalog__item">
+          <a class="img-wrapper catalog__img-wrapper" href="/">
+            <img class="catalog__img" alt="Большая корзинка для игрушек" width="260" height="195" src="https://via.placeholder.com/260x195">
+          </a>
+          <h2 class="catalog__title">
+            <a class="catalog__link" href="/">Большая корзинка для игрушек</a>
+          </h2>
+          <p class="catalog__descr">Диаметр 30 см, высота 30 см</p>
+          <div class="catalog__pricetag">
+            <strong class="catalog__cost">1 500 руб</strong>
+            <a class="catalog__tobasket" aria-label="Добавить в корзину" href="/"></a>
+          </div>
+        </li>
+      </ul>
+      <!-- /каталог -->
+
+
+      <!-- блок с видео -->
+      <section class="content-box">
+        <header class="content-box-header">
+          <h3 class="content-box-header__title video-title">
+            Процесс производства
+          </h3>
+        </header>
+
+        <div class="video-box">
+          <img class="video-box__preview" alt="Видео процесса производства" width="260" height="150" src="https://via.placeholder.com/260x150">
+          <a class="video-box__play" aria-label="Запустить видео"></a>
+        </div>
+
+      </section>
+      <!-- /блок с видео -->
+      <a class="button button--outline" href="/">
+        Сделать заказ
+      </a>
+    </main>
+    <!-- =================  /основной контент   ================= -->
+
+
+    <!-- =================  подвал проекта   ================= -->
+    <footer class="main-footer">
+      <section class="social-box">
+        <h2 class="visually-hidden">Мишка в соцсетях</h2>
+        <ul class="social-box__list main-footer__social-box">
+          <li class="social-box__item">
+            <a class="social__link social__link--instagram" href="/" target="_blank" aria-label="Мы в instagram"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="/" target="_blank" aria-label="Мы в facebook"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="/" target="_blank" aria-label="Мы в twitter"></a>
+          </li>
+        </ul>
+      </section>
+      <div class="main-footer__developer developer">
+        <span class="developer__text">Разработано</span>
+        <a class="developer__link" aria-label="Переход на страницу HTML-academy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <img class="developer__logo" src="https://via.placeholder.com/86x35" alt="HTML-academy">
+        </a>
+      </div>
+    </footer>
+    <!-- =================  /подвал проекта   ================= -->
+
+
+    <!-- модалка заказа -->
+    <div class="modal">
+      <div class="order-form">
+        <form action="https://echo.htmlacademy.ru">
+          <header class="content-box-header">
+            <h4 class="content-box-header__title video-title">
+              Добавить в корзину
+            </h4>
+          </header>
+          <fieldset class="order-form__item">
+            <legend class="order-form__title">Выберите размер:</legend>
+
+            <label class="order-form__element">
+              <input  class="order-form__radio-input" type="radio" name="size" value="size-s">
+              <span class="order-form__element-value">s</span>
+            </label>
+            <label class="order-form__element">
+              <input class="order-form__radio-input" type="radio" name="size" value="size-m">
+              <span class="order-form__element-value"></span> m
+            </label>
+            <label class="order-form__element">
+              <input class="order-form__radio-input" type="radio" name="size" value="size-l">
+              <span class="order-form__element-value">l</span>
+            </label>
+          </fieldset>
+          <button class="button button--green">Добавить</button>
+        </form>
+      </div>
+    </div>
+    <!-- /модалка заказа -->
+  </body>
+</html>
