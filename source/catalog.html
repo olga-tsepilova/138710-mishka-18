@@ -7,7 +7,7 @@
   <body>
   <!-- ================= шапка проекта  ================= -->
   <header class="main-header">
-    <a class="main-header__logo-link" href="index.html">
+    <a class="main-header__logo-link" href="index.html" aria-label="Переход на главную страницу">
       <img class="main-header__logo-img logo" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35" src="https://via.placeholder.com/86x35">
     </a>
     <button class="nav__toggle" type="button" aria-label="Открыть меню"></button>
@@ -35,19 +35,22 @@
         </li>
       </ul>
     </nav>
+    <strong class="main-header__delivery-info">Бесплатная доставка по России</strong>
   </header>
   <!-- ================= /шапка проекта  ================= -->
 
     <!-- =================  основной контент   ================= -->
     <main class="main-content">
-      <h1 class="main-content-title main-content-title--index">
-        Каталог товаров
-      </h1>
+      <section class="intro"><!-- убрала класс section.promo -->
+        <h1 class="main-content__title"><!-- исправила класс, был блок, стал элемент блока main-content -->
+          Каталог товаров
+        </h1>
+      </section>
 
       <!-- каталог -->
       <ul class="catalog">
         <li class="catalog__item">
-          <a class="img-wrapper catalog__img-wrapper" href="/">
+          <a class="img-wrapper" href="/"><!-- удалила .catalog__img-wrapper - да, он не нужен. думала, что будут еще картинки в других разделах, которые надо обернуть, но по дизам прошлась и не увидела. -->
             <img class="catalog__img" alt="Зайчик-попрыгайчик" width="260" height="195" src="https://via.placeholder.com/260x195">
           </a>
           <h2 class="catalog__title">
@@ -56,12 +59,12 @@
           <p class="catalog__descr">Рост 30 см, вес 200 г</p>
           <div class="catalog__pricetag">
             <strong class="catalog__cost">1 200 руб</strong>
-            <a class="catalog__tobasket" aria-label="Добавить в корзину" href="/"></a>
+            <a class="catalog__add-to-cart" aria-label="Добавить в корзину" href="/"></a>
           </div>
         </li>
 
         <li class="catalog__item">
-          <a class="img-wrapper catalog__img-wrapper" href="/">
+          <a class="img-wrapper" href="/">
             <img class="catalog__img" alt="Корзинка для белья" width="260" height="195" src="https://via.placeholder.com/260x195">
           </a>
           <h2 class="catalog__title">
@@ -70,12 +73,12 @@
           <p class="catalog__descr">Диаметр 15 см, высота 10 см</p>
           <div class="catalog__pricetag">
             <strong class="catalog__cost">690 руб</strong>
-            <a class="catalog__tobasket" aria-label="Добавить в корзину" href="/"></a>
+            <a class="catalog__add-to-cart" aria-label="Добавить в корзину" href="/"></a>
           </div>
         </li>
 
         <li class="catalog__item">
-          <a class="img-wrapper catalog__img-wrapper" href="/">
+          <a class="img-wrapper" href="/">
             <img class="catalog__img" alt="Большая корзинка для игрушек" width="260" height="195" src="https://via.placeholder.com/260x195">
           </a>
           <h2 class="catalog__title">
@@ -84,7 +87,7 @@
           <p class="catalog__descr">Диаметр 30 см, высота 30 см</p>
           <div class="catalog__pricetag">
             <strong class="catalog__cost">1 500 руб</strong>
-            <a class="catalog__tobasket" aria-label="Добавить в корзину" href="/"></a>
+            <a class="catalog__add-to-cart" aria-label="Добавить в корзину" href="/"></a>
           </div>
         </li>
       </ul>
@@ -101,7 +104,7 @@
 
         <div class="video-box">
           <img class="video-box__preview" alt="Видео процесса производства" width="260" height="150" src="https://via.placeholder.com/260x150">
-          <a class="video-box__play" aria-label="Запустить видео"></a>
+          <button class="video-box__play" type="button">Запустить видео</button><!-- запуталась в кнопках, удалила submit -->
         </div>
 
       </section>
@@ -115,17 +118,22 @@
 
     <!-- =================  подвал проекта   ================= -->
     <footer class="main-footer">
+      <a class="main-footer__logo-link" href="index.html" aria-label="Переход на главную страницу">
+        <img class="main-footer__logo-img logo" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35" src="https://via.placeholder.com/86x35">
+      </a>
       <section class="social-box">
-        <h2 class="visually-hidden">Мишка в соцсетях</h2>
-        <ul class="social-box__list main-footer__social-box">
+        <!--
+        1. удалила <h2 class="visually-hidden">Мишка в соцсетях</h2>  - посчитала что он не нужен, в дизах его нет, а для ссылок есть описание в aria-label
+        2. поправила классы элементов блока .social-box, сейчас везде первая часть названия = название класса блока -->
+        <ul class="social-box__list">
           <li class="social-box__item">
-            <a class="social__link social__link--instagram" href="/" target="_blank" aria-label="Мы в instagram"></a>
+            <a class="social-box__link social-box__link--instagram" href="/" target="_blank" aria-label="Мишка в instagram"></a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="/" target="_blank" aria-label="Мы в facebook"></a>
+          <li class="social-box__item">
+            <a class="social-box__link social-box__link--facebook" href="/" target="_blank" aria-label="Мишка в facebook"></a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="/" target="_blank" aria-label="Мы в twitter"></a>
+          <li class="social-box__item">
+            <a class="social-box__link social-box__link--twitter" href="/" target="_blank" aria-label="Мишка в twitter"></a>
           </li>
         </ul>
       </section>
@@ -141,13 +149,11 @@
 
     <!-- модалка заказа -->
     <div class="modal">
-      <div class="order-form">
-        <form action="https://echo.htmlacademy.ru">
-          <header class="content-box-header">
-            <h4 class="content-box-header__title video-title">
+      <div class="modal__order-form">
+        <form class="order-form" action="https://echo.htmlacademy.ru" method="get">
+            <h6 class="order-form__title">
               Добавить в корзину
-            </h4>
-          </header>
+            </h6>
           <fieldset class="order-form__item">
             <legend class="order-form__title">Выберите размер:</legend>
 
@@ -157,14 +163,14 @@
             </label>
             <label class="order-form__element">
               <input class="order-form__radio-input" type="radio" name="size" value="size-m">
-              <span class="order-form__element-value"></span> m
+              <span class="order-form__element-value">m</span>
             </label>
             <label class="order-form__element">
               <input class="order-form__radio-input" type="radio" name="size" value="size-l">
               <span class="order-form__element-value">l</span>
             </label>
           </fieldset>
-          <button class="button button--green">Добавить</button>
+          <button class="button button--green" type="button">Добавить</button>
         </form>
       </div>
     </div>
