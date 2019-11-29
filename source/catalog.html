@@ -122,16 +122,18 @@
         <img class="main-footer__logo-img logo" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35" src="https://via.placeholder.com/86x35">
       </a>
       <section class="social-box">
-        <h2 class="visually-hidden">Мишка в соцсетях</h2>
+        <!--
+        1. удалила <h2 class="visually-hidden">Мишка в соцсетях</h2>  - посчитала что он не нужен, в дизах его нет, а для ссылок есть описание в aria-label
+        2. поправила классы элементов блока .social-box, сейчас везде первая часть названия = название класса блока -->
         <ul class="social-box__list">
           <li class="social-box__item">
-            <a class="social__link social__link--instagram" href="/" target="_blank" aria-label="Мы в instagram"></a>
+            <a class="social-box__link social-box__link--instagram" href="/" target="_blank" aria-label="Мишка в instagram"></a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="/" target="_blank" aria-label="Мы в facebook"></a>
+          <li class="social-box__item">
+            <a class="social-box__link social-box__link--facebook" href="/" target="_blank" aria-label="Мишка в facebook"></a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="/" target="_blank" aria-label="Мы в twitter"></a>
+          <li class="social-box__item">
+            <a class="social-box__link social-box__link--twitter" href="/" target="_blank" aria-label="Мишка в twitter"></a>
           </li>
         </ul>
       </section>
