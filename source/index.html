@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Мишка - Интернет-магазин игрушек ручной работы</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <!-- ================= шапка проекта  ================= -->
@@ -41,8 +42,8 @@
 
     <!-- =================  основной контент   ================= -->
     <main class="main-content">
-      <section class="promo"><!-- убрала класс section.promo-mainpage. писала я его не как модификатор, а как блочный класс, что в логику БЭМ не вписывается. если бы продолжала использовать, то сейчас исправила бы на promo--mainpage -->
-        <h1 class="main-content__title"><!-- исправила класс, был блок, стал элемент блока main-content -->
+      <section class="promo">
+        <h1 class="promo__title"><!-- исправила класс, был элемент блока main-content, стал элемент блока promo -->
           Милые штуки ручной работы для дома
         </h1>
         <ul class="product-filter"><!-- изменила класс у ul.promo__product-filter и его элементов, убрала часть promo. Это блок и его можно использовать вне promo свободно -  -->
