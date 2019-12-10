@@ -1,3 +1,41 @@
-body {
-  background: black;
-}
+/* =====  normalize  ===== */
+@import "base/normalize";
+
+/* =====  layouts  ===== */
+@import "base/layouts";
+
+/* =====  typography ===== */
+@import "base/typography";
+
+/* ===== header ===== */
+@import "blocks/main-header";
+
+/* ===== footer ===== */
+@import "blocks/main-footer";
+
+/* ===== content ===== */
+/* description info on page  */
+@import "blocks/main-content";
+@import "blocks/intro";
+@import "blocks/promo";
+@import "blocks/content-box";
+@import "blocks/about-us";
+@import "blocks/slider";
+
+/* catalog */
+@import "blocks/catalog";
+@import "blocks/catalog-product-type";
+@import "blocks/video-box";
+@import "blocks/product-filter";
+@import "blocks/product-info";
+@import "blocks/product-week";
+
+/* contacts */
+@import "blocks/contacts";
+@import "blocks/map-box";
+@import "blocks/social-box";
+
+/* forms */
+@import "blocks/full-order-form";
+@import "blocks/button";
+@import "blocks/modal";

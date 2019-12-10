@@ -5,39 +5,43 @@
     <title>Каталог товаров | Мишка - Интернет-магазин игрушек ручной работы</title>
   </head>
   <body>
-  <!-- ================= шапка проекта  ================= -->
-  <header class="main-header">
-    <a class="main-header__logo-link" href="index.html" aria-label="Переход на главную страницу">
-      <img class="main-header__logo-img logo" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35" src="https://via.placeholder.com/86x35">
-    </a>
-    <button class="nav__toggle" type="button" aria-label="Открыть меню"></button>
-    <nav class="main-header__nav nav">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link nav__link--active">
-            Каталог товаров
-          </a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="form.html">
-            Вязание на заказ
-          </a>
-        </li>
-        <li class="nav__item nav__item--search">
-          <a class="nav__link" href="/">
-            Поиск по сайту
-          </a>
-        </li>
-        <li class="nav__item nav__item--basket">
-          <a class="nav__link" href="/">
-            Корзина пока пуста
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <strong class="main-header__delivery-info">Бесплатная доставка по России</strong>
-  </header>
-  <!-- ================= /шапка проекта  ================= -->
+
+  <!-- ================= ОБЕРТКА ДЛЯ СТРАНИЦЫ  ================= -->
+  <div class="main-wrapper">
+
+    <!-- ================= шапка проекта  ================= -->
+    <header class="main-header">
+      <a class="main-header__logo-link" href="index.html" aria-label="Переход на главную страницу">
+        <img class="main-header__logo-img logo" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35" src="https://via.placeholder.com/86x35">
+      </a>
+      <button class="nav__toggle" type="button" aria-label="Открыть меню"></button>
+      <nav class="main-header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link nav__link--active">
+              Каталог товаров
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="form.html">
+              Вязание на заказ
+            </a>
+          </li>
+          <li class="nav__item nav__item--search">
+            <a class="nav__link" href="/">
+              Поиск по сайту
+            </a>
+          </li>
+          <li class="nav__item nav__item--basket">
+            <a class="nav__link" href="/">
+              Корзина пока пуста
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <strong class="main-header__delivery-info">Бесплатная доставка по России</strong>
+    </header>
+    <!-- ================= /шапка проекта  ================= -->
 
     <!-- =================  основной контент   ================= -->
     <main class="main-content">
@@ -115,7 +119,6 @@
     </main>
     <!-- =================  /основной контент   ================= -->
 
-
     <!-- =================  подвал проекта   ================= -->
     <footer class="main-footer">
       <a class="main-footer__logo-link" href="index.html" aria-label="Переход на главную страницу">
@@ -146,8 +149,10 @@
     </footer>
     <!-- =================  /подвал проекта   ================= -->
 
+  </div>
+  <!-- ================= /ОБЕРТКА ДЛЯ СТРАНИЦЫ  ================= -->
 
-    <!-- модалка заказа -->
+  <!-- модалка заказа -->
     <div class="modal">
       <div class="modal__order-form">
         <form class="order-form" action="https://echo.htmlacademy.ru" method="get">
