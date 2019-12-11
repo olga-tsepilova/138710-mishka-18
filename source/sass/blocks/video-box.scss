@@ -1,0 +1,16 @@
+.video-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  background: url("../../img/video-mobile@1x.jpg") no-repeat center;
+
+  &__play {
+    width: 100px;
+    height: 76px;
+    border: none;
+    background: url("../../img/icon-play.svg") no-repeat center;
+    background-size: contain;
+  }
+}

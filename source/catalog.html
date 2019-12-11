@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог товаров | Мишка - Интернет-магазин игрушек ручной работы</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
@@ -12,10 +14,10 @@
     <!-- ================= шапка проекта  ================= -->
     <header class="main-header">
       <a class="main-header__logo-link" href="index.html" aria-label="Переход на главную страницу">
-        <img class="main-header__logo-img logo" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35" src="https://via.placeholder.com/86x35">
+        <img class="main-header__logo-img logo" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35" src="img/logo-mobile.svg">
       </a>
-      <button class="nav__toggle" type="button" aria-label="Открыть меню"></button>
-      <nav class="main-header__nav nav">
+      <button class="nav__toggle nav__toggle--open" type="button" aria-label="Открыть меню"></button>
+      <nav class="main-header__nav nav visually-hidden">
         <ul class="nav__list">
           <li class="nav__item">
             <a class="nav__link nav__link--active">
@@ -39,7 +41,7 @@
           </li>
         </ul>
       </nav>
-      <strong class="main-header__delivery-info">Бесплатная доставка по России</strong>
+      <strong class="main-header__delivery-info visually-hidden">Бесплатная доставка по России</strong>
     </header>
     <!-- ================= /шапка проекта  ================= -->
 
@@ -55,7 +57,7 @@
       <ul class="catalog">
         <li class="catalog__item">
           <a class="catalog__img-wrapper" href="/"><!-- изменила класс обертки на catalog__img-wrapper -->
-            <img class="catalog__img" alt="Зайчик-попрыгайчик" width="260" height="195" src="https://via.placeholder.com/260x195">
+            <img class="catalog__img" alt="Зайчик-попрыгайчик" width="260" height="195" src="img/photo-hare-mobile@1x.jpg">
           </a>
           <h2 class="catalog__title">
             <a class="catalog__link" href="/">Зайчик-попрыгайчик</a>
@@ -69,7 +71,7 @@
 
         <li class="catalog__item">
           <a class="img-wrapper" href="/">
-            <img class="catalog__img" alt="Корзинка для белья" width="260" height="195" src="https://via.placeholder.com/260x195">
+            <img class="catalog__img" alt="Корзинка для белья" width="260" height="195" src="img/photo-bowl-mobile@1x.jpg">
           </a>
           <h2 class="catalog__title">
             <a class="catalog__link" href="/">Корзинка для белья</a>
@@ -83,7 +85,7 @@
 
         <li class="catalog__item">
           <a class="img-wrapper" href="/">
-            <img class="catalog__img" alt="Большая корзинка для игрушек" width="260" height="195" src="https://via.placeholder.com/260x195">
+            <img class="catalog__img" alt="Большая корзинка для игрушек" width="260" height="195" src="img/photo-toys-mobile@1x.jpg">
           </a>
           <h2 class="catalog__title">
             <a class="catalog__link" href="/">Большая корзинка для игрушек</a>
@@ -107,8 +109,7 @@
         </header>
 
         <div class="video-box">
-          <img class="video-box__preview" alt="Видео процесса производства" width="260" height="150" src="https://via.placeholder.com/260x150">
-          <button class="video-box__play" type="button" aria-label="Запустить видео"></button><!-- добавила aria-label -->
+          <button class="video-box__play" type="button" aria-label="Запустить видео"></button>
         </div>
 
       </section>
@@ -121,7 +122,7 @@
 
     <!-- =================  подвал проекта   ================= -->
     <footer class="main-footer">
-      <a class="main-footer__logo-link" href="index.html" aria-label="Переход на главную страницу">
+      <a class="main-footer__logo-link visually-hidden">
         <img class="main-footer__logo-img logo" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35" src="https://via.placeholder.com/86x35">
       </a>
       <section class="social-box">
@@ -143,7 +144,7 @@
       <div class="main-footer__developer developer">
         <span class="developer__text">Разработано</span>
         <a class="developer__link" aria-label="Переход на страницу HTML-academy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-          <img class="developer__logo" src="https://via.placeholder.com/86x35" alt="HTML-academy">
+          <svg class="developer__logo"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
         </a>
       </div>
     </footer>
@@ -153,7 +154,7 @@
   <!-- ================= /ОБЕРТКА ДЛЯ СТРАНИЦЫ  ================= -->
 
   <!-- модалка заказа -->
-    <div class="modal">
+    <div class="modal visually-hidden">
       <div class="modal__order-form">
         <form class="order-form" action="https://echo.htmlacademy.ru" method="get">
             <h6 class="order-form__title">
