@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Вязание на заказ | Мишка - Интернет-магазин игрушек ручной работы</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
@@ -10,11 +12,11 @@
   <div class="main-wrapper">
     <!-- ================= шапка проекта  ================= -->
     <header class="main-header">
-      <a class="main-header__logo-link" href="index.html" aria-label="Переход на главную страницу">
-        <img class="main-header__logo-img logo" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35" src="https://via.placeholder.com/86x35">
+      <a class="main-header__logo-link">
+        <img class="main-header__logo-img logo" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35" src="img/logo-mobile.svg">
       </a>
-      <button class="nav__toggle" type="button" aria-label="Открыть меню"></button>
-      <nav class="main-header__nav nav">
+      <button class="nav__toggle nav__toggle--open" type="button" aria-label="Открыть меню"></button>
+      <nav class="main-header__nav nav visually-hidden">
         <ul class="nav__list">
           <li class="nav__item">
             <a class="nav__link nav__link--active" href="catalog.html">
@@ -22,7 +24,7 @@
             </a>
           </li>
           <li class="nav__item">
-            <a class="nav__link">
+            <a class="nav__link" href="form.html">
               Вязание на заказ
             </a>
           </li>
@@ -38,7 +40,7 @@
           </li>
         </ul>
       </nav>
-      <strong class="main-header__delivery-info">Бесплатная доставка по России</strong>
+      <strong class="main-header__delivery-info  visually-hidden">Бесплатная доставка по России</strong>
     </header>
     <!-- ================= /шапка проекта  ================= -->
 
@@ -52,7 +54,7 @@
 
       <!-- форма заказа нового изделия -->
       <section class="content-box">
-        <p class="content-box-description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+        <p class="content-box__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
         <form class="full-order-form" action="https://echo.htmlacademy.ru" method="post">
 
@@ -60,14 +62,14 @@
           <fieldset class="full-order-form__fieldset">
             <legend class="full-order-form__title">Тип</legend>
 
-            <label class="full-order-form__element">
-              <input class="full-order-form__radio-input" type="radio" name="product-
+            <label class="full-order-form__element full-order-form__element--radio">
+              <input class="full-order-form__radio-input visually-hidden" type="radio" name="product-
 type" value="product-type-accessory" checked>
               <span class="full-order-form__element-value">Аксессуар для
 интерьера</span>
             </label>
-            <label class="full-order-form__element">
-              <input class="full-order-form__radio-input" type="radio" name="product-
+            <label class="full-order-form__element full-order-form__element--radio">
+              <input class="full-order-form__radio-input visually-hidden" type="radio" name="product-
 type" value="product-type-toy">
               <span class="full-order-form__element-value">Детская игрушка</span>
             </label>
@@ -75,35 +77,35 @@ type" value="product-type-toy">
           <!-- /тип: Аксессуар / игрушка-->
 
           <!-- Цвет-->
-          <fieldset class="full-order-form">
-            <legend class="full-order-form__item-title">Цвет</legend>
+          <fieldset class="full-order-form__fieldset">
+            <legend class="full-order-form__title">Цвет</legend>
 
-            <label class="full-order-form__item-element">
+            <label class="full-order-form__element">
               <input  class="full-order-form__checkbox-input" type="checkbox" name="product-
 color" value="product-color-white" checked>
               <span class="full-order-form__item-element-value">Белый</span>
             </label>
-            <label class="full-order-form__item-element">
+            <label class="full-order-form__element">
               <input  class="full-order-form__checkbox-input" type="checkbox" name="product-
 color" value="product-color-gray" checked>
               <span class="full-order-form__item-element-value">Серый</span>
             </label>
-            <label class="full-order-form__item-element">
+            <label class="full-order-form__element">
               <input  class="full-order-form__checkbox-input" type="checkbox" name="product-
 color" value="product-color-tiffany">
               <span class="full-order-form__item-element-value">«Тиффани»</span>
             </label>
-            <label class="full-order-form__item-element">
+            <label class="full-order-form__element">
               <input  class="full-order-form__checkbox-input" type="checkbox" name="product-
 color" value="product-color-black">
               <span class="full-order-form__item-element-value">Черный</span>
             </label>
-            <label class="full-order-form__item-element">
+            <label class="full-order-form__element">
               <input  class="full-order-form__checkbox-input" type="checkbox" name="product-
 color" value="product-color-pink">
               <span class="full-order-form__item-element-value">Розовый</span>
             </label>
-            <label class="full-order-form__item-element">
+            <label class="full-order-form__element">
               <input  class="full-order-form__checkbox-input" type="checkbox" name="product-
 color" value="product-color-orange">
               <span class="full-order-form__item-element-value">Оранжевый</span>
@@ -113,18 +115,18 @@ color" value="product-color-orange">
 
 
           <!-- ФИО-->
-          <fieldset class="full-order-form">
-            <legend class="full-order-form__item-title">ФИО</legend>
+          <fieldset class="full-order-form__fieldset">
+            <legend class="full-order-form__title">ФИО</legend>
 
-            <label class="full-order-form__item-element">
+            <label class="full-order-form__element">
               <span class="full-order-form__item-element-value full-order-form__text-input-value">Имя:</span>
               <input class="full-order-form__text-input" type="text" name="customer-name" placeholder="Введите ваше имя*" required>
             </label>
-            <label class="full-order-form__item-element">
+            <label class="full-order-form__element">
               <span class="full-order-form__item-element-value full-order-form__text-input-value">Фамилия:</span>
               <input class="full-order-form__text-input" type="text" name="customer-name" placeholder="Укажите фамилию*" required>
             </label>
-            <label class="full-order-form__item-element">
+            <label class="full-order-form__element">
               <span class="full-order-form__item-element-value full-order-form__text-input-value">Отчество:</span>
               <input class="full-order-form__text-input" type="text" name="customer-name" placeholder="Отчество, если желаете">
             </label>
@@ -133,30 +135,30 @@ color" value="product-color-orange">
 
 
           <!-- тел-->
-          <fieldset class="full-order-form">
-            <legend class="full-order-form__item-title">тел</legend>
+          <fieldset class="full-order-form__fieldset">
+            <legend class="full-order-form__title">тел</legend>
 
-            <label class="full-order-form__item-element">
+            <label class="full-order-form__element">
               <input class="full-order-form__text-input full-order-form__text-input--phone" type="tel" name="customer-name" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
             </label>
           </fieldset>
           <!-- /тел-->
 
           <!-- E-mail-->
-          <fieldset class="full-order-form">
-            <legend class="full-order-form__item-title">E-mail</legend>
+          <fieldset class="full-order-form__fieldset">
+            <legend class="full-order-form__title">E-mail</legend>
 
-            <label class="full-order-form__item-element">
+            <label class="full-order-form__element">
               <input class="full-order-form__text-input full-order-form__text-input--email" type="email" name="customer-name" placeholder="Ваш Email*" required>
             </label>
           </fieldset>
           <!-- /E-mail-->
 
           <!-- комментарий к заказу -->
-          <fieldset class="full-order-form">
-            <legend class="full-order-form__item-title">Доп</legend>
+          <fieldset class="full-order-form__fieldset">
+            <legend class="full-order-form__title">Доп</legend>
 
-            <label class="full-order-form__item-element">
+            <label class="full-order-form__element">
               <textarea  class="full-order-form__textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </label>
           </fieldset>
@@ -173,7 +175,7 @@ color" value="product-color-orange">
 
     <!-- =================  подвал проекта   ================= -->
     <footer class="main-footer">
-      <a class="main-footer__logo-link" href="index.html" aria-label="Переход на главную страницу">
+      <a class="main-footer__logo-link visually-hidden">
         <img class="main-footer__logo-img logo" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35" src="https://via.placeholder.com/86x35">
       </a>
       <section class="social-box">
@@ -192,11 +194,10 @@ color" value="product-color-orange">
           </li>
         </ul>
       </section>
-
       <div class="main-footer__developer developer">
         <span class="developer__text">Разработано</span>
         <a class="developer__link" aria-label="Переход на страницу HTML-academy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-          <img class="developer__logo" src="https://via.placeholder.com/86x35" alt="HTML-academy">
+          <svg class="developer__logo"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
         </a>
       </div>
     </footer>

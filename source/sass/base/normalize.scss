@@ -159,9 +159,11 @@ button:active {
 button:focus,
 input:focus,
 select:focus,
-textarea:focus {
+textarea:focus,
+label:focus {
   outline: none;
 }
+
 
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,

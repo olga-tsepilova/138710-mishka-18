@@ -1,3 +1,66 @@
 .full-order-form {
   width: 100%;
+  padding: 2em 0;
+
+  &__fieldset {
+    padding: 1em 0;
+    border: none;
+  }
+
+  &__title {
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 1.7rem;
+    color: #63d1bb;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__element {
+    display: block;
+    position: relative;
+    padding: 0.5em 0 3em;
+    width: 100%;
+    min-height: 40px;
+    cursor: pointer;
+
+    &--radio {
+      padding-left: 4.5em;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #434343;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__element-value {
+    width: 100%;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #62d1ba;
+      opacity: 0;
+      transition: all 200ms ease-in-out;
+    }
+  }
+}
+
+.full-order-form__radio-input:checked + .full-order-form__element-value::before {
+  opacity: 1;
 }
