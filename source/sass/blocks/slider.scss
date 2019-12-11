@@ -1,0 +1,29 @@
+.slider {
+  &__control {
+    width: 100%;
+  }
+
+  &__control-link {
+    display: block;
+    width: 50%;
+    height: 50px;
+    float: left;
+    background-color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #ececec;
+
+    &--back {
+      background-image: url("../../img/icon-left-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto 50%;
+    }
+
+    &--forward {
+      background-image: url("../../img/icon-right-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto 50%;
+    }
+  }
+}

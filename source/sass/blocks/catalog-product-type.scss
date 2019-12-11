@@ -1,48 +1,46 @@
 .catalog-product-type {
-  display: block;
   width: 100%;
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
 
-.catalog-product-type__item {
-  display: block;
-  width: 100%;
-}
-
-.catalog-product-type__product {
-  display: block;
-  padding: 2em 1em 2em 1%;
-  font-size: 1.9rem;
-  color: #ffffff;
-  text-decoration: none;
-
-  &:hover,
-  &:active {
-    text-decoration: none;
-  }
-
-  &::after {
-    content: "";
+  &__item {
     display: block;
-    float: right;
-    width: 100px;
-    height: 100px;
-  }
-
-  &--interior {
+    width: 100%;
     background-color: #63d1bb;
 
-    &::after {
-      background-image: url("../../img/icon-interior.svg");
+    &:nth-child(even) {
+      background-color: #56c3b2;
     }
   }
 
-  &--toys {
-    background-color: #56c3b2;
+  &__link {
+    position: relative;
+    display: block;
+    padding: 2em 4em 2em 2em;
+    width: 100%;
+    font-size: 1.9rem;
+    color: #ffffff;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 2em;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 2em;
+    height: auto;
   }
 }
+
+
 
 /*.catalog-product-type__product--interior {
   background: #63d1bb url("../../img/icon-interior.svg") no-repeat 90% center;
