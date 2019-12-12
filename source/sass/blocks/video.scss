@@ -1,0 +1,30 @@
+.video {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2em 0;
+  border: 1px solid #ececec;
+
+  &__header {
+    position: relative;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 1.5em 5em;
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 1.1;
+    color: #000000;
+  }
+
+  &__title-icon {
+    position: absolute;
+    top: 0;
+    left: 2em;
+    width: 32px;
+    height: auto;
+    fill: #63d1bb;
+  }
+}
