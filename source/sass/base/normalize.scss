@@ -208,6 +208,13 @@ textarea {
   display: none;
 }
 
+input::placeholder,
+textarea::placeholder {
+  color: rgba(68, 68, 68, 0.3);
+  transition: color 0.3s ease;
+  text-overflow: ellipsis;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
