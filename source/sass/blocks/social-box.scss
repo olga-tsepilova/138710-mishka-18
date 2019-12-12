@@ -21,22 +21,7 @@
     text-align: center;
     width: 100%;
     text-decoration: none;
-    padding: .5em 0;
-
-    &--facebook {
-      background: url("../img/icon-fb.svg") no-repeat center;
-      background-size: auto 80%;
-    }
-
-    &--instagram {
-      background: url("../img/icon-insta.svg") no-repeat center;
-      background-size: auto 80%;
-    }
-
-    &--twitter {
-      background: url("../img/icon-twitter.svg") no-repeat center;
-      background-size: auto 80%;
-    }
+    padding: 0.5em 0;
   }
 
   &__link-icon {
