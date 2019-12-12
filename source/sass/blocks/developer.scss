@@ -1,18 +1,34 @@
 .developer {
   width: 100%;
   padding: 1em;
-  display: flex;
-  justify-content: center;
+  font-size: 1.9rem;
+  color: #000000;
+  font-weight: bold;
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    text-decoration: none;
+
+    &:focus {
+      opacity: 30%;
+    }
+  }
 
   &__text {
-    display: flex;
-    align-items: center;
     padding: 0 1em 0 0;
   }
 
   &__logo {
     fill: #63d1bb;
-    width: 2em;
+    width: 3em;
     height: auto;
+
+    &:hover,
+    &:active {
+      fill: #46c1ae;
+    }
   }
 }
