@@ -3,9 +3,24 @@
   background-position: top left;
   background-repeat: repeat-x;
   background-size: 100%;
-  padding: 2em 0;
+
+  &__list {
+    list-style-type: none;
+    width: 100%;
+    padding: 2em 0 0;
+  }
+
+  &__list-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 2em;
+    font-size: 1.7rem;
+    font-weight: bold;
+
+  }
 
   &__icon {
     fill: #149080;
+    margin: 0 0 1em;
   }
 }

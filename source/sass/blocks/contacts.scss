@@ -4,4 +4,12 @@
   background-repeat: repeat-x;
   background-size: 100%;
   padding: 2em 0;
+
+  &__header {
+    padding: 1em 2em;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+  }
 }

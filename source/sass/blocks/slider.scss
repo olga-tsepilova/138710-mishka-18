@@ -1,6 +1,16 @@
 .slider {
+  width: 100%;
+  padding: 0 0 2em;
+  overflow: hidden;
+
+  &__item {
+    width: 100%;
+    padding: 0 0 1em;
+  }
+
   &__control {
     width: 100%;
+    padding: 1em 0;
   }
 
   &__control-link {
@@ -17,6 +27,15 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: auto 50%;
+
+      &:hover,
+      &:active {
+        opacity: 0.6;
+      }
+
+      &:focus {
+        opacity: 0.3;
+      }
     }
 
     &--forward {
@@ -24,6 +43,15 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: auto 50%;
+
+      &:hover,
+      &:active {
+        opacity: 0.6;
+      }
+
+      &:focus {
+        opacity: 0.3;
+      }
     }
   }
 }
