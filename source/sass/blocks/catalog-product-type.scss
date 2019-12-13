@@ -17,9 +17,12 @@
 
 .catalog-product-type__link {
   position: relative;
-  display: block;
-  padding: 2em 4em 2em 2em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 50%;
   width: 100%;
+  min-height: 103px;
   font-size: 1.9rem;
   color: #ffffff;
   text-decoration: none;
@@ -28,14 +31,15 @@
   &:active {
     text-decoration: none;
   }
+
+  &--interior {
+    background: url("../img/icon-interior.svg") no-repeat right center;
+    background-size: 40px 62px;
+  }
+
+  &--toy {
+    background: url("../img/icon-toy.svg") no-repeat right center;
+    background-size: 60px 60px;
+  }
 }
 
-.catalog-product-type__icon {
-  position: absolute;
-  right: 2em;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
-  width: 2em;
-  height: auto;
-}
