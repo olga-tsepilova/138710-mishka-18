@@ -5,33 +5,33 @@
   font-size: 1.3rem;
   line-height: 2;
   padding: 0 2em;
+}
 
-  &__item {
-    display: flex;
-    padding: 0 0 1.5em;
+.contacts-info__item {
+  display: flex;
+  padding: 0 0 1.5em;
+}
+
+.contacts-info__parameter {
+  min-width: 30%;
+}
+
+.contacts-info__link-email {
+  color: #444444;
+  text-decoration: none;
+  border-bottom: 1px solid #62d1ba;
+
+  &:hover,
+  &:active {
+    color: #46c1ae;
+    border-bottom: 1px solid #46c1ae;
   }
 
-  &__parameter {
-    min-width: 30%;
+  &:focus {
+    opacity: 0.3;
   }
+}
 
-  &__link-email {
-    color: #444444;
-    text-decoration: none;
-    border-bottom: 1px solid #62d1ba;
-
-    &:hover,
-    &:active {
-      color: #46c1ae;
-      border-bottom: 1px solid #46c1ae;
-    }
-
-    &:focus {
-      opacity: 0.3;
-    }
-  }
-
-  &__button-box {
-    padding: 0 2em;
-  }
+.contacts-info__button-box {
+  padding: 0 2em;
 }

@@ -3,39 +3,39 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
 
-  &__item {
-    display: block;
-    width: 100%;
-    background-color: #63d1bb;
+.catalog-product-type__item {
+  display: block;
+  width: 100%;
+  background-color: #63d1bb;
 
-    &:nth-child(even) {
-      background-color: #56c3b2;
-    }
+  &:nth-child(even) {
+    background-color: #56c3b2;
   }
+}
 
-  &__link {
-    position: relative;
-    display: block;
-    padding: 2em 4em 2em 2em;
-    width: 100%;
-    font-size: 1.9rem;
-    color: #ffffff;
+.catalog-product-type__link {
+  position: relative;
+  display: block;
+  padding: 2em 4em 2em 2em;
+  width: 100%;
+  font-size: 1.9rem;
+  color: #ffffff;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
     text-decoration: none;
-
-    &:hover,
-    &:active {
-      text-decoration: none;
-    }
   }
+}
 
-  &__icon {
-    position: absolute;
-    right: 2em;
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
-    width: 2em;
-    height: auto;
-  }
+.catalog-product-type__icon {
+  position: absolute;
+  right: 2em;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  width: 2em;
+  height: auto;
 }

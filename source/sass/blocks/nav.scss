@@ -12,12 +12,12 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% auto;
-}
 
-.nav__toggle--open {
-  background-image: url("../img/icon-menu-open.svg");
-}
+  &--open {
+    background-image: url("../img/icon-menu-open.svg");
+  }
 
-.nav__toggle--close {
-  background-image: url("../img/icon-menu-close.svg");
+  &--close {
+    background-image: url("../img/icon-menu-close.svg");
+  }
 }
