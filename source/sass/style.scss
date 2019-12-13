@@ -1,11 +1,16 @@
 /* =====  normalize  ===== */
-@import "base/normalize";
+@import "libs/normalize";
 
-/* =====  layouts  ===== */
-@import "base/layouts";
+/* =====  variables ===== */
+@import "base/variables";
 
 /* =====  typography ===== */
-@import "base/typography";
+@import "base/font-face";
+@import "base/base";
+
+/* =====  layouts  ===== */
+@import "base/hidden";
+@import "global/layouts";
 
 /* ===== header ===== */
 @import "blocks/main-header";
