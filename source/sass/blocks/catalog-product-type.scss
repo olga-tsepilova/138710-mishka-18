@@ -20,7 +20,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-right: 50%;
+  padding: 0 50% 0 30px;
   width: 100%;
   min-height: 103px;
   font-size: 1.9rem;
@@ -32,14 +32,22 @@
     text-decoration: none;
   }
 
-  &--interior {
-    background: url("../img/icon-interior.svg") no-repeat right center;
-    background-size: 40px 62px;
+  &::after {
+    position: absolute;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    content: "";
   }
 
-  &--toy {
-    background: url("../img/icon-toy.svg") no-repeat right center;
-    background-size: 60px 60px;
+  &--interior::after {
+    background: url("../img/icon-interior.svg") no-repeat center;
+    background-size: auto 100%;
+  }
+
+  &--toy::after {
+    background: url("../img/icon-toy.svg") no-repeat center;
+    background-size: auto 100%;
   }
 }
 
