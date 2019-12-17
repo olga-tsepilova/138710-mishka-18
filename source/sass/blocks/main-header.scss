@@ -1,6 +1,15 @@
 .main-header {
   position: relative;
-  padding: 1em;
   text-align: center;
-  border-bottom: 1px solid #ececec;
+  border-top: 1px solid #ececec;
+  min-height: 80px;
+}
+
+.main-header__logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 50%;
+  margin: 0 auto;
 }
