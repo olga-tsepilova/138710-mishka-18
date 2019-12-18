@@ -1,7 +1,22 @@
 .map-box {
+  position: relative;
   width: 100%;
+  max-width: 600px;
   text-align: center;
-  padding: 1em 0 2em;
+  padding: 40px 0;
+  margin: 0 auto;
+
+  &::after {
+    position: absolute;
+    top: 33%;
+    left: 44%;
+    content: "";
+    display: block;
+    width: 67px;
+    height: 100px;
+    background: url("../img/icon-map-pin.svg") no-repeat center;
+    background-size: contain;
+  }
 }
 
 .map-box__img {
