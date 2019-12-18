@@ -67,7 +67,8 @@
     width: 40px;
     height: 40px;
     border: 2px solid #434343;
-    transition: all 200ms ease-in-out;
+
+    @include transition;
   }
 
   &--radio::before {
@@ -90,7 +91,8 @@
     border-radius: 50%;
     background: #62d1ba;
     opacity: 0;
-    transition: all 200ms ease-in-out;
+
+    @include transition;
   }
 
   &--checkbox::after {
@@ -105,7 +107,8 @@
     background: url("../img/icon-tick.svg") no-repeat center;
     background-size: auto 50%;
     opacity: 0;
-    transition: all 200ms ease-in-out;
+
+    @include transition;
   }
 }
 
@@ -136,7 +139,8 @@
   bottom: 10px;
   right: 0;
   fill: #cccccc;
-  transition: all 200ms ease-in-out;
+
+  @include transition;
 }
 
 .full-order-form__element:hover .full-order-form__icon,

@@ -1,7 +1,5 @@
 .intro {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center-vh;
   min-height: 176px;
   background-color: #f1f1f1;
   color: #000000;

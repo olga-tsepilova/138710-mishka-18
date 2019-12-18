@@ -4,14 +4,14 @@
   right: 0;
   bottom: 0;
   left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  @include flex-center-vh;
   background: rgba(255, 255, 255, 0.9);
   z-index: 99999;
   opacity: 0;
-  transition: opacity 200ms ease-in;
   pointer-events: none;
+
+  @include transition;
 }
 
 .modal:target {
@@ -30,7 +30,7 @@
 
 .close {
   background: #606061;
-  color: #FFFFFF;
+  color: #ffffff;
   line-height: 25px;
   position: absolute;
   right: 0;

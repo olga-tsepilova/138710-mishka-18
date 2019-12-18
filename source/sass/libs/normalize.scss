@@ -105,7 +105,8 @@ video {
 
 a {
   background-color: transparent;
-  transition: all 200ms ease-in-out;
+
+  @include transition;
 }
 
 abbr[title] {
@@ -212,7 +213,8 @@ textarea {
 input::placeholder,
 textarea::placeholder {
   color: rgba(68, 68, 68, 0.3);
-  transition: color 0.3s ease;
+
+  @include transition;
   text-overflow: ellipsis;
 }
 

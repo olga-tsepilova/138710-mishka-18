@@ -1,8 +1,7 @@
 .video-box {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  @include flex-center-vh;
 }
 
 .video-box__prewiew {
@@ -24,7 +23,7 @@
   background: url("../img/icon-play.svg") no-repeat center;
   background-size: contain;
 
-  transition: all 200ms ease-in-out;
+  @include transition;
 
   &:hover,
   &:active {
@@ -40,10 +39,10 @@
 .video-box__description {
   font-size: 1.3rem;
   line-height: 2;
-  padding: 2em;
+  padding: 30px;
   margin: 0;
 }
 
 .video-box__button-order {
-  padding: 1em 2em 0;
+  padding: 0 30px;
 }

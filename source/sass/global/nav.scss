@@ -2,9 +2,8 @@
   position: absolute;
   top: 0;
   right: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  @include flex-center-vh;
   width: 20px;
   height: 80px;
   background: url("../img/icon-menu-open.svg") no-repeat center;
@@ -19,9 +18,10 @@
   width: 100%;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
   list-style-type: none;
   border-top: 1px solid #ececec;
+
+  @include transition;
 }
 
 .nav__link {
