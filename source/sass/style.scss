@@ -1,0 +1,60 @@
+/* =====  normalize  ===== */
+@import "libs/normalize";
+
+/* =====  variables ===== */
+@import "base/variables";
+@import "base/mixins";
+
+/* =====  typography ===== */
+@import "base/font-face";
+@import "base/base";
+
+/* =====  layouts  ===== */
+@import "base/hidden";
+@import "global/layouts";
+
+/* ===== header ===== */
+@import "blocks/main-header";
+@import "global/nav";
+
+/* ===== footer ===== */
+@import "blocks/main-footer";
+
+/* ===== developer ===== */
+@import "blocks/developer";
+
+/* ===== content ===== */
+
+/* function elements */
+@import "blocks/modal";
+@import "blocks/slider";
+@import "blocks/button";
+
+
+/* description info on page  */
+@import "blocks/main-content";
+@import "blocks/intro";
+@import "blocks/promo";
+@import "blocks/content-box";
+@import "blocks/content-box-header";
+@import "blocks/about-us";
+@import "blocks/review";
+
+/* catalog */
+@import "blocks/catalog";
+@import "blocks/catalog-product-type";
+@import "blocks/video";
+@import "blocks/video-box";
+@import "blocks/product-filter";
+@import "blocks/product-info";
+@import "blocks/product-week";
+
+/* contacts */
+@import "blocks/contacts";
+@import "blocks/contacts-info";
+@import "blocks/map-box";
+@import "blocks/social-box";
+
+/* forms */
+@import "blocks/full-order-form";
+@import "blocks/order-form";

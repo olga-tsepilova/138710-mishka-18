@@ -1,0 +1,55 @@
+.order-form__title {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  color: $color-title;
+  font-size: 2.3rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.order-form__item {
+  width: 100%;
+  padding: 0 0 $padding-usual;
+}
+
+.order-form__item-title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: $padding-usual 0;
+}
+
+.order-form__item-element-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.order-form__item-element {
+  @include flex-center-vh;
+  width: 30%;
+  height: 48px;
+}
+
+.order-form__radio-input {
+  display: none;
+}
+
+.order-form__item-element-value {
+  @include flex-center-vh;
+  width: 100%;
+  height: 100%;
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 2px solid #ededed;
+
+  @include transition;
+}
+
+.order-form__radio-input:checked + .order-form__item-element-value {
+  border: 2px solid #62d3b5;
+}

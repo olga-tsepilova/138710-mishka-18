@@ -1,0 +1,24 @@
+.map-box {
+  position: relative;
+
+  @include adaptive-img-wrapper;
+  padding: 40px 0;
+  text-align: center;
+
+  &::after {
+    position: absolute;
+    top: 33%;
+    left: 44%;
+    content: "";
+    display: block;
+    width: 67px;
+    height: 100px;
+    background: url("../img/icon-map-pin.svg") no-repeat center;
+    background-size: contain;
+  }
+}
+
+.map-box__img {
+  @include adaptive-img;
+  margin: 0 auto;
+}

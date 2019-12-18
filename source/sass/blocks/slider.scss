@@ -1,0 +1,56 @@
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider__item {
+  width: 100%;
+}
+
+.slider__control {
+  display: flex;
+  width: 100%;
+  padding: $padding-usual 0;
+}
+
+.slider__control-link {
+  width: 50%;
+  height: 50px;
+  float: left;
+  background-color: $bg-color-usual;
+  text-decoration: none;
+  border: 1px solid $border-color-usual;
+
+  &--back {
+    background-image: url("../img/icon-left-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 50%;
+    border-right: none;
+
+    &:hover,
+    &:active {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.3;
+    }
+  }
+
+  &--forward {
+    background-image: url("../img/icon-right-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 50%;
+
+    &:hover,
+    &:active {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.3;
+    }
+  }
+}

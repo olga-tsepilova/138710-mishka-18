@@ -1,0 +1,16 @@
+.contacts {
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-position: top left;
+  background-repeat: repeat-x;
+  background-size: 100%;
+  padding: $padding-usual 0 40px;
+}
+
+.contacts__header {
+  padding: 20px $padding-usual 40px;
+}
+
+.contacts__title {
+  font-size: 1.6rem;
+  padding: 0;
+}

@@ -1,0 +1,26 @@
+.content-box-header {
+  width: 100%;
+}
+
+.content-box-header__title {
+  display: block;
+  padding: 0 0 8px;
+  width: 100%;
+  font-size: 2.5rem;
+  line-height: 0.8;
+  font-weight: bold;
+  color: $color-title;
+}
+
+.content-box-header__link {
+  display: block;
+  width: 100%;
+  color: $color-title;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.6;
+  }
+}

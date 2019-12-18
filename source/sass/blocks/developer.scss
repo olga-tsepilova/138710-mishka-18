@@ -1,0 +1,31 @@
+.developer {
+  width: 100%;
+  padding: $padding-usual 0;
+  font-size: 1.6rem;
+  color: $color-title;
+  font-weight: bold;
+}
+
+.developer__link {
+  @include flex-center-vh;
+  color: $color-title;
+  text-decoration: none;
+
+  &:focus {
+    opacity: 30%;
+  }
+}
+
+.developer__text {
+  padding: 0 25px 0 0;
+}
+
+.developer__logo {
+  fill: $color-tiffany;
+  height: 34px;
+
+  &:hover,
+  &:active {
+    fill: #46c1ae;
+  }
+}

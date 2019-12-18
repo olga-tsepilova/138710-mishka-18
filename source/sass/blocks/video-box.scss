@@ -1,0 +1,44 @@
+.video-box {
+  position: relative;
+
+  @include flex-center-vh;
+}
+
+.video-box__prewiew {
+  @include adaptive-img;
+}
+
+.video-box__play {
+  position: absolute;
+
+  @include position-zero;
+  margin: auto;
+  width: 100px;
+  height: 76px;
+  border: none;
+  background: url("../img/icon-play.svg") no-repeat center;
+  background-size: contain;
+
+  @include transition;
+
+  &:hover,
+  &:active {
+    transform: scale(1.2);
+  }
+
+  &:focus {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+}
+
+.video-box__description {
+  font-size: 1.3rem;
+  line-height: 2;
+  padding: $padding-usual;
+  margin: 0;
+}
+
+.video-box__button-order {
+  padding: 0 $padding-usual;
+}

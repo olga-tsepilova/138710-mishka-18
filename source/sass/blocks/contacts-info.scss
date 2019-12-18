@@ -1,0 +1,41 @@
+.contacts-info {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  font-size: 1.3rem;
+  line-height: 2;
+  padding: 0 $padding-usual;
+}
+
+.contacts-info__item {
+  display: flex;
+  padding: 0 0 40px;
+
+  &:last-child {
+    padding: 0;
+  }
+}
+
+.contacts-info__parameter {
+  min-width: 30%;
+}
+
+.contacts-info__link-email {
+  color: $color-usual;
+  text-decoration: none;
+  border-bottom: 1px solid #62d1ba;
+
+  &:hover,
+  &:active {
+    color: #46c1ae;
+    border-bottom: 1px solid #46c1ae;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
+}
+
+.contacts-info__button-box {
+  padding: 0 2em;
+}
