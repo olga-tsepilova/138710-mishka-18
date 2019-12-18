@@ -3,11 +3,11 @@
   background-position: top left;
   background-repeat: repeat-x;
   background-size: 100%;
-  padding: 30px 0 40px;
+  padding: $padding-usual 0 40px;
 }
 
 .contacts__header {
-  padding: 20px 30px 40px;
+  padding: 20px $padding-usual 40px;
 }
 
 .contacts__title {

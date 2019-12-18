@@ -4,7 +4,7 @@
   list-style-type: none;
   font-size: 1.3rem;
   line-height: 2;
-  padding: 0 30px;
+  padding: 0 $padding-usual;
 }
 
 .contacts-info__item {
@@ -21,7 +21,7 @@
 }
 
 .contacts-info__link-email {
-  color: #444444;
+  color: $color-usual;
   text-decoration: none;
   border-bottom: 1px solid #62d1ba;
 

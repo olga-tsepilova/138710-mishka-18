@@ -1,14 +1,14 @@
 .developer {
   width: 100%;
-  padding: 30px 0;
+  padding: $padding-usual 0;
   font-size: 1.6rem;
-  color: #000000;
+  color: $color-title;
   font-weight: bold;
 }
 
 .developer__link {
   @include flex-center-vh;
-  color: #000000;
+  color: $color-title;
   text-decoration: none;
 
   &:focus {
@@ -21,7 +21,7 @@
 }
 
 .developer__logo {
-  fill: #63d1bb;
+  fill: $color-tiffany;
   height: 34px;
 
   &:hover,

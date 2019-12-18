@@ -8,7 +8,7 @@
 .catalog-product-type__item {
   display: block;
   width: 100%;
-  background-color: #63d1bb;
+  background-color: $color-tiffany;
 
   &:nth-child(even) {
     background-color: #56c3b2;
@@ -20,13 +20,13 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 50% 0 30px;
+  padding: 0 50% 0 $padding-usual;
   width: 100%;
   min-height: 103px;
   font-size: 1.9rem;
   line-height: 1.2;
   font-weight: bold;
-  color: #ffffff;
+  color: $light-text;
   text-decoration: none;
 
   &:hover,

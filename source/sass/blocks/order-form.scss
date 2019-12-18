@@ -2,7 +2,7 @@
   display: block;
   margin: 0 auto;
   width: 150px;
-  color: #000000;
+  color: $color-title;
   font-size: 2.3rem;
   line-height: 1.2;
   text-transform: uppercase;
@@ -11,7 +11,7 @@
 
 .order-form__item {
   width: 100%;
-  padding: 0 0 30px;
+  padding: 0 0 $padding-usual;
 }
 
 .order-form__item-title {
@@ -19,7 +19,7 @@
   width: 100%;
   text-align: center;
   font-size: 1.5rem;
-  padding: 30px 0;
+  padding: $padding-usual 0;
 }
 
 .order-form__item-element-box {

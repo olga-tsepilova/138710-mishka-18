@@ -12,7 +12,7 @@
   font-size: 1.3rem;
   line-height: 2;
   margin: 0;
-  padding: 30px 0;
+  padding: $padding-usual 0;
 }
 
 .review__author {
@@ -25,7 +25,7 @@
 }
 
 .review__link {
-  color: #444444;
+  color: $color-title;
   font-size: 1.3rem;
   text-decoration: none;
 

@@ -9,3 +9,25 @@
 @mixin transition {
   transition: all 200ms ease-in-out;
 }
+
+/* img adaptive */
+@mixin adaptive-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* wrapper for img adaptive */
+@mixin adaptive-img-wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* zero position */
+@mixin position-zero {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

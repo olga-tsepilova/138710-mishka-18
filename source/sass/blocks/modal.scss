@@ -1,10 +1,7 @@
 .modal {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
 
+  @include position-zero;
   @include flex-center-vh;
   background: rgba(255, 255, 255, 0.9);
   z-index: 99999;
@@ -22,15 +19,15 @@
 .modal__dialog {
   width: 100%;
   position: relative;
-  padding: 30px;
-  border-top: 1px solid #c7c7c7;
-  border-bottom: 1px solid #c7c7c7;
+  padding: $padding-usual;
+  border-top: 1px solid $border-color-grey;
+  border-bottom: 1px solid $border-color-grey;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .close {
-  background: #606061;
-  color: #ffffff;
+  background: $bg-color-dark;
+  color: $light-text;
   line-height: 25px;
   position: absolute;
   right: 0;
@@ -40,9 +37,8 @@
   text-decoration: none;
   font-weight: bold;
   border-radius: 12px;
-  box-shadow: 1px 1px 3px #000000;
 }
 
 .close:hover {
-  background: #63d1bb;
+  background: $color-tiffany;
 }
