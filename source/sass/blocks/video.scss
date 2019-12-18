@@ -2,29 +2,28 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 2em 0;
+  padding: 0 0 30px;
   border: 1px solid #ececec;
 }
 
 .video__header {
-  position: relative;
+  display: flex;
+
+  &::before {
+    content: "";
+    width: 90px;
+    min-height: 90px;
+    background: url("../img/icon-video.svg") no-repeat center;
+    background-size: 32px auto;
+  }
 }
 
 .video__title {
   display: flex;
-  justify-content: center;
-  padding: 0 0 1.5em 5em;
+  align-items: center;
+  padding: 0;
   font-weight: bold;
   font-size: 1.7rem;
   line-height: 1.1;
   color: #000000;
-}
-
-.video__title-icon {
-  position: absolute;
-  top: 0;
-  left: 2em;
-  width: 32px;
-  height: auto;
-  fill: #63d1bb;
 }
