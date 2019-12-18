@@ -17,11 +17,16 @@
       <a class="main-header__logo-link" href="index.html" aria-label="Переход на главную страницу">
         <img class="main-header__logo-img logo" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35" src="img/logo-mobile.svg">
       </a>
-      <button class="nav__toggle nav__toggle--open" type="button" aria-label="Открыть меню"></button>
-      <nav class="main-header__nav nav visually-hidden">
+
+      <nav class="main-header__nav nav">
+
+        <input class="nav__toggle-button" id="main-header-navigation" type="checkbox">
+        <label class="nav__toggle" for="main-header-navigation" aria-label="Меню"></label>
+
+
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link nav__link--active">
+            <a class="nav__link" href="catalog.html">
               Каталог товаров
             </a>
           </li>
@@ -30,18 +35,19 @@
               Вязание на заказ
             </a>
           </li>
-          <li class="nav__item nav__item--search">
-            <a class="nav__link" href="/">
+          <li class="nav__item">
+            <a class="nav__link nav__link--search" href="/">
               Поиск по сайту
             </a>
           </li>
-          <li class="nav__item nav__item--basket">
-            <a class="nav__link" href="/">
+          <li class="nav__item">
+            <a class="nav__link nav__link--basket" href="/">
               Корзина пока пуста
             </a>
           </li>
         </ul>
       </nav>
+
       <strong class="main-header__delivery-info visually-hidden">Бесплатная доставка по России</strong>
     </header>
     <!-- ================= /шапка проекта  ================= -->
@@ -142,7 +148,7 @@
             По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
           </p>
           <div class="video-box__button-order">
-            <a class="button button--outline " href="/">
+            <a class="button button--outline " href="#open-modal">
               Сделать заказ
             </a>
           </div>
@@ -213,32 +219,41 @@
   <!-- ================= /ОБЕРТКА ДЛЯ СТРАНИЦЫ  ================= -->
 
   <!-- модалка заказа -->
-    <div class="modal">
-      <div class="modal__order-form">
-        <form class="order-form" action="https://echo.htmlacademy.ru" method="get">
-            <h6 class="order-form__title">
-              Добавить в корзину
-            </h6>
-          <fieldset class="order-form__item">
-            <legend class="order-form__title">Выберите размер:</legend>
+  <div class="modal" id="open-modal">
+    <div class="modal__dialog">
+      <!--
+      <a href="#close" title="Close" class="close">X</a>
+      элемент, закрывающий модалку. в дизе нет, но вообще нужен
+      -->
 
-            <label class="order-form__element">
+      <form class="order-form" action="https://echo.htmlacademy.ru" method="get">
+        <strong class="order-form__title">
+          Добавить в корзину
+        </strong>
+        <fieldset class="order-form__item">
+          <legend class="order-form__item-title">Выберите размер:</legend>
+
+          <div class="order-form__item-element-box">
+            <label class="order-form__item-element">
               <input  class="order-form__radio-input" type="radio" name="size" value="size-s">
-              <span class="order-form__element-value">s</span>
+              <span class="order-form__item-element-value">s</span>
             </label>
-            <label class="order-form__element">
+            <label class="order-form__item-element">
               <input class="order-form__radio-input" type="radio" name="size" value="size-m">
-              <span class="order-form__element-value">m</span>
+              <span class="order-form__item-element-value">m</span>
             </label>
-            <label class="order-form__element">
+            <label class="order-form__item-element">
               <input class="order-form__radio-input" type="radio" name="size" value="size-l">
-              <span class="order-form__element-value">l</span>
+              <span class="order-form__item-element-value">l</span>
             </label>
-          </fieldset>
-          <button class="button button--green" type="button">Добавить</button>
-        </form>
-      </div>
+          </div>
+
+        </fieldset>
+        <button class="button button--green" type="button">Добавить</button>
+      </form>
     </div>
-    <!-- /модалка заказа -->
+  </div>
+  <!-- /модалка заказа -->
+
   </body>
 </html>
