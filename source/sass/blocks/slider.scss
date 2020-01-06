@@ -17,9 +17,9 @@
   width: 50%;
   height: 50px;
   float: left;
-  background-color: $bg-color-usual;
+  background-color: $white;
   text-decoration: none;
-  border: 1px solid $border-color-usual;
+  border: 1px solid $extra-light-grey;
 
   &--back {
     background-image: url("../img/icon-left-arrow.svg");

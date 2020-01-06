@@ -14,11 +14,11 @@
 @import "global/layouts";
 
 /* ===== header ===== */
-@import "blocks/main-header";
+@import "global/main-header";
 @import "global/nav";
 
 /* ===== footer ===== */
-@import "blocks/main-footer";
+@import "global/main-footer";
 
 /* ===== developer ===== */
 @import "blocks/developer";
@@ -26,13 +26,13 @@
 /* ===== content ===== */
 
 /* function elements */
-@import "blocks/modal";
+@import "global/modal";
 @import "blocks/slider";
-@import "blocks/button";
+@import "global/button";
 
 
 /* description info on page  */
-@import "blocks/main-content";
+@import "global/main-content";
 @import "blocks/intro";
 @import "blocks/promo";
 @import "blocks/content-box";

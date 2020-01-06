@@ -1,0 +1,38 @@
+.button {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  color: $grey-dark;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 0;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: $white;
+  border: 2px solid $grey-dark;
+
+  @include transition;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $grey-dark;
+    color: $white;
+  }
+}
+
+.button--green {
+  background-color: $tiffany-dark;
+  border: 2px solid $tiffany-dark;
+  color: $white;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $white;
+    border: 2px solid $tiffany-dark;
+    color: $tiffany-dark;
+  }
+}
