@@ -1,8 +1,27 @@
 .main-footer {
   background-color: #f1f1f1;
   padding: 0 $padding-usual;
+
+  @include bp-tablet {
+    display: flex;
+    height: 143px;
+    padding: 0 $padding-usual-tab;
+  }
+}
+
+.main-footer__logo-link {
+  @include bp-tablet {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 33%;
+  }
 }
 
 .main-footer__developer {
   border-top: 1px solid #e5e5e5;
+
+  @include bp-tablet {
+    border-top: none;
+  }
 }

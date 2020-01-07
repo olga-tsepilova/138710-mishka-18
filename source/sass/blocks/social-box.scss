@@ -1,6 +1,11 @@
 .social-box {
   width: 100%;
   padding: 0;
+
+  @include bp-tablet {
+    @include flex-center-vh;
+    width: 33%;
+  }
 }
 
 .social-box__list {

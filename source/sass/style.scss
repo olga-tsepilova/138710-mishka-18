@@ -16,6 +16,11 @@
 @import "base/hidden";
 @import "global/layouts";
 
+/* function elements */
+@import "global/button";
+@import "global/modal";
+@import "blocks/slider";
+
 /* ===== header ===== */
 @import "global/main-header";
 @import "global/nav";
@@ -27,13 +32,6 @@
 @import "blocks/developer";
 
 /* ===== content ===== */
-
-/* function elements */
-@import "global/button";
-@import "global/modal";
-@import "blocks/slider";
-
-
 /* description info on page  */
 @import "global/main-content";
 @import "blocks/intro";

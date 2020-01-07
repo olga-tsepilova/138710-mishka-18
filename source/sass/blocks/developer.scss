@@ -4,6 +4,12 @@
   font-size: 1.6rem;
   color: $black;
   font-weight: bold;
+
+  @include bp-tablet {
+    width: 33%;
+    font-size: 1.9rem;
+    padding: $padding-usual-tab 0;
+  }
 }
 
 .developer__link {
@@ -13,6 +19,10 @@
 
   &:focus {
     opacity: 30%;
+  }
+
+  @include bp-tablet {
+    justify-content: flex-end;
   }
 }
 
