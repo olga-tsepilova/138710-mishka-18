@@ -4,13 +4,25 @@
   background-repeat: repeat-x;
   background-size: 100%;
   padding: $padding-usual 0 40px;
+
+  @include bp-tablet {
+    padding: $padding-usual-tab 0;
+  }
 }
 
 .contacts__header {
   padding: 20px $padding-usual 40px;
+
+  @include bp-tablet {
+    padding: 38px $padding-usual-tab;
+  }
 }
 
 .contacts__title {
   font-size: 1.6rem;
   padding: 0;
+
+  @include bp-tablet {
+    font-size: 4.3rem;
+  }
 }

@@ -8,6 +8,10 @@
   height: 80px;
   background: url("../img/icon-menu-open.svg") no-repeat center;
   background-size: 20px 14px;
+
+  @include bp-tablet {
+    display: none;
+  }
 }
 
 .nav__toggle-button {
@@ -22,6 +26,31 @@
   border-top: 1px solid $extra-light-grey;
 
   @include transition;
+
+  @include bp-tablet {
+    max-height: 200px;
+    overflow: visible;
+  }
+
+  &--addinfo {
+    border-top: none;
+
+    @include bp-tablet {
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  &--production {
+    @include bp-tablet {
+      position: absolute;
+      display: flex;
+      width: 50%;
+      bottom: -80px;
+      left: 25px;
+      border-top: none;
+    }
+  }
 }
 
 .nav__link {
@@ -52,6 +81,12 @@
     width: 21px;
     height: 80px;
     opacity: 0.2;
+
+    @include bp-tablet {
+      top: 0;
+      left: 32px;
+      height: 88px;
+    }
   }
 
   &--search::before {
@@ -62,6 +97,36 @@
   &--basket::before {
     background: url("../../img/icon-cart.svg") no-repeat center;
     background-size: 21px 18px;
+  }
+
+  &--search {
+    @include bp-tablet {
+      width: 82px;
+      height: 88px;
+      padding: 0 0 0 83px;
+      overflow: hidden;
+      border-bottom: none;
+      border-left: 1px solid $extra-light-grey;
+    }
+  }
+
+  &--basket {
+    @include bp-tablet {
+      height: 88px;
+      padding: 0 0 0 83px;
+      overflow: hidden;
+      border-bottom: none;
+      border-left: 1px solid $extra-light-grey;
+    }
+  }
+}
+
+
+@include bp-tablet {
+  .nav__list--production .nav__link {
+    font-size: 1.5rem;
+    border: none;
+    padding: 0 25px;
   }
 }
 

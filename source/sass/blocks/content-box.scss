@@ -1,6 +1,10 @@
 .content-box {
   width: 100%;
   padding: $padding-usual;
+
+  @include bp-tablet {
+    padding: $padding-usual-tab;
+  }
 }
 
 .content-box__description {

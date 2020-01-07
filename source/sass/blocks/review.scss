@@ -1,6 +1,13 @@
 .review {
+  position: relative;
   width: 100%;
   padding-bottom: 44px;
+
+  @include bp-tablet {
+    min-height: 457px;
+    background: url("../img/review@1x.jpg") no-repeat 0 0;
+    margin: 0 0 $padding-usual-tab;
+  }
 }
 
 .review__blockquote {
@@ -13,15 +20,26 @@
   line-height: 2;
   margin: 0;
   padding: $padding-usual 0;
+
+  @include bp-tablet {
+    font-size: 1.7rem;
+    line-height: 1.76;
+    padding: $padding-usual-tab 0;
+  }
 }
 
 .review__author {
-  display: block;
+  display: flex;
   width: 100%;
   padding: 0 0 15px;
   font-size: 1.7rem;
   font-weight: bold;
   font-style: normal;
+
+  @include bp-tablet {
+    width: 50%;
+    font-size: 1.8rem;
+  }
 }
 
 .review__link {
@@ -34,4 +52,11 @@
   &:active {
     color: #46c1ae;
   }
+
+  @include bp-tablet {
+    display: flex;
+    width: 50%;
+    font-size: 1.7rem;
+  }
+
 }

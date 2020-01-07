@@ -1,8 +1,20 @@
 .main-header {
   position: relative;
+  min-height: 80px;
   text-align: center;
   border-top: 1px solid $extra-light-grey;
-  min-height: 80px;
+
+  @include bp-tablet {
+    & {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 88px;
+      height: 88px;
+      text-align: left;
+      border-top: none;
+      border-bottom: 1px solid $extra-light-grey;
+    }
+  }
 }
 
 .main-header__logo-link {
@@ -10,4 +22,32 @@
   height: 80px;
   width: 50%;
   margin: 0 auto;
+
+  @include bp-tablet {
+    justify-content: flex-start;
+    width: 50%;
+    height: 88px;
+    padding: 0 0 0 50px;
+  }
+}
+
+.main-header__nav {
+  @include bp-tablet {
+    width: 50%;
+  }
+}
+
+.main-header__delivery-info {
+  @include bp-tablet {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 80px;
+    width: 50%;
+    margin: 0 0 0 50%;
+    padding: 0 50px 0 0;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: $grey-dark;
+  }
 }

@@ -5,6 +5,9 @@
 @import "base/variables";
 @import "base/mixins";
 
+/* =====  TEST  ===== */
+/*@import "global/adaptive-test";*/
+
 /* =====  typography ===== */
 @import "base/font-face";
 @import "base/base";
@@ -26,9 +29,9 @@
 /* ===== content ===== */
 
 /* function elements */
+@import "global/button";
 @import "global/modal";
 @import "blocks/slider";
-@import "global/button";
 
 
 /* description info on page  */

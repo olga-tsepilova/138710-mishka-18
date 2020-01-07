@@ -5,6 +5,13 @@
   font-size: 1.3rem;
   line-height: 2;
   padding: 0 $padding-usual;
+
+  @include bp-tablet {
+    flex-direction: row;
+    padding: 0 $padding-usual-tab;
+    font-size: 1.7rem;
+    line-height: 1.7;
+  }
 }
 
 .contacts-info__item {
@@ -14,10 +21,18 @@
   &:last-child {
     padding: 0;
   }
+
+  @include bp-tablet {
+     width: 50%;
+  }
 }
 
 .contacts-info__parameter {
   min-width: 30%;
+
+  @include bp-tablet {
+    min-width: 25%;
+  }
 }
 
 .contacts-info__link-email {
@@ -34,8 +49,19 @@
   &:focus {
     opacity: 0.3;
   }
+
+  @include bp-tablet {
+    padding: 0.5rem 0 0;
+    height: 30px;
+  }
+
 }
 
 .contacts-info__button-box {
   padding: 0 2em;
+
+  @include bp-tablet {
+    width: 230px;
+    margin: 0 auto;
+  }
 }

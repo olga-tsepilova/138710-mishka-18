@@ -1,0 +1,22 @@
+.index-bg {
+  background-image: url("../../img-test/mishka-index-mobile.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  @include bp-tablet {
+    & {
+      background-image: url("../../img-test/mishka-index-tablet.jpg");
+      background-position: top center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @include bp-desktop {
+    & {
+      background-image: url("../../img-test/mishka-index-desktop.jpg");
+      background-position: top center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+

@@ -6,7 +6,7 @@
     <title>Мишка - Интернет-магазин игрушек ручной работы</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="index-bg">
     <!-- ================= ОБЕРТКА ДЛЯ СТРАНИЦЫ  ================= -->
     <div class="main-wrapper">
 
@@ -22,7 +22,7 @@
           <label class="nav__toggle" for="main-header-navigation" aria-label="Меню"></label>
 
 
-          <ul class="nav__list">
+          <ul class="nav__list nav__list--production">
             <li class="nav__item">
               <a class="nav__link" href="catalog.html">
                 Каталог товаров
@@ -33,6 +33,8 @@
                 Вязание на заказ
               </a>
             </li>
+          </ul>
+          <ul class="nav__list nav__list--addinfo">
             <li class="nav__item">
               <a class="nav__link nav__link--search" href="/">
                 Поиск по сайту
@@ -48,7 +50,7 @@
 
 
 
-        <strong class="main-header__delivery-info  visually-hidden">Бесплатная доставка по России</strong>
+        <strong class="main-header__delivery-info  visually-hidden-mob">Бесплатная доставка по России</strong>
       </header>
       <!-- ================= /шапка проекта  ================= -->
 
@@ -95,33 +97,36 @@
             </h2>
             <strong class="product-week__header-mark">Товар недели</strong>
           </header>
-          <p class="product-week__description">
-            Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.
-          </p>
-          <table class="product-info">
-            <tr class="product-info__row">
-              <td class="product-info__parameter">Цвет:</td>
-              <td class="product-info__value">«Тиффани»/серый</td>
-            </tr>
-            <tr class="product-info__row">
-              <td class="product-info__parameter">Диаметр:</td>
-              <td class="product-info__value">25 см</td>
-            </tr>
-            <tr class="product-info__row">
-              <td class="product-info__parameter">Высота:</td>
-              <td class="product-info__value">15 см</td>
-            </tr>
-          </table>
 
-          <div class="product-week__photo">
-            <img class="product-week__img" alt="Вязаные корзинки" width="260" height="315" src="img/triple-set-mobile@1x.jpg">
+          <div class="product-week__databox">
+            <p class="product-week__description">
+              Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.
+            </p>
+            <table class="product-info">
+              <tr class="product-info__row">
+                <td class="product-info__parameter">Цвет:</td>
+                <td class="product-info__value">«Тиффани»/серый</td>
+              </tr>
+              <tr class="product-info__row">
+                <td class="product-info__parameter">Диаметр:</td>
+                <td class="product-info__value">25 см</td>
+              </tr>
+              <tr class="product-info__row">
+                <td class="product-info__parameter">Высота:</td>
+                <td class="product-info__value">15 см</td>
+              </tr>
+            </table>
+
+            <div class="product-week__photo">
+              <img class="product-week__img" alt="Вязаные корзинки" width="260" height="315" src="img/triple-set-mobile@1x.jpg">
+            </div>
+            <div class="product-week__cost">
+              Цена: 990 руб.
+            </div>
+            <a class="button button--outline" href="#open-modal">
+              Заказать
+            </a>
           </div>
-          <div class="product-week__cost">
-            Цена: 990 руб.
-          </div>
-          <a class="button button--outline" href="#open-modal">
-            Заказать
-          </a>
         </section>
         <!-- /товар недели -->
 
@@ -143,7 +148,8 @@
             <li class="about-us__list-item about-us__list-item--likes">
               Увеличивает лайки на фотографиях
             </li>
-
+          </ul>
+          <ul class="about-us__list">
             <li class="about-us__list-item about-us__list-item--handwork">
               Связано вручную с любовью и умилением
             </li>
@@ -185,7 +191,7 @@
           </div>
           <!-- /слайдер -->
 
-          <a class="button button--outline" href="/">
+          <a class="button button--outline slider__button" href="/">
             Написать
           </a>
         </section>
