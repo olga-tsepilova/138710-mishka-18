@@ -1,13 +1,25 @@
 .video {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: 0 0 $padding-usual;
   border: 1px solid $extra-light-grey;
+
+  @include bp-tablet {
+    padding: 0;
+    border: none;
+  }
 }
 
 .video__header {
   display: flex;
+
+  @include bp-tablet {
+    padding-left: $padding-usual-tab;
+    border: 1px solid $extra-light-grey;
+    border-bottom: 0;
+  }
 
   &::before {
     content: "";
@@ -15,6 +27,12 @@
     min-height: 90px;
     background: url("../img/icon-video.svg") no-repeat center;
     background-size: 32px auto;
+
+    @include bp-tablet {
+      width: 77px;
+      min-height: 100px;
+      background-position: left center;
+    }
   }
 }
 
@@ -26,4 +44,9 @@
   font-size: 1.7rem;
   line-height: 1.1;
   color: $black;
+
+  @include bp-tablet {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
 }

@@ -3,9 +3,20 @@
   min-height: 176px;
   background-color: #f1f1f1;
   color: $black;
+
+  @include bp-tablet {
+    min-height: 223px;
+    padding-top: 24px;
+    background: #f1f1f1 url(../img/bg-zigzag-fill.svg) repeat-x 0 bottom;
+    background-size: auto 24px;
+  }
 }
 
 .intro__title {
   font-size: 2.7rem;
   line-height: 1.1;
+
+  @include bp-tablet {
+    font-size: 4.3rem;
+  }
 }

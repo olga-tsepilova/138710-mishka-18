@@ -2,6 +2,10 @@
   position: relative;
 
   @include flex-center-vh;
+
+  @include bp-tablet {
+    order: -1;
+  }
 }
 
 .video-box__prewiew {
@@ -37,8 +41,22 @@
   line-height: 2;
   padding: $padding-usual;
   margin: 0;
+
+  @include bp-tablet {
+    padding: $padding-usual-tab;
+    padding-top: 0;
+    font-size: 1.5rem;
+    border-left: 1px solid $extra-light-grey;
+    border-right: 1px solid $extra-light-grey;
+  }
 }
 
 .video-box__button-order {
   padding: 0 $padding-usual;
+
+  @include bp-tablet {
+    padding: 0 $padding-usual-tab $padding-usual-tab;
+    border: 1px solid $extra-light-grey;
+    border-top: none;
+  }
 }
