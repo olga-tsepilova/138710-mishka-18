@@ -15,6 +15,15 @@
 
   @include bp-tablet {
     padding: 38px $padding-usual-tab;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 47px;
+      height: 81px;
+      background: url("../img/icon-flag.svg") no-repeat right center;
+      background-size: auto 81px;
+    }
   }
 }
 
@@ -23,6 +32,8 @@
   padding: 0;
 
   @include bp-tablet {
+    display: flex;
+    align-items: center;
     font-size: 4.3rem;
   }
 }
