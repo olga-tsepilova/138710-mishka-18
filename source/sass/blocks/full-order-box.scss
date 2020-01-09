@@ -1,20 +1,22 @@
-.content-box {
+.full-order-box {
   width: 100%;
   padding: $padding-usual;
 
   @include bp-tablet {
-    padding: $padding-usual-tab;
+    padding: $padding-usual-tab 0;
   }
 }
 
-.content-box__description {
+.full-order-box__description {
   font-size: 1.3rem;
   line-height: 1.84;
   padding: 0;
   margin: 0;
 
   @include bp-tablet {
+    padding: 0 $padding-usual-tab;
     font-size: 1.7rem;
     line-height: 1.7;
+
   }
 }

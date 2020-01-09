@@ -13,7 +13,7 @@
   <div class="main-wrapper">
     <!-- ================= шапка проекта  ================= -->
     <header class="main-header">
-      <a class="main-header__logo-link" href="index.html">
+      <a class="main-header__logo-link" href="index.html" aria-label="Переход на главную страницу">
         <img class="main-header__logo-img logo" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35" src="img/logo-mobile.svg">
       </a>
 
@@ -23,7 +23,7 @@
         <label class="nav__toggle" for="main-header-navigation" aria-label="Меню"></label>
 
 
-        <ul class="nav__list">
+        <ul class="nav__list nav__list--production">
           <li class="nav__item">
             <a class="nav__link" href="catalog.html">
               Каталог товаров
@@ -34,6 +34,8 @@
               Вязание на заказ
             </a>
           </li>
+        </ul>
+        <ul class="nav__list nav__list--addinfo">
           <li class="nav__item">
             <a class="nav__link nav__link--search" href="/">
               Поиск по сайту
@@ -47,7 +49,7 @@
         </ul>
       </nav>
 
-      <strong class="main-header__delivery-info  visually-hidden">Бесплатная доставка по России</strong>
+      <strong class="main-header__delivery-info visually-hidden-mob">Бесплатная доставка по России</strong>
     </header>
     <!-- ================= /шапка проекта  ================= -->
 
@@ -60,8 +62,8 @@
       </section>
 
       <!-- форма заказа нового изделия -->
-      <section class="content-box">
-        <p class="content-box__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <section class="full-order-box">
+        <p class="full-order-box__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
         <form class="full-order-form" action="https://echo.htmlacademy.ru" method="post">
 
@@ -71,17 +73,19 @@
               <span class="full-order-form__title-text">Тип</span>
             </legend>
 
-            <label class="full-order-form__element">
-              <input class="full-order-form__radio visually-hidden" type="radio" name="product-
+            <div class="full-order-form__element-box">
+              <label class="full-order-form__element">
+                <input class="full-order-form__radio visually-hidden" type="radio" name="product-
 type" value="product-type-accessory" checked>
-              <span class="full-order-form__value full-order-form__value--radio">Аксессуар для
+                <span class="full-order-form__value full-order-form__value--radio">Аксессуар для
 интерьера</span>
-            </label>
-            <label class="full-order-form__element">
-              <input class="full-order-form__radio visually-hidden" type="radio" name="product-
+              </label>
+              <label class="full-order-form__element">
+                <input class="full-order-form__radio visually-hidden" type="radio" name="product-
 type" value="product-type-toy">
-              <span class="full-order-form__value full-order-form__value--radio">Детская игрушка</span>
-            </label>
+                <span class="full-order-form__value full-order-form__value--radio">Детская игрушка</span>
+              </label>
+            </div>
           </fieldset>
           <!-- /тип: Аксессуар / игрушка-->
 
@@ -91,36 +95,38 @@ type" value="product-type-toy">
               <span class="full-order-form__title-text">Цвет</span>
             </legend>
 
-            <label class="full-order-form__element">
-              <input  class="full-order-form__checkbox visually-hidden" type="checkbox" name="product-
-color" value="product-color-white" checked>
-              <span class="full-order-form__value full-order-form__value--checkbox">Белый</span>
-            </label>
-            <label class="full-order-form__element">
-              <input  class="full-order-form__checkbox visually-hidden" type="checkbox" name="product-
-color" value="product-color-gray" checked>
-              <span class="full-order-form__value full-order-form__value--checkbox">Серый</span>
-            </label>
-            <label class="full-order-form__element">
-              <input  class="full-order-form__checkbox visually-hidden" type="checkbox" name="product-
-color" value="product-color-tiffany">
-              <span class="full-order-form__value full-order-form__value--checkbox">«Тиффани»</span>
-            </label>
-            <label class="full-order-form__element">
-              <input  class="full-order-form__checkbox visually-hidden" type="checkbox" name="product-
-color" value="product-color-black">
-              <span class="full-order-form__value full-order-form__value--checkbox">Черный</span>
-            </label>
-            <label class="full-order-form__element">
-              <input  class="full-order-form__checkbox visually-hidden" type="checkbox" name="product-
-color" value="product-color-pink">
-              <span class="full-order-form__value full-order-form__value--checkbox">Розовый</span>
-            </label>
-            <label class="full-order-form__element">
-              <input  class="full-order-form__checkbox visually-hidden" type="checkbox" name="product-
-color" value="product-color-orange">
-              <span class="full-order-form__value full-order-form__value--checkbox">Оранжевый</span>
-            </label>
+            <div class="full-order-form__element-box">
+              <label class="full-order-form__element full-order-form__element--checkbox">
+                <input  class="full-order-form__checkbox visually-hidden" type="checkbox" name="product-
+  color" value="product-color-white" checked>
+                <span class="full-order-form__value full-order-form__value--checkbox">Белый</span>
+              </label>
+              <label class="full-order-form__element full-order-form__element--checkbox">
+                <input  class="full-order-form__checkbox visually-hidden" type="checkbox" name="product-
+  color" value="product-color-gray" checked>
+                <span class="full-order-form__value full-order-form__value--checkbox">Серый</span>
+              </label>
+              <label class="full-order-form__element full-order-form__element--checkbox">
+                <input  class="full-order-form__checkbox visually-hidden" type="checkbox" name="product-
+  color" value="product-color-tiffany">
+                <span class="full-order-form__value full-order-form__value--checkbox">«Тиффани»</span>
+              </label>
+              <label class="full-order-form__element full-order-form__element--checkbox">
+                <input  class="full-order-form__checkbox visually-hidden" type="checkbox" name="product-
+  color" value="product-color-black">
+                <span class="full-order-form__value full-order-form__value--checkbox">Черный</span>
+              </label>
+              <label class="full-order-form__element full-order-form__element--checkbox">
+                <input  class="full-order-form__checkbox visually-hidden" type="checkbox" name="product-
+  color" value="product-color-pink">
+                <span class="full-order-form__value full-order-form__value--checkbox">Розовый</span>
+              </label>
+              <label class="full-order-form__element full-order-form__element--checkbox">
+                <input  class="full-order-form__checkbox visually-hidden" type="checkbox" name="product-
+  color" value="product-color-orange">
+                <span class="full-order-form__value full-order-form__value--checkbox">Оранжевый</span>
+              </label>
+            </div>
           </fieldset>
           <!-- /Цвет-->
 
@@ -131,31 +137,35 @@ color" value="product-color-orange">
               <span class="full-order-form__title-text">ФИО</span>
             </legend>
 
-            <label class="full-order-form__element">
-              <span class="full-order-form__value">Имя:</span>
-              <input class="full-order-form__text-input" type="text" name="customer-name" placeholder="Введите ваше имя*" required>
-            </label>
-            <label class="full-order-form__element">
-              <span class="full-order-form__value">Фамилия:</span>
-              <input class="full-order-form__text-input" type="text" name="customer-name" placeholder="Укажите фамилию*" required>
-            </label>
-            <label class="full-order-form__element">
-              <span class="full-order-form__value">Отчество:</span>
-              <input class="full-order-form__text-input" type="text" name="customer-name" placeholder="Отчество, если желаете">
-            </label>
+            <div class="full-order-form__element-box">
+              <label class="full-order-form__element full-order-form__element--fullname">
+                <span class="full-order-form__value full-order-form__value--fullname">Имя:</span>
+                <input class="full-order-form__text-input" type="text" name="customer-name" placeholder="Введите ваше имя*" required>
+              </label>
+              <label class="full-order-form__element full-order-form__element--fullname">
+                <span class="full-order-form__value full-order-form__value--fullname">Фамилия:</span>
+                <input class="full-order-form__text-input" type="text" name="customer-name" placeholder="Укажите фамилию*" required>
+              </label>
+              <label class="full-order-form__element full-order-form__element--fullname">
+                <span class="full-order-form__value full-order-form__value--fullname">Отчество:</span>
+                <input class="full-order-form__text-input" type="text" name="customer-name" placeholder="Отчество, если желаете">
+              </label>
+            </div>
+
           </fieldset>
           <!-- /ФИО-->
 
 
           <!-- тел-->
-          <fieldset class="full-order-form__fieldset">
+          <fieldset class="full-order-form__fieldset full-order-form__fieldset--phone">
             <legend class="full-order-form__title">
               <span class="full-order-form__title-text">Тел</span></legend>
 
-            <label class="full-order-form__element">
-              <input class="full-order-form__text-input" type="tel" name="customer-name" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+            <div class="full-order-form__element-box">
+              <label class="full-order-form__element">
+                <input class="full-order-form__text-input" type="tel" name="customer-name" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
 
-              <svg class=" full-order-form__icon" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24.829px" height="24.333px" viewBox="0 0 24.829 24.333" enable-background="new 0 0 24.829 24.333" xml:space="preserve">
+                <svg class=" full-order-form__icon" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24.829px" height="24.333px" viewBox="0 0 24.829 24.333" enable-background="new 0 0 24.829 24.333" xml:space="preserve">
                 <g>
                   <g id="UrwUhy_2_">
                     <g>
@@ -168,24 +178,28 @@ color" value="product-color-orange">
                 </g>
               </svg>
 
-            </label>
+              </label>
+            </div>
+
           </fieldset>
           <!-- /тел-->
 
           <!-- E-mail-->
-          <fieldset class="full-order-form__fieldset">
+          <fieldset class="full-order-form__fieldset full-order-form__fieldset--email">
             <legend class="full-order-form__title">
               <span class="full-order-form__title-text">E-mail</span>
             </legend>
 
-            <label class="full-order-form__element">
-              <input class="full-order-form__text-input" type="email" name="customer-name" placeholder="Ваш Email*" required>
+            <div class="full-order-form__element-box">
+              <label class="full-order-form__element">
+                <input class="full-order-form__text-input" type="email" name="customer-name" placeholder="Ваш Email*" required>
 
-              <svg class=" full-order-form__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+                <svg class=" full-order-form__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                 <path id="mail" d="M28,5H4C1.791,5,0,6.792,0,9v13c0,2.209,1.791,4,4,4h24c2.209,0,4-1.791,4-4V9 C32,6.792,30.209,5,28,5z M2,10.25l6.999,5.25L2,20.75V10.25z M30,22c0,1.104-0.898,2-2,2H4c-1.103,0-2-0.896-2-2l7.832-5.875 l4.368,3.277c0.533,0.397,1.166,0.6,1.8,0.6c0.633,0,1.266-0.201,1.799-0.6l4.369-3.277L30,22L30,22z M30,20.75l-7-5.25l7-5.25 V20.75z M17.199,18.602c-0.35,0.263-0.763,0.4-1.199,0.4s-0.851-0.139-1.2-0.4L10.665,15.5l-0.833-0.625L2,9.001V9 c0-1.103,0.897-2,2-2h24c1.102,0,2,0.897,2,2L17.199,18.602z"/>
               </svg>
 
-            </label>
+              </label>
+            </div>
           </fieldset>
           <!-- /E-mail-->
 
@@ -195,15 +209,20 @@ color" value="product-color-orange">
               <span class="full-order-form__title-text">Доп</span>
             </legend>
 
-            <label class="full-order-form__element">
-              <textarea class="full-order-form__textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-            </label>
+            <div class="full-order-form__element-box">
+              <label class="full-order-form__element">
+                <textarea class="full-order-form__textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              </label>
+            </div>
           </fieldset>
           <!-- /комментарий к заказу -->
 
-          <p class="full-order-form__remark">*Поля обязательны для заполнения</p>
+          <div class="full-order-form__button-box">
+            <p class="full-order-form__remark">*Поля обязательны для заполнения</p>
 
-          <button class="button button--outline" type="submit">Отправить заказ</button>
+            <button class="button button--outline full-order-form__button" type="submit">Отправить заказ</button>
+          </div>
+
         </form>
       </section>
       <!-- /форма заказа нового изделия -->
@@ -212,8 +231,8 @@ color" value="product-color-orange">
 
     <!-- =================  подвал проекта   ================= -->
     <footer class="main-footer">
-      <a class="main-footer__logo-link visually-hidden">
-        <img class="main-footer__logo-img logo" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35" src="https://via.placeholder.com/86x35">
+      <a class="main-footer__logo-link visually-hidden-mob">
+        <img class="main-footer__logo-img logo" alt="Мишка - Интернет-магазин игрушек ручной работы" width="102" height="34" src="img/logo-footer.svg">
       </a>
       <section class="social-box">
         <ul class="social-box__list">

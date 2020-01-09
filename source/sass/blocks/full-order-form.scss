@@ -1,10 +1,40 @@
 .full-order-form {
   width: 100%;
   padding: $padding-usual 0;
+
+  @include bp-tablet {
+    padding: $padding-usual-tab 0;
+  }
 }
 
 .full-order-form__fieldset {
   padding: 0 0 $padding-usual;
+
+  @include bp-tablet {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    padding: $padding-usual-tab;
+    margin: 0;
+
+    &:nth-child(2),
+    &:nth-child(4),
+    &:nth-child(5) {
+      background-color: $white-medium;
+    }
+  }
+
+  &--phone {
+    @include bp-tablet {
+      padding-bottom: 0;
+    }
+  }
+
+  &--email {
+    @include bp-tablet {
+      padding-top: 15px;
+    }
+  }
 }
 
 .full-order-form__title {
@@ -24,10 +54,30 @@
     background: #61d3bc;
     flex-grow: 1;
   }
+
+  @include bp-tablet {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 52px;
+    line-height: 52px;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .full-order-form__title-text {
   padding: 0 $padding-usual 0 0;
+}
+
+.full-order-form__element-box {
+  @include bp-tablet {
+    display: block;
+    float: right;
+    width: 75%;
+  }
 }
 
 .full-order-form__element {
@@ -44,6 +94,20 @@
   &:last-child {
     padding: 0;
   }
+
+  @include bp-tablet {
+    font-size: 1.9rem;
+
+    &--checkbox {
+      display: block;
+      float: left;
+      width: 50%;
+    }
+
+    &--fullname {
+      flex-wrap: nowrap;
+    }
+  }
 }
 
 .full-order-form__value {
@@ -56,6 +120,11 @@
     padding-left: 5em;
     align-items: center;
     min-height: 40px;
+
+    @include bp-tablet {
+      min-height: 52px;
+      padding-left: 4.5em;
+    }
   }
 
   &--radio::before,
@@ -69,6 +138,11 @@
     border: 2px solid #434343;
 
     @include transition;
+
+    @include bp-tablet {
+      width: 52px;
+      height: 52px;
+    }
   }
 
   &--radio::before {
@@ -93,6 +167,13 @@
     opacity: 0;
 
     @include transition;
+
+    @include bp-tablet {
+      top: 17px;
+      left: 17px;
+      width: 22px;
+      height: 22px;
+    }
   }
 
   &--checkbox::after {
@@ -109,6 +190,22 @@
     opacity: 0;
 
     @include transition;
+
+    @include bp-tablet {
+      top: 15px;
+      left: 9px;
+      width: 33px;
+      height: 22px;
+      background-size: 33px 22px;
+    }
+  }
+
+  &--fullname {
+    @include bp-tablet {
+      @include flex-center-vh;
+      width: auto;
+      padding-right: 25px;
+    }
   }
 }
 
@@ -132,6 +229,15 @@
   &:active {
     border-bottom-color: #62d1ba;
   }
+
+  @include bp-tablet {
+    padding: 15px 17px;
+  }
+}
+
+.full-order-form__fieldset--phone .full-order-form__text-input,
+.full-order-form__fieldset--email .full-order-form__text-input {
+  background-color: $white-medium;
 }
 
 .full-order-form__icon {
@@ -141,6 +247,10 @@
   fill: $grey-light;
 
   @include transition;
+
+  @include bp-tablet {
+    right: 20px;
+  }
 }
 
 .full-order-form__element:hover .full-order-form__icon,
@@ -166,8 +276,33 @@
   }
 }
 
+
+.full-order-form__button-box {
+  @include bp-tablet {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $padding-usual-tab;
+  }
+}
+
 .full-order-form__remark {
   margin: 0;
   padding: 0 0 2em;
   font-size: 1.3rem;
+
+  @include bp-tablet {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    font-size: 1.7rem;
+    padding: 0;
+  }
+}
+
+.full-order-form__button {
+  @include bp-tablet {
+    order: -1;
+    width: 34%;
+  }
 }

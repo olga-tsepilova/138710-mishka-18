@@ -1,13 +1,13 @@
 .intro {
   @include flex-center-vh;
   min-height: 176px;
-  background-color: #f1f1f1;
+  background-color: $white-medium;
   color: $black;
 
   @include bp-tablet {
     min-height: 223px;
     padding-top: 24px;
-    background: #f1f1f1 url(../img/bg-zigzag-fill.svg) repeat-x 0 bottom;
+    background: $white-medium url(../img/bg-zigzag-fill.svg) repeat-x 0 bottom;
     background-size: auto 24px;
   }
 }
