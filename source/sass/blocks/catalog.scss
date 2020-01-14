@@ -8,6 +8,13 @@
     padding: $padding-usual-tab;
     padding-bottom: 0;
   }
+
+  @include bp-desktop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1150px;
+  }
 }
 
 .catalog__item {
@@ -26,6 +33,15 @@
       margin: 0;
     }
   }
+
+  @include bp-desktop {
+    flex-direction: column;
+    width: 31%;
+
+    &:last-child {
+      margin: 0 0 55px;
+    }
+  }
 }
 
 .catalog__img-wrapper {
@@ -39,6 +55,12 @@
     margin: 0;
     padding: 0;
   }
+
+  @include bp-desktop {
+    width: 100%;
+    flex-basis: 316px;
+    height: 462px;
+  }
 }
 
 .catalog__img {
@@ -46,6 +68,10 @@
 
   @include bp-tablet {
     height: 333px;
+  }
+
+  @include bp-desktop {
+    height: 462px;
   }
 }
 
@@ -57,6 +83,11 @@
     flex-direction: column;
     width: 50%;
     padding: $padding-usual $padding-usual 8px $padding-usual;
+  }
+
+  @include bp-desktop {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -97,6 +128,10 @@
     padding: 20px 0 $padding-usual;
     font-size: 1.5rem;
     line-height: 2;
+  }
+
+  @include bp-desktop {
+    padding: 15px 0;
   }
 }
 

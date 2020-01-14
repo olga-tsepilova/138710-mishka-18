@@ -10,6 +10,13 @@
     padding: 0;
     border: none;
   }
+
+  @include bp-desktop {
+    flex-wrap: wrap;
+    align-items: center;
+    height: 455px;
+    padding: 0 $padding-usual-tab 0 0;
+  }
 }
 
 .video__header {
@@ -19,6 +26,14 @@
     padding-left: $padding-usual-tab;
     border: 1px solid $extra-light-grey;
     border-bottom: 0;
+  }
+
+  @include bp-desktop {
+    flex-wrap: wrap;
+    width: 34.5%;
+    border-left: 0;
+    padding-left: 78px;
+    padding-top: 50px;
   }
 
   &::before {
@@ -32,6 +47,11 @@
       width: 77px;
       min-height: 100px;
       background-position: left center;
+    }
+
+    @include bp-desktop {
+      min-height: 53px;
+      background-position: left top;
     }
   }
 }
@@ -48,5 +68,10 @@
   @include bp-tablet {
     font-size: 2rem;
     line-height: 1.2;
+  }
+
+  @include bp-desktop {
+    width: 100%;
+    padding-right: 20%;
   }
 }
