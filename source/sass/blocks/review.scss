@@ -8,6 +8,13 @@
     background: url("../img/review@1x.jpg") no-repeat 0 0;
     margin: 0 0 $padding-usual-tab;
   }
+
+  @include bp-tablet {
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 175px;
+  }
 }
 
 .review__blockquote {

@@ -9,10 +9,19 @@
     flex-wrap: wrap;
     background-size: auto 15px;
   }
+
+  @include bp-desktop {
+    max-width: 1050px;
+    background-size: auto 20px;
+  }
 }
 
 .about-us__header {
   padding: 11px 0 0;
+
+  @include bp-desktop {
+    padding: 40px 0 0;
+  }
 }
 
 .about-us__list {
@@ -22,10 +31,13 @@
 
   @include bp-tablet {
     display: flex;
-    flex-direction: column;
-    width: 50%;
+    flex-wrap: wrap;
     padding: 0 30px 0 0;
     margin: $padding-usual-tab 0;
+  }
+
+  @include bp-desktop {
+    margin-bottom: 0;
   }
 }
 
@@ -79,10 +91,37 @@
   }
 
   @include bp-tablet {
-    width: 100%;
+    width: 50%;
+    padding: 0 10% 50px 0;
+
+    &--ecology {
+      order: 1;
+    }
+
+    &--style {
+      order: 3;
+    }
+
+    &--likes {
+      order: 5;
+    }
+
+    &--handwork {
+      order: 2;
+    }
+
+    &--support {
+      order: 4;
+    }
+
+    &--gift {
+      order: 6;
+    }
+
     font-size: 2rem;
     line-height: 1.1;
   }
+
 }
 
 .about-us__icon {

@@ -12,6 +12,10 @@
     padding: 165px 10% 0;
     background: #f9f9f9 url("../img/hero-tablet@1x.jpg") no-repeat center top;
   }
+
+  @include bp-desktop {
+    background: #f9f9f9 url("../img/hero-desktop@1x.jpg") no-repeat center top;
+  }
 }
 
 .promo__title {
@@ -21,6 +25,16 @@
 
   @include bp-tablet {
     font-size: 4.3rem;
+    line-height: 1.1;
+  }
+
+  @include bp-desktop {
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 5.3rem;
     line-height: 1.1;
   }
 }

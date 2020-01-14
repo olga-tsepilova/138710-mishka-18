@@ -18,6 +18,10 @@
   @include bp-tablet {
     font-size: 4.3rem;
   }
+
+  @include bp-desktop {
+    font-size: 5.3rem;
+  }
 }
 
 .content-box-header__link {

@@ -9,6 +9,18 @@
   }
 }
 
+.main-footer__wrapper {
+  @include bp-desktop {
+    display: flex;
+    height: 143px;
+    width: 100%;
+    max-width: 1050px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+  }
+}
+
 .main-footer__logo-link {
   @include bp-tablet {
     display: flex;

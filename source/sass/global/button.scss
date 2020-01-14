@@ -25,18 +25,18 @@
   @include bp-tablet {
     font-size: 1.7rem;
   }
-}
 
-.button--green {
-  background-color: $tiffany-dark;
-  border: 2px solid $tiffany-dark;
-  color: $white;
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: $white;
+  &--green {
+    background-color: $tiffany-dark;
     border: 2px solid $tiffany-dark;
-    color: $tiffany-dark;
+    color: $white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $white;
+      border: 2px solid $tiffany-dark;
+      color: $tiffany-dark;
+    }
   }
 }

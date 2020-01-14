@@ -8,6 +8,15 @@
   @include bp-tablet {
     padding: $padding-usual-tab 0;
   }
+
+  @include bp-desktop {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1050px;
+    height: 557px;
+  }
 }
 
 .contacts__header {
@@ -25,6 +34,18 @@
       background-size: auto 81px;
     }
   }
+
+  @include bp-desktop {
+    display: flex;
+    width: 50%;
+    padding: 60px 0 0;
+
+    &::after {
+      min-width: 175px;
+      background-position: center;
+      order: -1;
+    }
+  }
 }
 
 .contacts__title {
@@ -35,5 +56,18 @@
     display: flex;
     align-items: center;
     font-size: 4.3rem;
+  }
+}
+
+.contacts__map {
+  @include bp-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 0;
+    height: 457px;
+    order: 2;
+    overflow: hidden;
   }
 }

@@ -5,6 +5,12 @@
   @include bp-tablet {
     padding: $padding-usual-tab;
   }
+
+  @include bp-desktop {
+    max-width: 1150px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .content-box__description {
