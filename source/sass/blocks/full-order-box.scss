@@ -5,6 +5,10 @@
   @include bp-tablet {
     padding: $padding-usual-tab 0;
   }
+
+  @include bp-desktop {
+    padding: 130px 0 $padding-usual-tab;
+  }
 }
 
 .full-order-box__description {
@@ -17,6 +21,12 @@
     padding: 0 $padding-usual-tab;
     font-size: 1.7rem;
     line-height: 1.7;
+  }
 
+  @include bp-desktop {
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 $padding-usual-tab 0 175px;
   }
 }
