@@ -7,7 +7,7 @@
   @include bp-tablet {
     min-height: 223px;
     padding-top: 24px;
-    background: $white-medium url(../img/bg-zigzag-fill.svg) repeat-x 0 bottom;
+    background: $white-medium url("../img/bg-zigzag-fill.svg") repeat-x 0 bottom;
     background-size: auto 24px;
   }
 
