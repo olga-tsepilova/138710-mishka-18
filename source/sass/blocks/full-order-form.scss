@@ -168,8 +168,7 @@
   @include bp-desktop {
     max-width: 1050px;
     padding: 0 175px;
-    margin-right: auto;
-    margin-left: auto;
+    @include gorisontal-center;
   }
 }
 

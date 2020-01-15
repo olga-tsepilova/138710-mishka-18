@@ -1,6 +1,6 @@
 /* breakpoints for grids */
 @mixin bp-mobile {
-  @media all and (min-width: 320px) {
+  @media all and (min-width: 300px) {
     @content;
   }
 }
@@ -49,4 +49,10 @@
   left: 0;
   bottom: 0;
   right: 0;
+}
+
+/* horisontal center for limited blocks */
+@mixin gorisontal-center {
+  margin-right: auto;
+  margin-left: auto;
 }

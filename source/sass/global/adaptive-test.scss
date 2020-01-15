@@ -1,11 +1,11 @@
 .index-bg {
-  background-image: url("../../img-test/mishka-index-mobile.jpg");
+  background-image: url("../img-test/mishka-index-mobile.jpg");
   background-position: top center;
   background-repeat: no-repeat;
 
   @include bp-tablet {
     & {
-      background-image: url("../../img-test/mishka-index-tablet.jpg");
+      background-image: url("../img-test/mishka-index-tablet.jpg");
       background-position: top center;
       background-repeat: no-repeat;
     }
@@ -13,9 +13,17 @@
 
   @include bp-desktop {
     & {
-      background-image: url("../../img-test/mishka-index-desktop.jpg");
+      background-image: url("../img-test/mishka-index-desktop.jpg");
       background-position: top center;
       background-repeat: no-repeat;
     }
   }
+}
+
+.main-wrapper {
+  opacity: 0.5;
+}
+
+.main-footer {
+  display: none;
 }
