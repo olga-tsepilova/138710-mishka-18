@@ -20,14 +20,14 @@
   width: 100%;
   position: relative;
   padding: $padding-usual;
-  border-top: 1px solid $border-color-grey;
-  border-bottom: 1px solid $border-color-grey;
+  border-top: 1px solid $grey-medium;
+  border-bottom: 1px solid $grey-medium;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .close {
-  background: $bg-color-dark;
-  color: $light-text;
+  background: $grey-dark;
+  color: $white;
   line-height: 25px;
   position: absolute;
   right: 0;
@@ -40,5 +40,5 @@
 }
 
 .close:hover {
-  background: $color-tiffany;
+  background: $tiffany-medium;
 }

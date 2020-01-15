@@ -1,0 +1,41 @@
+.main-footer {
+  background-color: $white-medium;
+  padding: 0 $padding-usual;
+
+  @include bp-tablet {
+    display: flex;
+    height: 143px;
+    padding: 0 $padding-usual-tab;
+  }
+}
+
+.main-footer__wrapper {
+  @include bp-tablet {
+    display: flex;
+    width: 100%;
+    height: 143px;
+  }
+
+  @include bp-desktop {
+    max-width: 1050px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.main-footer__logo-link {
+  @include bp-tablet {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 33%;
+  }
+}
+
+.main-footer__developer {
+  border-top: 1px solid #e5e5e5;
+
+  @include bp-tablet {
+    border-top: none;
+  }
+}

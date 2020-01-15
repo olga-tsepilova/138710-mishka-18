@@ -2,10 +2,22 @@
   width: 100%;
   font-size: 1.3rem;
   line-height: 1;
+
+  @include bp-tablet {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  &--infotable {
+    @include bp-desktop {
+      width: 50%;
+    }
+  }
 }
 
+
 .product-info__row {
-  border-bottom: 1px solid $border-color-usual;
+  border-bottom: 1px solid $extra-light-grey;
 }
 
 .product-info__parameter,

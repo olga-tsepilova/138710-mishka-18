@@ -1,6 +1,16 @@
 .content-box {
   width: 100%;
   padding: $padding-usual;
+
+  @include bp-tablet {
+    padding: $padding-usual-tab;
+  }
+
+  @include bp-desktop {
+    max-width: 1150px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .content-box__description {
@@ -8,4 +18,9 @@
   line-height: 1.84;
   padding: 0;
   margin: 0;
+
+  @include bp-tablet {
+    font-size: 1.7rem;
+    line-height: 1.7;
+  }
 }

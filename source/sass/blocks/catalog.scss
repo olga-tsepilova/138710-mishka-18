@@ -3,27 +3,92 @@
   list-style-type: none;
   padding: $padding-usual;
   margin: 0 auto;
+
+  @include bp-tablet {
+    padding: $padding-usual-tab;
+    padding-bottom: 0;
+  }
+
+  @include bp-desktop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1150px;
+  }
 }
 
 .catalog__item {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 0 0 30px;
-  border: 1px solid $border-color-usual;
+  margin: 0 0 $padding-usual;
+  border: 1px solid $extra-light-grey;
+
+  @include bp-tablet {
+    flex-direction: row;
+    margin: 0 0 55px;
+    padding: 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  @include bp-desktop {
+    flex-direction: column;
+    width: 31%;
+
+    &:last-child {
+      margin: 0 0 55px;
+    }
+  }
 }
 
 .catalog__img-wrapper {
   @include flex-center-vh;
   @include adaptive-img-wrapper;
+
+  @include bp-tablet {
+    width: 50%;
+    flex-basis: 333px;
+    height: 333px;
+    margin: 0;
+    padding: 0;
+  }
+
+  @include bp-desktop {
+    width: 100%;
+    flex-basis: 316px;
+    height: 462px;
+  }
 }
 
 .catalog__img {
   @include adaptive-img;
+
+  @include bp-tablet {
+    height: 333px;
+  }
+
+  @include bp-desktop {
+    height: 462px;
+  }
 }
 
 .catalog__product-info {
   padding: $padding-usual;
+
+  @include bp-tablet {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: $padding-usual $padding-usual 8px $padding-usual;
+  }
+
+  @include bp-desktop {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .catalog__title {
@@ -31,11 +96,16 @@
   flex-direction: column;
   font-size: 1.7rem;
   line-height: 1.41;
-  color: $color-title;
+  color: $black;
+
+  @include bp-tablet {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
 }
 
 .catalog__title-link {
-  color: $color-title;
+  color: $black;
   text-decoration: none;
 
   &:hover,
@@ -52,6 +122,17 @@
   padding: 15px 0 $padding-usual;
   margin: 0;
   font-size: 1.3rem;
+
+  @include bp-tablet {
+    flex-grow: 1;
+    padding: 20px 0 $padding-usual;
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+
+  @include bp-desktop {
+    padding: 15px 0;
+  }
 }
 
 .catalog__pricetag {
@@ -60,29 +141,44 @@
   justify-content: space-between;
   padding: $padding-usual 0 0;
   border-top: 1px solid #ededed;
-  color: $color-title;
+  color: $black;
+
+  @include bp-tablet {
+    padding: 0;
+  }
 }
 
 .catalog__cost {
   font-size: 1.5rem;
+
+  @include bp-tablet {
+    font-size: 1.7rem;
+    line-height: 1.4;
+  }
 }
 
 .catalog__add-to-cart {
   @include flex-center-vh;
   width: 20px;
   height: 19px;
+
+  @include bp-tablet {
+    margin-right: -20px;
+    width: 64px;
+    height: 64px;
+  }
 }
 
 .catalog__add-to-cart-icon {
   width: 20px;
   height: 19px;
-  fill: $bg-icons-light;
+  fill: $grey-light;
 
   @include transition;
 
   &:hover,
   &:active {
-    fill: $color-tiffany;
+    fill: $tiffany-medium;
   }
 
   &:focus {

@@ -5,10 +5,6 @@
   @include bp-tablet {
     padding: $padding-usual-tab 0;
   }
-
-  @include bp-desktop {
-    padding: $padding-usual-tab 0 0;
-  }
 }
 
 .full-order-form__wrapper {
@@ -26,7 +22,11 @@
 
   @include bp-tablet {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
     padding: $padding-usual-tab;
+    margin: 0;
 
     &--phone {
       padding-bottom: 0;
@@ -56,10 +56,6 @@
     &--fullname {
       padding-right: 175px;
     }
-
-    &--comments {
-      padding-right: 175px;
-    }
   }
 }
 
@@ -81,8 +77,6 @@
   }
 
   @include bp-tablet {
-    min-width: 166px;
-    flex-basis: 166px;
     height: 52px;
     line-height: 52px;
 
@@ -95,27 +89,19 @@
     min-width: 175px;
     flex-basis: 175px;
     padding-left: 61px;
+    box-sizing: border-box;
   }
 }
 
 .full-order-form__title-text {
   padding: 0 $padding-usual 0 0;
-
-  @include bp-tablet {
-    padding: 0;
-  }
 }
 
 .full-order-form__element-box {
   @include bp-tablet {
-    flex-grow: 1;
     display: flex;
-    flex-direction: column;
-
-    &--colors {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
+    flex-wrap: wrap;
+    flex-grow: 1;
   }
 }
 
@@ -157,44 +143,6 @@
     }
   }
 }
-
-.full-order-form__button-box {
-  @include bp-tablet {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 $padding-usual-tab;
-  }
-
-  @include bp-desktop {
-    max-width: 1050px;
-    padding: 0 175px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-.full-order-form__remark {
-  margin: 0;
-  padding: 0 0 2em;
-  font-size: 1.3rem;
-
-  @include bp-tablet {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 50%;
-    font-size: 1.7rem;
-    padding: 0;
-  }
-}
-
-.full-order-form__button {
-  @include bp-tablet {
-    order: -1;
-    width: 34%;
-  }
-}
-
 
 .full-order-form__value {
   position: relative;
@@ -359,5 +307,36 @@
   &:hover,
   &:active {
     border-color: #62d1ba;
+  }
+}
+
+
+.full-order-form__button-box {
+  @include bp-tablet {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $padding-usual-tab;
+  }
+}
+
+.full-order-form__remark {
+  margin: 0;
+  padding: 0 0 2em;
+  font-size: 1.3rem;
+
+  @include bp-tablet {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    font-size: 1.7rem;
+    padding: 0;
+  }
+}
+
+.full-order-form__button {
+  @include bp-tablet {
+    order: -1;
+    width: 34%;
   }
 }

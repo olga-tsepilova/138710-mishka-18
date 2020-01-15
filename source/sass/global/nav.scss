@@ -8,6 +8,10 @@
   height: 80px;
   background: url("../img/icon-menu-open.svg") no-repeat center;
   background-size: 20px 14px;
+
+  @include bp-tablet {
+    display: none;
+  }
 }
 
 .nav__toggle-button {
@@ -19,9 +23,56 @@
   max-height: 0;
   overflow: hidden;
   list-style-type: none;
-  border-top: 1px solid $border-color-usual;
+  border-top: 1px solid $extra-light-grey;
 
   @include transition;
+
+  @include bp-tablet {
+    max-height: 200px;
+    overflow: visible;
+  }
+
+  &--addinfo {
+    border-top: none;
+
+    @include bp-tablet {
+      display: flex;
+      width: 100%;
+    }
+
+    @include bp-desktop {
+      display: flex;
+      justify-content: flex-end;
+      width: 50%;
+    }
+  }
+
+  &--production {
+    @include bp-tablet {
+      position: absolute;
+      display: flex;
+      width: 50%;
+      bottom: -80px;
+      left: 25px;
+      border-top: none;
+    }
+
+    @include bp-desktop {
+      position: relative;
+      bottom: 0;
+      left: -25px;
+    }
+  }
+
+  &--product-filter {
+    @include bp-desktop {
+      display: flex;
+      width: 50%;
+      margin-left: -25px;
+      border-top: none;
+      border-bottom: none;
+    }
+  }
 }
 
 .nav__link {
@@ -31,17 +82,17 @@
   height: 80px;
   padding: 0 0 0 75px;
   font-size: 1.7rem;
-  color: $color-title;
+  color: $black;
   font-weight: bold;
   text-decoration: none;
-  border-bottom: 1px solid $border-color-usual;
+  border-bottom: 1px solid $extra-light-grey;
 
   &--active,
   &:hover,
   &:focus,
   &:active {
     text-decoration: none;
-    color: $color-tiffany;
+    color: $tiffany-medium;
   }
 
   &::before {
@@ -52,6 +103,12 @@
     width: 21px;
     height: 80px;
     opacity: 0.2;
+
+    @include bp-tablet {
+      top: 0;
+      left: 32px;
+      height: 88px;
+    }
   }
 
   &--search::before {
@@ -62,6 +119,55 @@
   &--basket::before {
     background: url("../../img/icon-cart.svg") no-repeat center;
     background-size: 21px 18px;
+  }
+
+  &--search {
+    @include bp-tablet {
+      width: 82px;
+      height: 88px;
+      padding: 0 0 0 83px;
+      overflow: hidden;
+      border-bottom: none;
+      border-left: 1px solid $extra-light-grey;
+    }
+  }
+
+  &--basket {
+    @include bp-tablet {
+      height: 88px;
+      padding: 0 0 0 83px;
+      overflow: hidden;
+      border-bottom: none;
+      border-left: 1px solid $extra-light-grey;
+    }
+  }
+
+  &--to-form {
+    @include bp-desktop {
+      border-left: 1px solid $extra-light-grey;
+    }
+  }
+
+  &--catalog,
+  &--to-form {
+    @include bp-tablet {
+      font-size: 1.5rem;
+      border-bottom: none;
+      padding: 0 25px;
+    }
+
+    @include bp-desktop {
+      height: 88px;
+      font-size: 1.7rem;
+    }
+  }
+
+  &--product-filter-link {
+    @include bp-desktop {
+      padding: 0 25px;
+      font-size: 1.5rem;
+      border: none;
+    }
   }
 }
 

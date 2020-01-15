@@ -1,6 +1,11 @@
 .social-box {
   width: 100%;
   padding: 0;
+
+  @include bp-tablet {
+    @include flex-center-vh;
+    width: 33%;
+  }
 }
 
 .social-box__list {
@@ -8,6 +13,10 @@
   width: 80%;
   margin: 0 auto;
   list-style-type: none;
+
+  @include bp-desktop {
+    width: 50%;
+  }
 }
 
 .social-box__item {

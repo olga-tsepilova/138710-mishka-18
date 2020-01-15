@@ -2,10 +2,24 @@
   position: relative;
 
   @include flex-center-vh;
+
+  @include bp-tablet {
+    order: -1;
+  }
+
+  @include bp-desktop {
+    width: 65.5%;
+    height: 455px;
+    padding: 0;
+  }
 }
 
 .video-box__prewiew {
   @include adaptive-img;
+
+  @include bp-desktop {
+    height: 455px;
+  }
 }
 
 .video-box__play {
@@ -37,8 +51,35 @@
   line-height: 2;
   padding: $padding-usual;
   margin: 0;
+
+  @include bp-tablet {
+    padding: $padding-usual-tab;
+    padding-top: 0;
+    font-size: 1.5rem;
+    border-left: 1px solid $extra-light-grey;
+    border-right: 1px solid $extra-light-grey;
+  }
+
+  @include bp-desktop {
+    width: 34.5%;
+    padding: 34px 0 0 78px;
+    border-left: none;
+    flex-grow: 1;
+  }
 }
 
 .video-box__button-order {
   padding: 0 $padding-usual;
+
+  @include bp-tablet {
+    padding: 0 $padding-usual-tab $padding-usual-tab;
+    border: 1px solid $extra-light-grey;
+    border-top: none;
+  }
+
+  @include bp-desktop {
+    width: 34.5%;
+    border-left: none;
+    padding: 0 $padding-usual-tab 60px 78px;
+  }
 }

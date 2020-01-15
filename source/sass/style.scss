@@ -5,6 +5,9 @@
 @import "base/variables";
 @import "base/mixins";
 
+/* =====  TEST  ===== */
+/*@import "global/adaptive-test";*/
+
 /* =====  typography ===== */
 @import "base/font-face";
 @import "base/base";
@@ -13,26 +16,24 @@
 @import "base/hidden";
 @import "global/layouts";
 
+/* function elements */
+@import "global/button";
+@import "global/modal";
+@import "blocks/slider";
+
 /* ===== header ===== */
-@import "blocks/main-header";
+@import "global/main-header";
 @import "global/nav";
 
 /* ===== footer ===== */
-@import "blocks/main-footer";
+@import "global/main-footer";
 
 /* ===== developer ===== */
 @import "blocks/developer";
 
 /* ===== content ===== */
-
-/* function elements */
-@import "blocks/modal";
-@import "blocks/slider";
-@import "blocks/button";
-
-
 /* description info on page  */
-@import "blocks/main-content";
+@import "global/main-content";
 @import "blocks/intro";
 @import "blocks/promo";
 @import "blocks/content-box";
@@ -56,5 +57,6 @@
 @import "blocks/social-box";
 
 /* forms */
+@import "blocks/full-order-box";
 @import "blocks/full-order-form";
 @import "blocks/order-form";
