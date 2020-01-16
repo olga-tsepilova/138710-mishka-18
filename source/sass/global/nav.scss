@@ -8,20 +8,46 @@
   height: 80px;
   background: url("../img/icon-menu-open.svg") no-repeat center;
   background-size: 20px 14px;
+  border: none;
+
+  &--close {
+      background: url("../img/icon-menu-close.svg") no-repeat center;
+      background-size: 21px 20px;
+  }
 
   @include bp-tablet {
     display: none;
   }
 }
 
-.nav__toggle-button {
-  display: none;
+.nav__wrapper {
+  @include bp-only-mobile {
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    backface-visibility: hidden;
+
+
+    @include transition;
+
+    &--show {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-height: 1000px;
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+
+      @include transition;
+    }
+  }
 }
 
 .nav__list {
   width: 100%;
-  max-height: 0;
-  overflow: hidden;
   list-style-type: none;
   border-top: 1px solid $extra-light-grey;
 
@@ -65,6 +91,8 @@
   }
 
   &--product-filter {
+    @include visually-hidden;
+
     @include bp-desktop {
       display: flex;
       width: 50%;
@@ -75,11 +103,18 @@
   }
 }
 
+.nav__item {
+  @include bp-only-mobile {
+    width: 100%;
+  }
+}
+
 .nav__link {
   position: relative;
   display: flex;
   align-items: center;
   height: 80px;
+  width: 100%;
   padding: 0 0 0 75px;
   font-size: 1.7rem;
   color: $black;
@@ -175,7 +210,4 @@
   max-height: 500px;
 }
 
-.nav__toggle-button:checked ~ .nav__toggle {
-  background: url("../../img/icon-menu-close.svg") no-repeat center;
-  background-size: 21px 20px;
-}
+

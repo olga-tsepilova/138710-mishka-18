@@ -63,6 +63,8 @@
 }
 
 .main-header__nav {
+  width: 100%;
+
   @include bp-tablet {
     width: 50%;
   }
@@ -76,6 +78,8 @@
 }
 
 .main-header__delivery-info {
+  @include visually-hidden;
+
   @include bp-tablet {
     display: flex;
     justify-content: flex-end;

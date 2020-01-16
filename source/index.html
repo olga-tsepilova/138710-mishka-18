@@ -6,7 +6,7 @@
     <title>Мишка - Интернет-магазин игрушек ручной работы</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body class="index-bg">
+  <body>
     <!-- ================= ОБЕРТКА ДЛЯ СТРАНИЦЫ  ================= -->
     <div class="main-wrapper">
 
@@ -19,52 +19,51 @@
 
           <nav class="main-header__nav nav">
 
-<!--            <input class="nav__toggle-button" id="main-header-navigation" type="checkbox">
-            <label class="nav__toggle" for="main-header-navigation" aria-label="Меню"></label>-->
-
             <button class="nav__toggle" type="button" aria-label="Открыть меню"></button>
 
-            <ul class="nav__list nav__list--production">
-              <li class="nav__item">
-                <a class="nav__link nav__link--catalog" href="catalog.html">
-                  Каталог товаров
-                </a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link nav__link--to-form" href="form.html">
-                  Вязание на заказ
-                </a>
-              </li>
-            </ul>
+            <div class="nav__wrapper">
+              <ul class="nav__list nav__list--production">
+                <li class="nav__item">
+                  <a class="nav__link nav__link--catalog" href="catalog.html">
+                    Каталог товаров
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link nav__link--to-form" href="form.html">
+                    Вязание на заказ
+                  </a>
+                </li>
+              </ul>
 
-            <ul class="nav__list nav__list--addinfo">
-              <li class="nav__item">
-                <a class="nav__link nav__link--search" href="/">
-                  Поиск по сайту
-                </a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link nav__link--basket" href="/">
-                  Корзина пока пуста
-                </a>
-              </li>
-            </ul>
+              <ul class="nav__list nav__list--addinfo">
+                <li class="nav__item">
+                  <a class="nav__link nav__link--search" href="/">
+                    Поиск по сайту
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link nav__link--basket" href="/">
+                    Корзина пока пуста
+                  </a>
+                </li>
+              </ul>
 
-            <ul class="nav__list nav__list--product-filter visually-hidden-tablet">
-              <li class="nav__item">
-                <a class="nav__link nav__link--product-filter-link" href="/">
-                  Новые поступления
-                </a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link nav__link--product-filter-link" href="/">
-                  Распродажа
-                </a>
-              </li>
-            </ul>
+              <ul class="nav__list nav__list--product-filter">
+                <li class="nav__item">
+                  <a class="nav__link nav__link--product-filter-link" href="/">
+                    Новые поступления
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link nav__link--product-filter-link" href="/">
+                    Распродажа
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
 
-          <strong class="main-header__delivery-info visually-hidden-mob">Бесплатная доставка по России</strong>
+          <strong class="main-header__delivery-info">Бесплатная доставка по России</strong>
         </div>
       </header>
       <!-- ================= /шапка проекта  ================= -->
@@ -124,13 +123,23 @@
             </div>
 
             <div class="product-week__photo">
-              <img class="product-week__img" alt="Вязаные корзинки" width="260" height="315" src="img/triple-set-mobile@1x.jpg">
+              <picture>
+                <source media="(min-width: 1050)"
+                        srcset="img/triple-set-desktop@1x.jpg,
+                      img/triple-set-tablet@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                        srcset="img/triple-set-tablet@1x.jpg 1x,
+                      img/triple-set-tablet@2x.jpg 2x">
+                <img class="product-week__img" src="img/triple-set-mobile@1x.jpg"
+                     srcset="img/triple-set-mobile@2x.jpg 2x"
+                     alt="Вязаные корзинки" width="260" height="315">
+              </picture>
             </div>
             <div class="product-week__cost">
               Цена: 990 руб.
             </div>
             <div class="product-week__info-box">
-              <a class="button button--outline" href="#open-modal">
+              <a class="button button--outline open-modal">
                 Заказать
               </a>
             </div>
@@ -229,7 +238,11 @@
           <!-- карта -->
           <div class="contacts__map">
             <div class="map-box">
-              <img class="map-box__img" src="img/map-mobile@1x.jpg" width="322" height="457" alt="Карта адреса">
+              <picture>
+                <source media="(min-width: 1050)" srcset="img/map-desktop@1x.jpg, img/map-tablet@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+                <img class="map-box__img" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="322" height="457" alt="Карта адреса">
+              </picture>
             </div>
           </div>
 
@@ -309,10 +322,7 @@
     <!-- модалка заказа -->
     <div class="modal" id="open-modal">
       <div class="modal__dialog">
-        <!--
-       <a href="#close" title="Close" class="close">X</a>
-       элемент, закрывающий модалку. в дизе нет, но вообще нужен
-       -->
+       <span class="modal__close" aria-label="закрыть окно">X</span>
         <form class="order-form" action="https://echo.htmlacademy.ru" method="get">
           <strong class="order-form__title">
             Добавить в корзину
@@ -343,6 +353,6 @@
     <!-- /модалка заказа -->
 
 
-
+    <script src="js/main.js"></script>
   </body>
 </html>

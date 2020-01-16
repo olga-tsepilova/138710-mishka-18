@@ -1,18 +1,30 @@
 /* breakpoints for grids */
 @mixin bp-mobile {
-  @media all and (min-width: 300px) {
+  @media all and (min-width: $bp-mob) {
+    @content;
+  }
+}
+
+@mixin bp-only-mobile {
+  @media all and (max-width: $bp-only-mob) {
     @content;
   }
 }
 
 @mixin bp-tablet {
-  @media all and (min-width: 768px) {
+  @media all and (min-width: $bp-tab) {
     @content;
   }
 }
 
 @mixin bp-desktop {
-  @media all and (min-width: 1150px) {
+  @media all and (min-width: $bp-desk-big) {
+    @content;
+  }
+}
+
+@mixin bp-retina-2x {
+  @media (min-resolution: $retina-dppx) {
     @content;
   }
 }
@@ -55,4 +67,16 @@
 @mixin gorisontal-center {
   margin-right: auto;
   margin-left: auto;
+}
+
+/* visually hidden */
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
