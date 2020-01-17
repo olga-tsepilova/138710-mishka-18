@@ -14,58 +14,66 @@
     <!-- ================= шапка проекта  ================= -->
     <header class="main-header">
       <div class="main-header__wrapper">
-        <a class="main-header__logo-link" href="index.html" aria-label="Переход на главную страницу">
-          <img class="main-header__logo-img logo" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35" src="img/logo-mobile.svg">
+        <a class="main-header__logo-link" href="index.html">
+          <picture>
+            <source media="(min-width: 1150px)"
+                    srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)"
+                    srcset="img/logo-tablet.svg">
+            <img class="main-header__logo-img"
+                 src="img/logo-mobile.svg"
+                 alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35">
+          </picture>
         </a>
 
         <nav class="main-header__nav nav">
 
-          <input class="nav__toggle-button" id="main-header-navigation" type="checkbox">
-          <label class="nav__toggle" for="main-header-navigation" aria-label="Меню"></label>
+          <button class="nav__toggle" type="button" aria-label="Открыть меню"></button>
 
-          <ul class="nav__list nav__list--production">
-            <li class="nav__item">
-              <a class="nav__link nav__link--catalog" href="catalog.html">
-                Каталог товаров
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link nav__link--to-form" href="form.html">
-                Вязание на заказ
-              </a>
-            </li>
-          </ul>
+          <div class="nav__wrapper">
+            <ul class="nav__list nav__list--production">
+              <li class="nav__item">
+                <a class="nav__link nav__link--catalog" href="catalog.html">
+                  Каталог товаров
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link nav__link--active nav__link--to-form">
+                  Вязание на заказ
+                </a>
+              </li>
+            </ul>
 
-          <ul class="nav__list nav__list--addinfo">
-            <li class="nav__item">
-              <a class="nav__link nav__link--search" href="/">
-                Поиск по сайту
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link nav__link--basket" href="/">
-                Корзина пока пуста
-              </a>
-            </li>
-          </ul>
+            <ul class="nav__list nav__list--addinfo">
+              <li class="nav__item">
+                <a class="nav__link nav__link--search" href="/">
+                  Поиск по сайту
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link nav__link--basket" href="/">
+                  Корзина пока пуста
+                </a>
+              </li>
+            </ul>
 
-          <ul class="nav__list nav__list--product-filter visually-hidden-tablet">
-            <li class="nav__item">
-              <a class="nav__link nav__link--product-filter-link" href="/">
-                Новые поступления
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link nav__link--product-filter-link" href="/">
-                Распродажа
-              </a>
-            </li>
-          </ul>
+            <ul class="nav__list nav__list--product-filter">
+              <li class="nav__item">
+                <a class="nav__link nav__link--product-filter-link" href="/">
+                  Новые поступления
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link nav__link--product-filter-link" href="/">
+                  Распродажа
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
 
-        <strong class="main-header__delivery-info visually-hidden-mob">Бесплатная доставка по России</strong>
+        <strong class="main-header__delivery-info">Бесплатная доставка по России</strong>
       </div>
-
     </header>
     <!-- ================= /шапка проекта  ================= -->
 
@@ -92,13 +100,13 @@
 
               <div class="full-order-form__element-box">
                 <label class="full-order-form__element">
-                  <input class="full-order-form__radio visually-hidden" type="radio" name="product-
+                  <input class="full-order-form__choice" type="radio" name="product-
 type" value="product-type-accessory" checked>
                   <span class="full-order-form__value full-order-form__value--radio">Аксессуар для
 интерьера</span>
                 </label>
                 <label class="full-order-form__element">
-                  <input class="full-order-form__radio visually-hidden" type="radio" name="product-
+                  <input class="full-order-form__choice" type="radio" name="product-
 type" value="product-type-toy">
                   <span class="full-order-form__value full-order-form__value--radio">Детская игрушка</span>
                 </label>
@@ -116,32 +124,32 @@ type" value="product-type-toy">
 
               <div class="full-order-form__element-box full-order-form__element-box--colors">
                 <label class="full-order-form__element full-order-form__element--checkbox">
-                  <input  class="full-order-form__checkbox visually-hidden" type="checkbox" name="product-
+                  <input  class="full-order-form__choice" type="checkbox" name="product-
   color" value="product-color-white" checked>
                   <span class="full-order-form__value full-order-form__value--checkbox">Белый</span>
                 </label>
                 <label class="full-order-form__element full-order-form__element--checkbox">
-                  <input  class="full-order-form__checkbox visually-hidden" type="checkbox" name="product-
+                  <input  class="full-order-form__choice" type="checkbox" name="product-
   color" value="product-color-gray" checked>
                   <span class="full-order-form__value full-order-form__value--checkbox">Серый</span>
                 </label>
                 <label class="full-order-form__element full-order-form__element--checkbox">
-                  <input  class="full-order-form__checkbox visually-hidden" type="checkbox" name="product-
+                  <input  class="full-order-form__choice" type="checkbox" name="product-
   color" value="product-color-tiffany">
                   <span class="full-order-form__value full-order-form__value--checkbox">«Тиффани»</span>
                 </label>
                 <label class="full-order-form__element full-order-form__element--checkbox">
-                  <input  class="full-order-form__checkbox visually-hidden" type="checkbox" name="product-
+                  <input  class="full-order-form__choice" type="checkbox" name="product-
   color" value="product-color-black">
                   <span class="full-order-form__value full-order-form__value--checkbox">Черный</span>
                 </label>
                 <label class="full-order-form__element full-order-form__element--checkbox">
-                  <input  class="full-order-form__checkbox visually-hidden" type="checkbox" name="product-
+                  <input  class="full-order-form__choice" type="checkbox" name="product-
   color" value="product-color-pink">
                   <span class="full-order-form__value full-order-form__value--checkbox">Розовый</span>
                 </label>
                 <label class="full-order-form__element full-order-form__element--checkbox">
-                  <input  class="full-order-form__checkbox visually-hidden" type="checkbox" name="product-
+                  <input  class="full-order-form__choice" type="checkbox" name="product-
   color" value="product-color-orange">
                   <span class="full-order-form__value full-order-form__value--checkbox">Оранжевый</span>
                 </label>
@@ -257,7 +265,7 @@ type" value="product-type-toy">
     <!-- =================  подвал проекта   ================= -->
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <a class="main-footer__logo-link visually-hidden-mob">
+        <a class="main-footer__logo-link">
           <img class="main-footer__logo-img logo" alt="Мишка - Интернет-магазин игрушек ручной работы" width="102" height="34" src="img/logo-footer.svg">
         </a>
         <section class="social-box">
@@ -315,5 +323,7 @@ type" value="product-type-toy">
   </div>
   <!-- ================= /ОБЕРТКА ДЛЯ СТРАНИЦЫ  ================= -->
 
+  <script src="js/main.js"></script>
+  <script src="js/picturefill.js"></script>
   </body>
 </html>
