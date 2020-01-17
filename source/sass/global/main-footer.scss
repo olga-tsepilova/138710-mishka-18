@@ -18,6 +18,7 @@
 
   @include bp-desktop {
     max-width: 1050px;
+
     @include gorisontal-center;
   }
 }

@@ -11,8 +11,8 @@
   border: none;
 
   &--close {
-      background: url("../img/icon-menu-close.svg") no-repeat center;
-      background-size: 21px 20px;
+    background: url("../img/icon-menu-close.svg") no-repeat center;
+    background-size: 21px 20px;
   }
 
   @include bp-tablet {
