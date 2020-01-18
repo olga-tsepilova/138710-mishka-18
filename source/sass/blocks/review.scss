@@ -7,9 +7,13 @@
     min-height: 457px;
     background: url("../img/review@1x.jpg") no-repeat 0 0;
     margin: 0 0 $padding-usual-tab;
+
+    @include bp-retina-2x {
+      background: url("../img/review@2x.jpg") no-repeat 0 0;
+    }
   }
 
-  @include bp-tablet {
+  @include bp-desktop {
     max-width: 1050px;
     margin-left: auto;
     margin-right: auto;

@@ -18,11 +18,14 @@
 
   @include bp-desktop {
     max-width: 1050px;
+
     @include gorisontal-center;
   }
 }
 
 .main-footer__logo-link {
+  display: none;
+
   @include bp-tablet {
     display: flex;
     align-items: center;

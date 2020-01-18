@@ -1,19 +1,25 @@
 .modal {
   position: fixed;
 
-  @include position-zero;
   @include flex-center-vh;
+  @include position-zero;
   background: rgba(255, 255, 255, 0.9);
-  z-index: 99999;
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 0;
 
   @include transition;
-}
 
-.modal:target {
-  opacity: 1;
-  pointer-events: auto;
+  &--show {
+    z-index: 9999;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+
+    @include transition;
+  }
 }
 
 .modal__dialog {
@@ -22,10 +28,18 @@
   padding: $padding-usual;
   border-top: 1px solid $grey-medium;
   border-bottom: 1px solid $grey-medium;
+  background-color: $white;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+
+  @include bp-tablet {
+    max-width: 566px;
+    padding: $padding-usual-tab 106px;
+
+    @include gorisontal-center;
+  }
 }
 
-.close {
+.modal__close {
   background: $grey-dark;
   color: $white;
   line-height: 25px;
@@ -37,8 +51,15 @@
   text-decoration: none;
   font-weight: bold;
   border-radius: 12px;
-}
+  cursor: pointer;
 
-.close:hover {
-  background: $tiffany-medium;
+  &:hover,
+  &:focus,
+  &:active {
+    background: $tiffany-medium;
+  }
+
+  @include bp-tablet {
+    right: -10px;
+  }
 }

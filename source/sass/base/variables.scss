@@ -12,3 +12,11 @@ $tiffany-dark: #64d1bc;
 /* padding */
 $padding-usual: 30px;
 $padding-usual-tab: 50px;
+
+/* breakpoints for grids */
+$bp-mob: 300px;
+$bp-only-mob: 767px;
+$bp-tab: 768px;
+$bp-desk-big: 1150px;
+$bp-desk-small: 1050px;
+$retina-dppx: 1.5dppx;

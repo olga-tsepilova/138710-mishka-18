@@ -158,6 +158,10 @@
   }
 }
 
+.full-order-form__choice {
+  display: none;
+}
+
 .full-order-form__button-box {
   @include bp-tablet {
     display: flex;
@@ -168,6 +172,7 @@
   @include bp-desktop {
     max-width: 1050px;
     padding: 0 175px;
+
     @include gorisontal-center;
   }
 }
@@ -243,8 +248,8 @@
     content: "";
     display: inline-block;
     position: absolute;
-    top: 13px;
-    left: 13px;
+    top: 14px;
+    left: 14px;
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -294,8 +299,8 @@
   }
 }
 
-.full-order-form__radio:checked + .full-order-form__value--radio::after,
-.full-order-form__checkbox:checked + .full-order-form__value--checkbox::after {
+.full-order-form__choice:checked + .full-order-form__value--radio::after,
+.full-order-form__choice:checked + .full-order-form__value--checkbox::after {
   opacity: 1;
 }
 

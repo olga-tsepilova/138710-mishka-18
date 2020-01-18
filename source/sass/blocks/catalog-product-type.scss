@@ -60,9 +60,16 @@
   color: $white;
   text-decoration: none;
 
-  &:hover,
-  &:active {
+  &:hover {
+    padding-bottom: 5px;
     text-decoration: none;
+  }
+
+  &:focus,
+  &:active {
+    padding-bottom: 5px;
+    text-decoration: none;
+    opacity: 0.3;
   }
 
   &::after {

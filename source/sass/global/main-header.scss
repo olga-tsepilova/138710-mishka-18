@@ -3,6 +3,7 @@
   min-height: 80px;
   text-align: center;
   border-top: 1px solid $extra-light-grey;
+  border-bottom: 1px solid $extra-light-grey;
 
   @include bp-tablet {
     & {
@@ -12,7 +13,6 @@
       height: 88px;
       text-align: left;
       border-top: none;
-      border-bottom: 1px solid $extra-light-grey;
     }
   }
 }
@@ -52,17 +52,41 @@
 
   @include bp-desktop {
     width: 149px;
-    height: 72px;
+    height: 88px;
     padding: 0;
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
     margin: 0 auto;
+    z-index: 20;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-header__logo-img {
+  @include bp-tablet {
+    width: 113px;
+    height: 46px;
+  }
+
+  @include bp-desktop {
+    width: 149px;
+    height: 72px;
   }
 }
 
 .main-header__nav {
+  width: 100%;
+
   @include bp-tablet {
     width: 50%;
   }
@@ -72,15 +96,19 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    z-index: 15;
   }
 }
 
 .main-header__delivery-info {
+  @include visually-hidden;
+
   @include bp-tablet {
+    position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 80px;
+    height: 60px;
     width: 50%;
     margin: 0 0 0 50%;
     padding: 0 50px 0 0;
@@ -90,7 +118,8 @@
   }
 
   @include bp-desktop {
+    height: 80px;
     padding: 0;
-    margin: -80px 0 0 50%;
+    margin: 0 0 0 50%;
   }
 }
