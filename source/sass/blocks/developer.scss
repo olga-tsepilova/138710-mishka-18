@@ -1,9 +1,13 @@
 .developer {
+  @include flex-center-vh;
   width: 100%;
-  padding: $padding-usual 0;
   font-size: 1.6rem;
   color: $black;
   font-weight: bold;
+
+  @include bp-only-mobile {
+    height: 80px;
+  }
 
   @include bp-tablet {
     width: 33%;
@@ -13,10 +17,6 @@
 }
 
 .developer__link {
-  @include flex-center-vh;
-  color: $black;
-  text-decoration: none;
-
   &:focus {
     opacity: 30%;
   }
