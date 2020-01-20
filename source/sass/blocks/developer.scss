@@ -11,6 +11,7 @@
 
   @include bp-tablet {
     width: 33%;
+    justify-content: flex-end;
     font-size: 1.9rem;
     padding: $padding-usual-tab 0;
   }
@@ -28,14 +29,23 @@
 
 .developer__text {
   padding: 0 25px 0 0;
+
+  @include transition;
+  &:hover {
+    @include transition;
+    opacity: 0.3;
+  }
 }
 
 .developer__logo {
-  fill: $tiffany-medium;
   height: 34px;
+  fill: $tiffany-medium;
 
-  &:hover,
-  &:active {
-    fill: #46c1ae;
+  &:hover {
+    fill: $tiffany;
   }
+}
+
+.developer__text:hover + .developer__link {
+  opacity: 0.3;
 }

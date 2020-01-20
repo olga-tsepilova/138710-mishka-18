@@ -22,9 +22,9 @@
 
 .nav__wrapper {
   @include bp-only-mobile {
-    max-height: 0;
     width: 100%;
     opacity: 0;
+    height: 0;
     pointer-events: none;
     visibility: hidden;
     backface-visibility: hidden;
@@ -32,13 +32,16 @@
     @include transition;
 
     &--show {
+      position: absolute;
+      top: 80px;
+      left: 0;
       display: flex;
       flex-direction: column;
       width: 100%;
-      max-height: 1000px;
       visibility: visible;
       opacity: 1;
       pointer-events: auto;
+      z-index: 999;
 
       @include transition;
     }
@@ -58,6 +61,10 @@
   border-top: 1px solid $extra-light-grey;
 
   @include transition;
+
+  @include bp-only-mobile {
+    background-color: $white;
+  }
 
   @include bp-tablet {
     max-height: 200px;
@@ -128,11 +135,20 @@
   text-decoration: none;
   border-bottom: 1px solid $extra-light-grey;
 
+  .nav__icon {
+    fill: $black;
+    opacity: 0.2;
+  }
+
   &--active,
   &:hover {
     text-decoration: none;
     color: $black;
-    opacity: 0.6;
+
+    .nav__icon {
+      fill: $tiffany-medium;
+      opacity: 1;
+    }
   }
 
   &:focus,
@@ -140,21 +156,9 @@
     text-decoration: none;
     color: $black;
     opacity: 0.3;
-  }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 30px;
-    width: 21px;
-    height: 80px;
-    opacity: 0.2;
-
-    @include bp-tablet {
-      top: 0;
-      left: 32px;
-      height: 88px;
+    .nav__icon {
+      fill: $tiffany-medium;
     }
   }
 
@@ -216,6 +220,17 @@
       font-size: 1.5rem;
       border: none;
     }
+  }
+}
+
+.nav__icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+
+  @include bp-tablet {
+    top: 32px;
+    left: 32px;
   }
 }
 
