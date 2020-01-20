@@ -23,7 +23,7 @@
   }
 }
 
-.main-footer__logo-link {
+.main-footer__logo {
   display: none;
 
   @include bp-tablet {
@@ -31,6 +31,20 @@
     align-items: center;
     justify-content: flex-start;
     width: 33%;
+  }
+}
+
+.main-footer__logo-img {
+  @include transition;
+
+  &:hover {
+    fill: #62d1ba;
+  }
+
+  &:focus,
+  &:active {
+    fill: #62d1ba;
+    opacity: 0.3;
   }
 }
 

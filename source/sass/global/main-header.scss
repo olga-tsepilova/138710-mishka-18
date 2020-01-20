@@ -62,12 +62,12 @@
     z-index: 20;
   }
 
-  &:hover {
+  &[href]:hover {
     opacity: 0.6;
   }
 
-  &:focus,
-  &:active {
+  &[href]:focus,
+  &[href]:active {
     opacity: 0.3;
   }
 }

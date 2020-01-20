@@ -42,12 +42,12 @@
 }
 
 .about-us__list-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 0 0 $padding-usual;
   font-size: 1.7rem;
   font-weight: bold;
-  position: relative;
 
   &::before {
     content: "";
@@ -61,32 +61,32 @@
   }
 
   &--ecology::before {
-    background: url("../../img/icon-feature-flower.svg") no-repeat bottom center;
+    background: url("../img/icon-feature-flower.svg") no-repeat bottom center;
     background-size: auto 37px;
   }
 
   &--style::before {
-    background: url("../../img/icon-feature-money.svg") no-repeat bottom center;
+    background: url("../img/icon-feature-money.svg") no-repeat bottom center;
     background-size: 47px 27px;
   }
 
   &--likes::before {
-    background: url("../../img/icon-feature-heart.svg") no-repeat bottom center;
+    background: url("../img/icon-feature-heart.svg") no-repeat bottom center;
     background-size: 34px 27px;
   }
 
   &--handwork::before {
-    background: url("../../img/icon-feature-ball.svg") no-repeat bottom center;
+    background: url("../img/icon-feature-ball.svg") no-repeat bottom center;
     background-size: 35px 34px;
   }
 
   &--support::before {
-    background: url("../../img/icon-feature-rocket.svg") no-repeat bottom center;
+    background: url("../img/icon-feature-rocket.svg") no-repeat bottom center;
     background-size: 100% auto;
   }
 
   &--gift::before {
-    background: url("../../img/icon-feature-gift.svg") no-repeat bottom center;
+    background: url("../img/icon-feature-gift.svg") no-repeat bottom center;
     background-size: 33px 32px;
   }
 
