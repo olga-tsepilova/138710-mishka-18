@@ -15,11 +15,15 @@
 
   @include transition;
 
-  &:hover,
+  &:hover {
+    background-color: $grey-dark;
+    color: $white;
+  }
+
   &:focus,
   &:active {
     background-color: $grey-dark;
-    color: $white;
+    color: $grey-medium-dark;
   }
 
   @include bp-tablet {
