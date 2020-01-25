@@ -32,6 +32,14 @@
     backface-visibility: visible;
     z-index: 999;
   }
+
+  @include bp-desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    z-index: 15;
+  }
 }
 
 /*.nav__wrapper {
@@ -188,7 +196,7 @@
   }
 
   &--basket::before {
-    background: url("../../img/icon-cart.svg") no-repeat center;
+    background: url("../../img/sprite/icon-cart.svg") no-repeat center;
     background-size: 21px 18px;
   }
 

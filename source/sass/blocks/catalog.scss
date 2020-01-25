@@ -24,22 +24,75 @@
   margin: 0 0 $padding-usual;
   border: 1px solid $extra-light-grey;
 
+  &:hover {
+    .catalog__product-info {
+      box-shadow: 0 5px 10px 2px #E8E8E8;
+
+      @include transition;
+    }
+  }
+
+  &:focus,
+  &:active {
+    .catalog__product-info {
+      box-shadow: 0 3px 5px 2px #E8E8E8;
+
+      @include transition;
+    }
+  }
+
   @include bp-tablet {
     flex-direction: row;
     margin: 0 0 55px;
     padding: 0;
+    height: 333px;
 
     &:last-child {
       margin: 0;
+    }
+
+    &:hover {
+      .catalog__product-info {
+        box-shadow: 7px 0 8px 0 #e8e8e8;
+
+        @include transition;
+      }
+    }
+
+    &:focus,
+    &:active {
+      .catalog__product-info {
+        box-shadow: 7px 0 8px -3px #e8e8e8;
+
+        @include transition;
+      }
     }
   }
 
   @include bp-desktop {
     flex-direction: column;
     width: 31%;
+    height: auto;
 
     &:last-child {
       margin: 0 0 55px;
+    }
+
+    &:hover {
+      .catalog__product-info {
+        box-shadow: 0 5px 10px 2px #E8E8E8;
+
+        @include transition;
+      }
+    }
+
+    &:focus,
+    &:active {
+      .catalog__product-info {
+        box-shadow: 0 3px 5px 2px #E8E8E8;
+
+        @include transition;
+      }
     }
   }
 }
@@ -77,6 +130,8 @@
 
 .catalog__product-info {
   padding: $padding-usual;
+
+  @include transition;
 
   @include bp-tablet {
     display: flex;

@@ -244,6 +244,13 @@
     border-color: #62d1ba;
   }
 
+  &--radio:focus::before,
+  &--checkbox:focus::before,
+  &--radio:active::before,
+  &--checkbox:active::before {
+    border-color: #c7c7c7;
+  }
+
   &--radio::after {
     content: "";
     display: inline-block;
@@ -300,7 +307,11 @@
 }
 
 .full-order-form__choice:checked + .full-order-form__value--radio::after,
-.full-order-form__choice:checked + .full-order-form__value--checkbox::after {
+.full-order-form__choice:checked + .full-order-form__value--checkbox::after,
+.full-order-form__value--radio:focus::after,
+.full-order-form__value--checkbox:focus::after,
+.full-order-form__value--radio:active::after,
+.full-order-form__value--checkbox:active::after {
   opacity: 1;
 }
 
@@ -327,7 +338,9 @@
 
 .full-order-form__fieldset--phone .full-order-form__text-input,
 .full-order-form__fieldset--email .full-order-form__text-input {
-  background-color: $white-medium;
+  @include bp-tablet {
+    background-color: $white-medium;
+  }
 }
 
 .full-order-form__icon {

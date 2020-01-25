@@ -789,7 +789,7 @@ body {
     .nav__link:focus .nav__icon, .nav__link:active .nav__icon {
       fill: #63d1bb; }
   .nav__link--search::before {
-    background: url("../img/icon-search.svg") no-repeat center;
+    background: url("../img/sprite/icon-search.svg") no-repeat center;
     background-size: 18px 18px; }
   .nav__link--basket::before {
     background: url("../../img/icon-cart.svg") no-repeat center;

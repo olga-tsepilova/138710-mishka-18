@@ -8,6 +8,7 @@
   }
 
   @include bp-desktop {
+    align-items: flex-end;
     width: 65.5%;
     height: 455px;
     padding: 0;
@@ -17,13 +18,16 @@
 .video-box__prewiew {
   @include adaptive-img;
 
+  display: block;
+
   @include bp-desktop {
-    height: 455px;
+    min-height: 455px;
   }
 }
 
 .video-box__play {
   position: absolute;
+  cursor: pointer;
 
   @include position-zero;
   margin: auto;

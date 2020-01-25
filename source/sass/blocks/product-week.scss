@@ -120,6 +120,16 @@
 
 .product-week__img {
   @include adaptive-img;
+
+  @include bp-tablet {
+    min-width: 303px;
+    min-height: 404px;
+  }
+
+  @include bp-desktop {
+    min-width: 525px;
+    min-height: 636px;
+  }
 }
 
 .product-week__cost {
@@ -133,7 +143,7 @@
   @include bp-tablet {
     font-size: 2rem;
     line-height: 1.2;
-    padding: 43px 0 35px;
+    padding: 45px 0 35px;
   }
 
   @include bp-desktop {
