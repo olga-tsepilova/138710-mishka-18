@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Каталог товаров | Мишка - Интернет-магазин игрушек ручной работы</title>
 
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
+  <div class="hidden">
+    <include src="build/img/sprite.svg"></include>
+  </div>
 
   <!-- ================= ОБЕРТКА ДЛЯ СТРАНИЦЫ  ================= -->
   <div class="main-wrapper">
@@ -45,7 +48,7 @@
               <li class="nav__item">
                 <a class="nav__link nav__link--search" href="/">
                   <svg class="nav__icon" width="18" height="18" aria-label="Поиск по сайту" focusable="false">
-                    <use xlink:href="img/icon-sprite.svg#icon-search"></use>
+                    <use xlink:href="img/sprite.svg#icon-search"></use>
                   </svg>
                   Поиск по сайту
                 </a>
@@ -53,7 +56,7 @@
               <li class="nav__item">
                 <a class="nav__link nav__link--basket" href="/">
                   <svg class="nav__icon" width="21" height="18" aria-label="Корзина" focusable="false">
-                    <use xlink:href="img/icon-sprite.svg#icon-cart"></use>
+                    <use xlink:href="img/sprite.svg#icon-cart"></use>
                   </svg>
                   Корзина пока пуста
                 </a>
@@ -112,7 +115,7 @@
               <strong class="catalog__cost">1 200 руб</strong>
               <a class="catalog__add-to-cart" aria-label="Добавить в корзину" href="/">
                 <svg class="catalog__add-to-cart-icon" width="21" height="18" aria-label="Положить в корзину" focusable="false">
-                  <use xlink:href="img/icon-sprite.svg#icon-cart"></use>
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
                 </svg>
               </a>
             </div>
@@ -140,7 +143,7 @@
               <strong class="catalog__cost">690 руб</strong>
               <a class="catalog__add-to-cart" aria-label="Добавить в корзину" href="/">
                 <svg class="catalog__add-to-cart-icon" width="21" height="18" aria-label="Положить в корзину" focusable="false">
-                  <use xlink:href="img/icon-sprite.svg#icon-cart"></use>
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
                 </svg>
               </a>
             </div>
@@ -168,7 +171,7 @@
               <strong class="catalog__cost">1 500 руб</strong>
               <a class="catalog__add-to-cart" aria-label="Добавить в корзину" href="/">
                 <svg class="catalog__add-to-cart-icon" width="21" height="18" aria-label="Положить в корзину" focusable="false">
-                  <use xlink:href="img/icon-sprite.svg#icon-cart"></use>
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
                 </svg>
               </a>
             </div>
@@ -222,7 +225,7 @@
         <div class="main-footer__logo">
           <a href="index.html" aria-label="Мишка - Интернет-магазин игрушек ручной работы">
             <svg class="main-footer__logo-img" width="102" height="34" role="img">
-              <use xlink:href="img/icon-sprite.svg#logo-footer"></use>
+              <use xlink:href="img/sprite.svg#logo-footer"></use>
             </svg>
           </a>
         </div>
@@ -233,21 +236,21 @@
             <li class="social-box__item">
               <a class="social-box__link" href="/" target="_blank" aria-label="Мишка в instagram">
                 <svg class="social-box__link-icon" width="21" height="28" role="img">
-                  <use xlink:href="img/icon-sprite.svg#icon-insta"></use>
+                  <use xlink:href="img/sprite.svg#icon-insta"></use>
                 </svg>
               </a>
             </li>
             <li class="social-box__item">
               <a class="social-box__link" href="/" target="_blank" aria-label="Мишка в facebook">
                 <svg class="social-box__link-icon" width="21" height="28" role="img">
-                  <use xlink:href="img/icon-sprite.svg#icon-fb"></use>
+                  <use xlink:href="img/sprite.svg#icon-fb"></use>
                 </svg>
               </a>
             </li>
             <li class="social-box__item">
               <a class="social-box__link" href="/" target="_blank" aria-label="Мишка в twitter">
                 <svg class="social-box__link-icon" width="21" height="28" role="img">
-                  <use xlink:href="img/icon-sprite.svg#icon-twitter"></use>
+                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
@@ -258,7 +261,7 @@
 
           <a class="developer__link" aria-label="Переход на страницу HTML-academy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
             <svg class="developer__logo" width="27" height="34" role="img">
-              <use xlink:href="img/icon-sprite.svg#logo-htmlacademy"></use>
+              <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
             </svg>
           </a>
         </div>
@@ -283,7 +286,7 @@
 
           <div class="order-form__item-element-box">
             <label class="order-form__item-element">
-              <input  class="order-form__radio-input" type="radio" name="size" value="size-s">
+              <input class="order-form__radio-input" type="radio" name="size" value="size-s">
               <span class="order-form__item-element-value">s</span>
             </label>
             <label class="order-form__item-element">
@@ -304,6 +307,5 @@
   <!-- /модалка заказа -->
 
   <script src="js/main.js"></script>
-  <script src="js/picturefill.js"></script>
   </body>
 </html>

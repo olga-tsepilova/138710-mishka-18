@@ -1,9 +1,15 @@
+"use strict";
 /* mobile navigation */
+function classAddJs() {
+  document.querySelector('.nav__wrapper').classList.add('nav__wrapper--close');
+}
 function classToggle() {
   this.classList.toggle('nav__toggle--close');
   document.querySelector('.nav__wrapper').classList.toggle('nav__wrapper--show');
+  document.querySelector('.nav__wrapper').classList.remove('nav__wrapper--close');
 }
 document.querySelector('.nav__toggle').addEventListener('click', classToggle);
+
 
 
 /*var navMain = document.querySelector('.main-nav');
