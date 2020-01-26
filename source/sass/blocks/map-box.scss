@@ -30,4 +30,9 @@
 .map-box__img {
   @include adaptive-img;
   margin: 0 auto;
+
+  @include bp-desktop {
+    min-width: 525px;
+    min-height: 427px;
+  }
 }

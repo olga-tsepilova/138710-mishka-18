@@ -7,11 +7,14 @@
   @include bp-tablet {
     display: flex;
     flex-wrap: wrap;
+    max-width: $bp-tab;
+
+    @include gorisontal-center;
     background-size: auto 15px;
   }
 
   @include bp-desktop {
-    max-width: 1050px;
+    max-width: $bp-desk-small;
     background-size: auto 20px;
   }
 }
@@ -124,6 +127,6 @@
 }
 
 .about-us__icon {
-  fill: #149080;
+  fill: $tiffany-dark;
   margin: 0 0 1em;
 }

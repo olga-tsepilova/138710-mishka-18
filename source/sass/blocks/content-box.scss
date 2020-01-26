@@ -7,7 +7,7 @@
   }
 
   @include bp-desktop {
-    max-width: 1150px;
+    max-width: $bp-desk-big;
 
     @include gorisontal-center;
   }

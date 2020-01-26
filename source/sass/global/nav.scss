@@ -23,31 +23,34 @@
 
 .nav__wrapper {
   @include bp-only-mobile {
-    width: 100%;
-    opacity: 0;
-    max-height: 0;
-    pointer-events: none;
-    visibility: hidden;
-    backface-visibility: hidden;
-    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    max-height: 500px;
+    pointer-events: auto;
+    visibility: visible;
+    backface-visibility: visible;
+    z-index: 999;
 
-    @include transition;
+    &--close {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      max-height: 0;
+      pointer-events: none;
+      visibility: hidden;
+      backface-visibility: hidden;
+      z-index: 0;
 
-    &--nojs {
-      display: flex;
-      flex-direction: column;
-      opacity: 1;
-      max-height: 500px;
-      pointer-events: auto;
-      visibility: visible;
-      backface-visibility: visible;
-      z-index: 999;
+      @include transition;
     }
 
     &--show {
+      position: absolute;
       display: flex;
       flex-direction: column;
-      position: absolute;
       top: 80px;
       left: 0;
       width: 100%;
@@ -60,12 +63,20 @@
       @include transition;
     }
   }
+
+  @include bp-desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    z-index: 15;
+  }
 }
 
 .nav__list {
   width: 100%;
   list-style-type: none;
-  border-top: 1px solid $extra-light-grey;
+  border-top: 1px solid $white-medium-dark;
 
   @include transition;
 
@@ -83,13 +94,16 @@
 
     @include bp-tablet {
       display: flex;
+      justify-content: flex-end;
       width: 100%;
+      padding-right: 50px;
     }
 
     @include bp-desktop {
       display: flex;
       justify-content: flex-end;
       width: 50%;
+      padding-right: 0;
     }
   }
 
@@ -97,28 +111,20 @@
     @include bp-tablet {
       position: absolute;
       display: flex;
-      width: 50%;
+      width: 60%;
+      left: 0;
       bottom: -60px;
-      left: 25px;
-      border-top: none;
+      padding-left: 25px;
+      border: none;
     }
 
     @include bp-desktop {
       position: relative;
-      bottom: 0;
-      left: -25px;
-    }
-  }
-
-  &--product-filter {
-    @include visually-hidden;
-
-    @include bp-desktop {
-      position: relative;
-      display: flex;
       width: 50%;
-      height: 80px;
-      margin: 0 0 0 -25px;
+      min-height: 88px;
+      bottom: 0;
+      left: 0;
+      padding-left: 0;
     }
   }
 }
@@ -133,14 +139,15 @@
   position: relative;
   display: flex;
   align-items: center;
-  height: 80px;
+  min-height: 80px;
   width: 100%;
-  padding: 0 0 0 75px;
+  padding: 5px 10px 5px 75px;
+  text-align: left;
   font-size: 1.7rem;
   color: $black;
   font-weight: bold;
   text-decoration: none;
-  border-bottom: 1px solid $extra-light-grey;
+  border-bottom: 1px solid $white-medium-dark;
 
   .nav__icon {
     fill: $black;
@@ -150,10 +157,10 @@
   &--active,
   &:hover {
     text-decoration: none;
-    color: $black;
+    color: $black-light-extra;
 
     .nav__icon {
-      fill: $tiffany-medium;
+      fill: $tiffany-light;
       opacity: 1;
     }
   }
@@ -165,7 +172,7 @@
     opacity: 0.3;
 
     .nav__icon {
-      fill: $tiffany-medium;
+      fill: $tiffany-light;
     }
   }
 
@@ -175,7 +182,7 @@
   }
 
   &--basket::before {
-    background: url("../../img/icon-cart.svg") no-repeat center;
+    background: url("../../img/sprite/icon-cart.svg") no-repeat center;
     background-size: 21px 18px;
   }
 
@@ -186,7 +193,7 @@
       padding: 0 0 0 83px;
       overflow: hidden;
       border-bottom: none;
-      border-left: 1px solid $extra-light-grey;
+      border-left: 1px solid $white-medium-dark;
     }
   }
 
@@ -196,47 +203,46 @@
       padding: 0 0 0 83px;
       overflow: hidden;
       border-bottom: none;
-      border-left: 1px solid $extra-light-grey;
+      border-left: 1px solid $white-medium-dark;
     }
   }
 
   &--to-form {
     @include bp-desktop {
-      border-left: 1px solid $extra-light-grey;
+      border-left: 1px solid $white-medium-dark;
     }
   }
 
   &--catalog,
   &--to-form {
     @include bp-tablet {
+      min-height: 60px;
+      padding: 0 25px;
       font-size: 1.5rem;
       border-bottom: none;
-      padding: 20px 25px 0;
     }
 
     @include bp-desktop {
-      height: 88px;
-      padding: 0 25px;
+      min-height: 88px;
       font-size: 1.7rem;
     }
   }
 
-  &--product-filter-link {
+  &--catalog {
     @include bp-desktop {
-      padding: 0 25px;
-      font-size: 1.5rem;
-      border: none;
+      padding-left: 0;
     }
   }
 }
 
 .nav__icon {
   position: absolute;
-  top: 30px;
+  top: 50%;
   left: 30px;
+  margin-top: -10px;
 
   @include bp-tablet {
-    top: 32px;
     left: 32px;
+    margin-top: -10px;
   }
 }

@@ -46,14 +46,14 @@
 }
 
 .contacts-info__link-email {
-  color: $grey-dark;
+  color: $black-medium-light;
   text-decoration: none;
-  border-bottom: 1px solid #62d1ba;
+  border-bottom: 1px solid $tiffany-light-medium;
 
   &:hover,
   &:active {
-    color: #46c1ae;
-    border-bottom: 1px solid #46c1ae;
+    color: $tiffany-medium-dark;
+    border-bottom: 1px solid $tiffany-medium-dark;
   }
 
   &:focus {

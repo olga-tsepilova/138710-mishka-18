@@ -1,14 +1,26 @@
+/*
 .intro {
-  @include flex-center-vh;
-  min-height: 176px;
+  position: relative;
+  display: flex;
+  width: 100%;
   background-color: $white-medium;
+
+  @include bp-tablet {
+    background: $white-medium url("../img/bg-zigzag-fill.svg") repeat-x 0 bottom;
+    background-size: auto 24px;
+  }
+}
+
+.intro__wrapper {
+  @include flex-center-vh;
+
+  width: 100%;
+  min-height: 177px;
   color: $black;
 
   @include bp-tablet {
     min-height: 223px;
     padding-top: 24px;
-    background: $white-medium url("../img/bg-zigzag-fill.svg") repeat-x 0 bottom;
-    background-size: auto 24px;
   }
 
   @include bp-desktop {
@@ -18,9 +30,11 @@
   }
 }
 
+
 .intro__title {
   font-size: 2.7rem;
   line-height: 1.1;
+  text-align: center;
 
   @include bp-tablet {
     font-size: 4.3rem;
@@ -28,5 +42,63 @@
 
   @include bp-desktop {
     font-size: 5.3rem;
+  }
+}
+*/
+.intro {
+  position: relative;
+  display: flex;
+  width: 100%;
+  background-color: $white-medium;
+
+  @include bp-tablet {
+    background: $white-medium url("../img/bg-zigzag-fill.svg") repeat-x 0 bottom;
+    background-size: auto 24px;
+  }
+}
+
+.intro__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 177px;
+
+  @include bp-only-mobile {
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include bp-tablet {
+    justify-content: flex-start;
+    height: 224px;
+    max-width: $bp-tab;
+
+    @include gorisontal-center;
+  }
+
+  @include bp-desktop {
+    height: 255px;
+    max-width: $bp-desk-small;
+  }
+}
+
+.intro__title {
+  font-size: 2.7rem;
+  color: $black;
+  padding: 0 10%;
+  text-align: center;
+
+  @include bp-tablet {
+    padding-top: 40px;
+    font-size: 4.3rem;
+    line-height: 1.1;
+  }
+
+  @include bp-desktop {
+    max-width: 850px;
+
+    @include gorisontal-center;
+    font-size: 5.3rem;
+    line-height: 1.1;
   }
 }

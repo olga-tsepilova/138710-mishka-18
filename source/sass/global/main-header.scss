@@ -2,8 +2,9 @@
   position: relative;
   min-height: 80px;
   text-align: center;
-  border-top: 1px solid $extra-light-grey;
-  border-bottom: 1px solid $extra-light-grey;
+  border-top: 1px solid $white-medium-dark;
+  border-bottom: 1px solid $white-medium-dark;
+  z-index: 15;
 
   @include bp-tablet {
     & {
@@ -26,18 +27,21 @@
   @include bp-tablet {
     min-height: 88px;
     height: 88px;
+    max-width: $bp-tab;
+
+    @include gorisontal-center;
     text-align: left;
     border-top: none;
-    border-bottom: 1px solid $extra-light-grey;
+    border-bottom: 1px solid $white-medium-dark;
   }
 
   @include bp-desktop {
-    max-width: 1050px;
-    margin: 0 auto;
+    max-width: $bp-desk-small;
   }
 }
 
-.main-header__logo-link {
+
+.main-header__logo {
   @include flex-center-vh;
   height: 80px;
   width: 50%;
@@ -45,8 +49,8 @@
 
   @include bp-tablet {
     justify-content: flex-start;
-    width: 50%;
     height: 88px;
+    width: 30%;
     padding: 0 0 0 50px;
   }
 
@@ -61,7 +65,9 @@
     margin: 0 auto;
     z-index: 20;
   }
+}
 
+.main-header__logo-link {
   &[href]:hover {
     opacity: 0.6;
   }
@@ -88,7 +94,7 @@
   width: 100%;
 
   @include bp-tablet {
-    width: 50%;
+    width: 70%;
   }
 
   @include bp-desktop {
@@ -97,29 +103,5 @@
     flex-wrap: wrap;
     width: 100%;
     z-index: 15;
-  }
-}
-
-.main-header__delivery-info {
-  @include visually-hidden;
-
-  @include bp-tablet {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 60px;
-    width: 50%;
-    margin: 0 0 0 50%;
-    padding: 0 50px 0 0;
-    font-size: 1.5rem;
-    font-weight: normal;
-    color: $grey-dark;
-  }
-
-  @include bp-desktop {
-    height: 80px;
-    padding: 0;
-    margin: 0 0 0 50%;
   }
 }

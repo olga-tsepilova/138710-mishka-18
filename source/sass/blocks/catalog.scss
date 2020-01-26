@@ -5,6 +5,9 @@
   margin: 0 auto;
 
   @include bp-tablet {
+    max-width: $bp-tab;
+
+    @include gorisontal-center;
     padding: $padding-usual-tab;
     padding-bottom: 0;
   }
@@ -12,8 +15,8 @@
   @include bp-desktop {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1150px;
+    justify-content: flex-start;
+    max-width: $bp-desk-big;
   }
 }
 
@@ -22,24 +25,83 @@
   display: flex;
   flex-direction: column;
   margin: 0 0 $padding-usual;
-  border: 1px solid $extra-light-grey;
+  border: 1px solid $white-medium-dark;
+
+  &:hover {
+    .catalog__product-info {
+      box-shadow: 0 5px 10px 2px $grey-light-extra;
+
+      @include transition;
+    }
+  }
+
+  &:focus,
+  &:active {
+    .catalog__product-info {
+      box-shadow: 0 3px 5px 2px $grey-light-extra;
+
+      @include transition;
+    }
+  }
 
   @include bp-tablet {
     flex-direction: row;
     margin: 0 0 55px;
     padding: 0;
+    height: 333px;
 
     &:last-child {
       margin: 0;
+    }
+
+    &:hover {
+      .catalog__product-info {
+        box-shadow: 7px 0 8px 0 $grey-light-extra;
+
+        @include transition;
+      }
+    }
+
+    &:focus,
+    &:active {
+      .catalog__product-info {
+        box-shadow: 7px 0 8px -3px $grey-light-extra;
+
+        @include transition;
+      }
     }
   }
 
   @include bp-desktop {
     flex-direction: column;
     width: 31%;
+    height: auto;
+    margin-right: 3.5%;
+    overflow: hidden;
 
     &:last-child {
-      margin: 0 0 55px;
+      margin-bottom: 50px;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:hover {
+      .catalog__product-info {
+        box-shadow: 0 5px 10px 2px $grey-light-extra;
+
+        @include transition;
+      }
+    }
+
+    &:focus,
+    &:active {
+      .catalog__product-info {
+        box-shadow: 0 3px 5px 2px $grey-light-extra;
+
+        @include transition;
+      }
     }
   }
 }
@@ -72,11 +134,14 @@
 
   @include bp-desktop {
     height: 462px;
+    min-width: 325px;
   }
 }
 
 .catalog__product-info {
   padding: $padding-usual;
+
+  @include transition;
 
   @include bp-tablet {
     display: flex;
@@ -140,7 +205,7 @@
   align-items: center;
   justify-content: space-between;
   padding: $padding-usual 0 0;
-  border-top: 1px solid #ededed;
+  border-top: 1px solid $white-dark;
   color: $black;
 
   @include bp-tablet {
@@ -172,13 +237,13 @@
 .catalog__add-to-cart-icon {
   width: 20px;
   height: 19px;
-  fill: $grey-light;
+  fill: $grey;
 
   @include transition;
 
   &:hover,
   &:active {
-    fill: $tiffany-medium;
+    fill: $tiffany-light;
   }
 
   &:focus {

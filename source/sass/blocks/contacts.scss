@@ -6,6 +6,9 @@
   padding: $padding-usual 0 40px;
 
   @include bp-tablet {
+    max-width: $bp-tab;
+
+    @include gorisontal-center;
     padding: $padding-usual-tab 0;
   }
 
@@ -14,7 +17,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1050px;
+    max-width: $bp-desk-small;
     height: 557px;
   }
 }
@@ -62,7 +65,7 @@
 .contacts__map {
   @include bp-desktop {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     width: 50%;
     padding: 0;

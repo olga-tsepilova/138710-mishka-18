@@ -28,7 +28,7 @@
   float: left;
   background-color: $white;
   text-decoration: none;
-  border: 1px solid $extra-light-grey;
+  border: 1px solid $white-medium-dark;
 
   &--back {
     background-image: url("../img/icon-left-arrow.svg");
@@ -71,9 +71,13 @@
 .slider__button {
   @include bp-tablet {
     position: absolute;
-    top: 50px;
+    top: 80px;
     right: 50px;
     width: 175px;
     font-size: 1.7rem;
+  }
+
+  @include bp-desktop {
+    top: 50px;
   }
 }

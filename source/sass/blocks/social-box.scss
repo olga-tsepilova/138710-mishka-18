@@ -35,17 +35,17 @@
 .social-box__link-icon {
   width: 21px;
   height: 28px;
-  fill: #231f20;
+  fill: $black-light;
 
   @include transition;
 
   &:hover,
   &:active {
-    fill: #62d1ba;
+    fill: $tiffany-light-medium;
   }
 
   &:focus {
-    fill: #62d1ba;
+    fill: $tiffany-light-medium;
     opacity: 0.3;
   }
 }

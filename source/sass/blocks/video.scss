@@ -4,9 +4,12 @@
   display: flex;
   flex-direction: column;
   padding: 0 0 $padding-usual;
-  border: 1px solid $extra-light-grey;
+  border: 1px solid $white-medium-dark;
 
   @include bp-tablet {
+    max-width: $bp-tab;
+
+    @include gorisontal-center;
     padding: 0;
     border: none;
   }
@@ -14,6 +17,7 @@
   @include bp-desktop {
     flex-wrap: wrap;
     align-items: center;
+    max-width: $bp-desk-small;
     height: 455px;
     padding: 0 $padding-usual-tab 0 0;
   }
@@ -24,7 +28,7 @@
 
   @include bp-tablet {
     padding-left: $padding-usual-tab;
-    border: 1px solid $extra-light-grey;
+    border: 1px solid $white-medium-dark;
     border-bottom: 0;
   }
 

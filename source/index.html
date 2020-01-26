@@ -3,29 +3,40 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Вяжем и продаем душевные игрушки. Только ручная работа, экологические чистые материалы, стильные аксессуары для фотосессий.">
+
     <title>Мишка - Интернет-магазин игрушек ручной работы</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
+    <div class="hidden">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <!-- ================= ОБЕРТКА ДЛЯ СТРАНИЦЫ  ================= -->
     <div class="main-wrapper">
 
       <!-- ================= шапка проекта  ================= -->
       <header class="main-header">
         <div class="main-header__wrapper">
-          <a class="main-header__logo-link">
-            <picture>
-              <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img class="main-header__logo-img" src="img/logo-mobile.svg" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35">
-            </picture>
-          </a>
+          <div class="main-header__logo">
+            <a class="main-header__logo-link">
+              <picture>
+                <source media="(min-width: 1050px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="main-header__logo-img" src="img/logo-mobile.svg" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35">
+              </picture>
+            </a>
+          </div>
 
           <nav class="main-header__nav nav">
 
             <button class="nav__toggle" type="button" aria-label="Открыть меню"></button>
 
-            <div class="nav__wrapper nav__wrapper--nojs">
+            <!-- для js поставить класс nav__wrapper--close -->
+            <div class="nav__wrapper nav__wrapper--close">
               <ul class="nav__list nav__list--production">
                 <li class="nav__item">
                   <a class="nav__link nav__link--catalog" href="catalog.html">
@@ -43,7 +54,7 @@
                 <li class="nav__item">
                   <a class="nav__link nav__link--search" href="/">
                     <svg class="nav__icon" width="18" height="18" aria-label="Поиск по сайту" focusable="false">
-                      <use xlink:href="img/icon-sprite.svg#icon-search"></use>
+                      <use xlink:href="#icon-search"></use>
                     </svg>
                     Поиск по сайту
                   </a>
@@ -51,29 +62,14 @@
                 <li class="nav__item">
                   <a class="nav__link nav__link--basket" href="/">
                     <svg class="nav__icon" width="21" height="18" aria-label="Корзина" focusable="false">
-                      <use xlink:href="img/icon-sprite.svg#icon-cart"></use>
+                      <use xlink:href="#icon-cart"></use>
                     </svg>
                     Корзина пока пуста
                   </a>
                 </li>
               </ul>
-
-              <ul class="nav__list nav__list--product-filter">
-                <li class="nav__item">
-                  <a class="nav__link nav__link--product-filter-link" href="/">
-                    Новые поступления
-                  </a>
-                </li>
-                <li class="nav__item">
-                  <a class="nav__link nav__link--product-filter-link" href="/">
-                    Распродажа
-                  </a>
-                </li>
-              </ul>
             </div>
           </nav>
-
-          <strong class="main-header__delivery-info">Бесплатная доставка по России</strong>
         </div>
       </header>
       <!-- ================= /шапка проекта  ================= -->
@@ -82,25 +78,45 @@
       <main class="main-content">
         <section class="promo">
           <div class="promo__wrapper">
+
+            <div class="content-add-date">
+              <ul class="content-add-date__list">
+                <li class="content-add-date__item">
+                  <a class="content-add-date____link" href="/">
+                    Новые поступления
+                  </a>
+                </li>
+                <li class="content-add-date__item">
+                  <a class="content-add-date____link" href="/">
+                    Распродажа
+                  </a>
+                </li>
+              </ul>
+              <strong class="content-add-date__delivery-info">Бесплатная доставка по России</strong>
+            </div>
+
             <h1 class="promo__title">
               Милые штуки ручной работы для дома
             </h1>
+
           </div>
         </section>
 
         <!--  каталог -  типы продукции -->
-        <ul class="catalog-product-type">
-          <li class="catalog-product-type__item">
-            <a class="catalog-product-type__link catalog-product-type__link--interior" href="/">
-              Предметы интерьера
-            </a>
-          </li>
-          <li class="catalog-product-type__item">
-            <a class="catalog-product-type__link catalog-product-type__link--toy" href="/">
-              Детские игрушки
-            </a>
-          </li>
-        </ul>
+        <div class="catalog-product-wrapper">
+          <ul class="catalog-product-type">
+            <li class="catalog-product-type__item">
+              <a class="catalog-product-type__link catalog-product-type__link--interior" href="/">
+                Предметы интерьера
+              </a>
+            </li>
+            <li class="catalog-product-type__item">
+              <a class="catalog-product-type__link catalog-product-type__link--toy" href="/">
+                Детские игрушки
+              </a>
+            </li>
+          </ul>
+        </div>
         <!-- / каталог -  типы продукции -->
 
         <!-- товар недели -->
@@ -136,10 +152,10 @@
 
             <div class="product-week__photo">
               <picture>
-                <source type="image/webp" media="(min-width: 1050)" srcset="img/triple-set-desktop@1x.webp, img/triple-set-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1050px)" srcset="img/triple-set-desktop@1x.webp, img/triple-set-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
-                <source media="(min-width: 1050)" srcset="img/triple-set-desktop@1x.jpg, img/triple-set-tablet@2x.jpg 2x">
+                <source media="(min-width: 1050px)" srcset="img/triple-set-desktop@1x.jpg, img/triple-set-tablet@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
                 <img class="product-week__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки" width="260" height="315">
               </picture>
@@ -248,10 +264,10 @@
           <div class="contacts__map">
             <div class="map-box">
               <picture>
-                <source type="image/webp" media="(min-width: 1050)" srcset="img/map-desktop@1x.webp, img/map-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1050px)" srcset="img/map-desktop@1x.webp, img/map-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
-                <source media="(min-width: 1050)" srcset="img/map-desktop@1x.jpg, img/map-tablet@2x.jpg 2x">
+                <source media="(min-width: 1050px)" srcset="img/map-desktop@1x.jpg, img/map-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
                 <img class="map-box__img" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="322" height="457" alt="Карта адреса">
               </picture>
@@ -276,7 +292,7 @@
           <div class="main-footer__logo">
             <a aria-label="Мишка - Интернет-магазин игрушек ручной работы">
               <svg class="main-footer__logo-img" width="102" height="34" role="img">
-                <use xlink:href="img/icon-sprite.svg#logo-footer"></use>
+                <use xlink:href="#logo-footer"></use>
               </svg>
             </a>
           </div>
@@ -287,21 +303,21 @@
               <li class="social-box__item">
                 <a class="social-box__link" href="/" target="_blank" aria-label="Мишка в instagram">
                   <svg class="social-box__link-icon" width="21" height="28" role="img">
-                    <use xlink:href="img/icon-sprite.svg#icon-insta"></use>
+                    <use xlink:href="#icon-insta"></use>
                   </svg>
                 </a>
               </li>
               <li class="social-box__item">
                 <a class="social-box__link" href="/" target="_blank" aria-label="Мишка в facebook">
                   <svg class="social-box__link-icon" width="21" height="28" role="img">
-                    <use xlink:href="img/icon-sprite.svg#icon-fb"></use>
+                    <use xlink:href="#icon-fb"></use>
                   </svg>
                 </a>
               </li>
               <li class="social-box__item">
                 <a class="social-box__link" href="/" target="_blank" aria-label="Мишка в twitter">
                   <svg class="social-box__link-icon" width="21" height="28" role="img">
-                    <use xlink:href="img/icon-sprite.svg#icon-twitter"></use>
+                    <use xlink:href="#icon-twitter"></use>
                   </svg>
                 </a>
               </li>
@@ -312,7 +328,7 @@
 
             <a class="developer__link" aria-label="Переход на страницу HTML-academy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
               <svg class="developer__logo" width="27" height="34" role="img">
-                <use xlink:href="img/icon-sprite.svg#logo-htmlacademy"></use>
+                <use xlink:href="#logo-htmlacademy"></use>
               </svg>
             </a>
           </div>
@@ -337,7 +353,7 @@
 
             <div class="order-form__item-element-box">
               <label class="order-form__item-element">
-                <input  class="order-form__radio-input" type="radio" name="size" value="size-s">
+                <input class="order-form__radio-input" type="radio" name="size" value="size-s">
                 <span class="order-form__item-element-value">s</span>
               </label>
               <label class="order-form__item-element">
@@ -358,7 +374,6 @@
     <!-- /модалка заказа -->
 
 
-    <script src="js/main.js"></script>
-    <script src="js/picturefill.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
