@@ -87,6 +87,7 @@
 .product-week__info-box {
   @include bp-only-mobile {
     max-width: 260px;
+
     @include gorisontal-center;
   }
 
