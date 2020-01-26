@@ -1,0 +1,97 @@
+.content-add-date {
+  @include bp-only-mobile {
+    @include visually-hidden;
+  }
+
+  @include bp-tablet {
+    position: relative;
+    width: 100%;
+    min-height: 60px;
+
+    @include gorisontal-center;
+  }
+
+  @include bp-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: $bp-desk-small;
+  }
+}
+
+.content-add-date__list {
+  @include bp-tablet {
+    @include visually-hidden;
+  }
+
+  @include bp-desktop {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    height: 60px;
+    min-height: 60px;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding-right: 0;
+    overflow: visible;
+    clip: auto;
+    list-style-type: none;
+  }
+}
+
+.content-add-date____link {
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  color: $black;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 0 25px 0 0;
+
+  &--active,
+  &:hover {
+    text-decoration: none;
+    color: $black-light-extra;
+  }
+
+  &:focus,
+  &:active {
+    color: $black;
+    opacity: 0.3;
+  }
+}
+
+.content-add-date__delivery-info {
+  @include bp-tablet {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+    height: 60px;
+    min-height: 60px;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding-right: 50px;
+    overflow: visible;
+    clip: auto;
+    text-align: right;
+    font-weight: normal;
+  }
+
+  @include bp-desktop {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+    min-height: 60px;
+    padding-right: 0;
+  }
+}

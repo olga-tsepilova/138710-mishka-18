@@ -17,7 +17,7 @@
   }
 
   @include bp-desktop {
-    max-width: 1050px;
+    max-width: $bp-desk-small;
 
     @include gorisontal-center;
   }
@@ -38,18 +38,18 @@
   @include transition;
 
   &:hover {
-    fill: #62d1ba;
+    fill: $tiffany-light-medium;
   }
 
   &:focus,
   &:active {
-    fill: #62d1ba;
+    fill: $tiffany-light-medium;
     opacity: 0.3;
   }
 }
 
 .main-footer__developer {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid $grey-light;
 
   @include bp-tablet {
     border-top: none;

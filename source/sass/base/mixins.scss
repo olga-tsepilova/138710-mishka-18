@@ -18,7 +18,7 @@
 }
 
 @mixin bp-desktop {
-  @media all and (min-width: $bp-desk-big) {
+  @media all and (min-width: $bp-desk-small) {
     @content;
   }
 }

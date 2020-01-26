@@ -21,19 +21,22 @@
       <!-- ================= шапка проекта  ================= -->
       <header class="main-header">
         <div class="main-header__wrapper">
-          <a class="main-header__logo-link">
-            <picture>
-              <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img class="main-header__logo-img" src="img/logo-mobile.svg" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35">
-            </picture>
-          </a>
+          <div class="main-header__logo">
+            <a class="main-header__logo-link">
+              <picture>
+                <source media="(min-width: 1050px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="main-header__logo-img" src="img/logo-mobile.svg" alt="Мишка - Интернет-магазин игрушек ручной работы" width="86" height="35">
+              </picture>
+            </a>
+          </div>
 
           <nav class="main-header__nav nav">
 
             <button class="nav__toggle" type="button" aria-label="Открыть меню"></button>
 
-            <div class="nav__wrapper">
+            <!-- для js поставить класс nav__wrapper--close -->
+            <div class="nav__wrapper nav__wrapper--close">
               <ul class="nav__list nav__list--production">
                 <li class="nav__item">
                   <a class="nav__link nav__link--catalog" href="catalog.html">
@@ -65,23 +68,8 @@
                   </a>
                 </li>
               </ul>
-
-              <ul class="nav__list nav__list--product-filter">
-                <li class="nav__item">
-                  <a class="nav__link nav__link--product-filter-link" href="/">
-                    Новые поступления
-                  </a>
-                </li>
-                <li class="nav__item">
-                  <a class="nav__link nav__link--product-filter-link" href="/">
-                    Распродажа
-                  </a>
-                </li>
-              </ul>
             </div>
           </nav>
-
-          <strong class="main-header__delivery-info">Бесплатная доставка по России</strong>
         </div>
       </header>
       <!-- ================= /шапка проекта  ================= -->
@@ -90,9 +78,27 @@
       <main class="main-content">
         <section class="promo">
           <div class="promo__wrapper">
+
+           <div class="content-add-date">
+             <ul class="content-add-date__list">
+               <li class="content-add-date__item">
+                 <a class="content-add-date____link" href="/">
+                   Новые поступления
+                 </a>
+               </li>
+               <li class="content-add-date__item">
+                 <a class="content-add-date____link" href="/">
+                   Распродажа
+                 </a>
+               </li>
+             </ul>
+             <strong class="content-add-date__delivery-info">Бесплатная доставка по России</strong>
+           </div>
+
             <h1 class="promo__title">
               Милые штуки ручной работы для дома
             </h1>
+
           </div>
         </section>
 

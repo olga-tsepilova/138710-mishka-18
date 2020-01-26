@@ -3,7 +3,7 @@
   width: 100%;
   padding: 20px 0;
   text-align: center;
-  color: $grey-dark;
+  color: $black-medium-light;
   font-size: 1.6rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -11,19 +11,19 @@
   text-decoration: none;
   cursor: pointer;
   background-color: $white;
-  border: 2px solid $grey-dark;
+  border: 2px solid $black-medium-light;
 
   @include transition;
 
   &:hover {
-    background-color: $grey-dark;
+    background-color: $black-medium-light;
     color: $white;
   }
 
   &:focus,
   &:active {
-    background-color: $grey-dark;
-    color: $grey-medium-dark;
+    background-color: $black-medium-light;
+    color: $black-light-extra;
   }
 
   @include bp-tablet {
@@ -31,16 +31,16 @@
   }
 
   &--green {
-    background-color: $tiffany-dark;
-    border: 2px solid $tiffany-dark;
+    background-color: $tiffany-light-extra;
+    border: 2px solid $tiffany-light-extra;
     color: $white;
 
     &:hover,
     &:focus,
     &:active {
       background-color: $white;
-      border: 2px solid $tiffany-dark;
-      color: $tiffany-dark;
+      border: 2px solid $tiffany-light-extra;
+      color: $tiffany-light-extra;
     }
   }
 }

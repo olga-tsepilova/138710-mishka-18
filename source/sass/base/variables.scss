@@ -1,15 +1,29 @@
 /* colors */
 $white: #ffffff;
+$white-medium-light: #f9f9f9;
 $white-medium: #f1f1f1;
-$extra-light-grey: #ececec;
-$grey-light: #cccccc;
-$grey-medium: #c6c6c6;
-$grey-medium-dark: #8d8d8d;
-$grey-dark: #444444;
+$white-medium-dark: #ececec;
+$white-dark: #ededed;
+
+$grey-light-extra: #e8e8e8;
+$grey-light: #e5e5e5;
+$grey: #cccccc;
+$grey-medium: #c7c7c7;
+$grey-medium-dark: #c6c6c6;
+
+$black-light-extra: #8d8d8d;
+$black-light: #231f20;
+$black-medium-light: #444444;
+$black-medium: #434343;
 $black: #000000;
-$tiffany-medium: #63d1bb;
-$tiffany: #46c1ae;
-$tiffany-dark: #64d1bc;
+
+$tiffany-light-extra: #64d1bc;
+$tiffany-light: #63d1bb;
+$tiffany-light-medium: #62d1ba;
+$tiffany: #61d3bc;
+$tiffany-medium: #56c3b2;
+$tiffany-medium-dark: #46c1ae;
+$tiffany-dark: #149080;
 
 /* padding */
 $padding-usual: 30px;

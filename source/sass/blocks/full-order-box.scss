@@ -18,15 +18,16 @@
   margin: 0;
 
   @include bp-tablet {
+    max-width: $bp-tab;
+
+    @include gorisontal-center;
     padding: 0 $padding-usual-tab;
     font-size: 1.7rem;
     line-height: 1.7;
   }
 
   @include bp-desktop {
-    max-width: 1050px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: $bp-desk-small;
     padding: 0 $padding-usual-tab 0 175px;
   }
 }

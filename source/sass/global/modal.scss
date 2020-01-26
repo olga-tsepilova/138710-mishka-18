@@ -26,8 +26,8 @@
   width: 100%;
   position: relative;
   padding: $padding-usual;
-  border-top: 1px solid $grey-medium;
-  border-bottom: 1px solid $grey-medium;
+  border-top: 1px solid $grey-medium-dark;
+  border-bottom: 1px solid $grey-medium-dark;
   background-color: $white;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
 
@@ -40,7 +40,7 @@
 }
 
 .modal__close {
-  background: $grey-dark;
+  background: $black-medium-light;
   color: $white;
   line-height: 25px;
   position: absolute;
@@ -56,7 +56,7 @@
   &:hover,
   &:focus,
   &:active {
-    background: $tiffany-medium;
+    background: $tiffany-light;
   }
 
   @include bp-tablet {
