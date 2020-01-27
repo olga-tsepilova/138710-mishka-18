@@ -66,9 +66,9 @@
 }
 
 .product-week__description {
-  font-size: 1.3rem;
-  line-height: 1.53;
-  padding: 25px 0;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  padding: 27px 0 16px;
   margin: 0;
 
   @include bp-tablet {
@@ -100,7 +100,7 @@
 
 .product-week__photo {
   display: flex;
-  padding: $padding-usual 0 0;
+  padding: 27px 0 0;
   justify-content: center;
 
   @include adaptive-img-wrapper;
@@ -145,7 +145,7 @@
 
 .product-week__cost {
   width: 100%;
-  padding: $padding-usual 0;
+  padding: 24px 0 28px;
   text-align: center;
   font-weight: bold;
   font-size: 1.7rem;

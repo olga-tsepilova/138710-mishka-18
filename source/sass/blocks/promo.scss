@@ -10,11 +10,11 @@
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
-  height: 282px;
+  height: 280px;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: auto 124%;
+  background-size: auto 338px;
 
   @include bp-retina-2x {
     background-image: url("../img/hero-mobile@2x.jpg");
@@ -45,9 +45,10 @@
 }
 
 .promo__title {
+  padding: 70px 10% 0;
   font-size: 2.7rem;
+  line-height: 107%;
   color: $black;
-  padding: 80px 10% 0;
   text-align: center;
 
   @include bp-tablet {
@@ -63,4 +64,9 @@
     font-size: 5.3rem;
     line-height: 1.1;
   }
+}
+
+.promo__title-item {
+  display: flex;
+  justify-content: center;
 }

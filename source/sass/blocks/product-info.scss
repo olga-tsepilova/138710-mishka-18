@@ -1,6 +1,6 @@
 .product-info {
   width: 100%;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   line-height: 1;
 
   @include bp-tablet {
@@ -23,4 +23,12 @@
 .product-info__parameter,
 .product-info__value {
   padding: 13px 0;
+}
+
+.product-info__parameter {
+  min-width: 75px;
+}
+
+.product-info__value {
+  font-size: 1.3rem;
 }

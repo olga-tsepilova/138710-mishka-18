@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+  padding-bottom: 4px;
 }
 
 .slider__item {
@@ -11,7 +12,7 @@
 .slider__control {
   display: flex;
   width: 100%;
-  padding: $padding-usual 0;
+  padding: 35px 0;
 
   @include bp-tablet {
     position: absolute;

@@ -4,9 +4,8 @@
     display: flex;
     width: 100%;
     background-color: $white-medium-light;
-  }
 
-  &::after {
+    &::after {
     position: absolute;
     bottom: -10px;
     left: 0;
@@ -15,6 +14,7 @@
     height: 24px;
     background: url("../img/bg-zigzag-fill.svg") repeat-x 0 0;
     background-size: auto 24px;
+  }
 
     @include bp-desktop {
       background-size: auto 30px;

@@ -59,7 +59,7 @@
                 </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link nav__link--basket" href="/">
+                <a class="nav__link nav__link--basket open-modal" href="/">
                   <svg class="nav__icon" width="21" height="18" aria-label="Корзина" focusable="false">
                     <use xlink:href="#icon-cart"></use>
                   </svg>
@@ -317,6 +317,39 @@ type" value="product-type-toy">
 
   </div>
   <!-- ================= /ОБЕРТКА ДЛЯ СТРАНИЦЫ  ================= -->
+
+  <!-- модалка заказа -->
+  <div class="modal">
+    <div class="modal__dialog">
+      <span class="modal__close" aria-label="закрыть окно">X</span>
+      <form class="order-form" action="https://echo.htmlacademy.ru" method="get">
+        <strong class="order-form__title">
+          Добавить в корзину
+        </strong>
+        <fieldset class="order-form__item">
+          <legend class="order-form__item-title">Выберите размер:</legend>
+
+          <div class="order-form__item-element-box">
+            <label class="order-form__item-element">
+              <input class="order-form__radio-input" type="radio" name="size" value="size-s">
+              <span class="order-form__item-element-value">s</span>
+            </label>
+            <label class="order-form__item-element">
+              <input class="order-form__radio-input" type="radio" name="size" value="size-m">
+              <span class="order-form__item-element-value">m</span>
+            </label>
+            <label class="order-form__item-element">
+              <input class="order-form__radio-input" type="radio" name="size" value="size-l">
+              <span class="order-form__item-element-value">l</span>
+            </label>
+          </div>
+
+        </fieldset>
+        <button class="button button--green" type="button">Добавить</button>
+      </form>
+    </div>
+  </div>
+  <!-- /модалка заказа -->
 
   <script src="js/script.min.js"></script>
   </body>

@@ -3,7 +3,7 @@
   background-position: top left;
   background-repeat: repeat-x;
   background-size: 100%;
-  padding: $padding-usual 0 40px;
+  padding: $padding-usual 0 35px;
 
   @include bp-tablet {
     max-width: $bp-tab;
@@ -23,7 +23,7 @@
 }
 
 .contacts__header {
-  padding: 20px $padding-usual 40px;
+  padding: 18px 0 33px 27px;
 
   @include bp-tablet {
     padding: 38px $padding-usual-tab;
