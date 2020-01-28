@@ -24,6 +24,7 @@
 
   @include bp-tablet {
     justify-content: flex-end;
+    margin: 20px -5px 0 0;
   }
 }
 
@@ -35,6 +36,10 @@
   &:hover {
     @include transition;
     opacity: 0.3;
+  }
+
+  @include bp-tablet {
+    padding: 9px 28px 0 0;
   }
 }
 

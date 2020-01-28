@@ -4,7 +4,7 @@
   line-height: 1;
 
   @include bp-tablet {
-    font-size: 1.5rem;
+    font-size: 1.48rem;
     line-height: 1.3;
   }
 
@@ -23,6 +23,10 @@
 .product-info__parameter,
 .product-info__value {
   padding: 13px 0;
+
+  @include bp-tablet {
+    padding: 12px 0;
+  }
 }
 
 .product-info__parameter {

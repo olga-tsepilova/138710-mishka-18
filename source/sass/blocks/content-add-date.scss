@@ -64,6 +64,10 @@
     color: $black;
     opacity: 0.3;
   }
+
+  @include bp-desktop {
+    padding: 0 60px 0 0;
+  }
 }
 
 .content-add-date__delivery-info {
@@ -81,6 +85,7 @@
     padding-right: 50px;
     overflow: visible;
     clip: auto;
+    font-size: 1.5rem;
     text-align: right;
     font-weight: normal;
   }

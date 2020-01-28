@@ -7,6 +7,10 @@
 
 .slider__item {
   width: 100%;
+
+  @include bp-desktop {
+    padding-right: 50px;
+  }
 }
 
 .slider__control {
@@ -16,10 +20,14 @@
 
   @include bp-tablet {
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     right: 0;
     padding: 0;
     width: 175px;
+  }
+
+  @include bp-desktop {
+
   }
 }
 
@@ -72,13 +80,14 @@
 .slider__button {
   @include bp-tablet {
     position: absolute;
-    top: 80px;
+    top: 78px;
     right: 50px;
     width: 175px;
     font-size: 1.7rem;
   }
 
   @include bp-desktop {
-    top: 50px;
+    top: 78px;
+    right: 0;
   }
 }

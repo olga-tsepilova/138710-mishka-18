@@ -34,6 +34,7 @@
 
   @include bp-tablet {
     width: 50%;
+    height: 117px;
   }
 }
 
@@ -72,16 +73,40 @@
     width: 60px;
     height: 103px;
     content: "";
+
+    @include bp-tablet {
+      height: 117px;
+    }
   }
 
   &--interior::after {
     background: url("../img/icon-interior.svg") no-repeat 14px 23px;
     background-size: 40px 62px;
+
+    @include bp-tablet {
+      background-position: 15px 30px;
+    }
   }
 
   &--toy::after {
     background: url("../img/icon-toy.svg") no-repeat 4px 21px;
     background-size: 60px 60px;
+
+    @include bp-tablet {
+      background-position: 0 33px;
+      right: 33px;
+    }
+  }
+
+  @include bp-tablet {
+    padding: 0 50% 0 35px;
+    height: 117px;
+    font-size: 1.99rem;
+    line-height: 1.34;
+  }
+
+  @include bp-desktop {
+    padding: 0 60% 0 35px;
   }
 }
 
