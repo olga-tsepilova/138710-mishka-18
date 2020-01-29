@@ -16,14 +16,25 @@
     background: url("../img/icon-map-pin.svg") no-repeat center;
     background-size: contain;
 
-    @include bp-desktop {
-      top: 38%;
-      left: 48%;
+    @include bp-tablet {
+      left: 47%;
     }
+
+    @include bp-desktop {
+      top: 32%;
+      left: 46%;
+    }
+  }
+
+  @include bp-tablet {
+    max-width: 768px;
+    padding: 40px 0 50px;
   }
 
   @include bp-desktop {
     padding: 0;
+    width: 525px;
+    height: 457px;
   }
 }
 

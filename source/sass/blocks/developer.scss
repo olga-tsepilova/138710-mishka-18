@@ -1,7 +1,7 @@
 .developer {
   @include flex-center-vh;
   width: 100%;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: $black;
   font-weight: bold;
 
@@ -24,17 +24,22 @@
 
   @include bp-tablet {
     justify-content: flex-end;
+    margin: 20px -5px 0 0;
   }
 }
 
 .developer__text {
-  padding: 0 25px 0 0;
+  padding: 0 38px 5px 0;
 
   @include transition;
 
   &:hover {
     @include transition;
     opacity: 0.3;
+  }
+
+  @include bp-tablet {
+    padding: 9px 28px 0 0;
   }
 }
 

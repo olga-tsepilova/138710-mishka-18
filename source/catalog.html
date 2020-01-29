@@ -60,11 +60,11 @@
                 </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link nav__link--basket" href="/">
+                <a class="nav__link nav__link--basket open-modal-1" href="form.html">
                   <svg class="nav__icon" width="21" height="18" aria-label="Корзина" focusable="false">
                     <use xlink:href="#icon-cart"></use>
                   </svg>
-                  Корзина пока пуста
+                  Корзина: пока пуста
                 </a>
               </li>
             </ul>
@@ -122,7 +122,7 @@
             <p class="catalog__description">Рост 30 см, вес 200 г</p>
             <div class="catalog__pricetag">
               <strong class="catalog__cost">1 200 руб</strong>
-              <a class="catalog__add-to-cart" aria-label="Добавить в корзину" href="/">
+              <a class="catalog__add-to-cart open-modal-2" aria-label="Добавить в корзину" href="form.html">
                 <svg class="catalog__add-to-cart-icon" width="21" height="18" aria-label="Положить в корзину" focusable="false">
                   <use xlink:href="img/sprite.svg#icon-cart"></use>
                 </svg>
@@ -150,7 +150,7 @@
             <p class="catalog__description">Диаметр 15 см, высота 10 см</p>
             <div class="catalog__pricetag">
               <strong class="catalog__cost">690 руб</strong>
-              <a class="catalog__add-to-cart" aria-label="Добавить в корзину" href="/">
+              <a class="catalog__add-to-cart open-modal-3" aria-label="Добавить в корзину" href="form.html">
                 <svg class="catalog__add-to-cart-icon" width="21" height="18" aria-label="Положить в корзину" focusable="false">
                   <use xlink:href="img/sprite.svg#icon-cart"></use>
                 </svg>
@@ -178,7 +178,7 @@
             <p class="catalog__description">Диаметр 30 см, высота 30 см</p>
             <div class="catalog__pricetag">
               <strong class="catalog__cost">1 500 руб</strong>
-              <a class="catalog__add-to-cart" aria-label="Добавить в корзину" href="/">
+              <a class="catalog__add-to-cart open-modal-4" aria-label="Добавить в корзину" href="form.html">
                 <svg class="catalog__add-to-cart-icon" width="21" height="18" aria-label="Положить в корзину" focusable="false">
                   <use xlink:href="img/sprite.svg#icon-cart"></use>
                 </svg>
@@ -192,8 +192,8 @@
 
 
       <!-- блок с видео -->
-      <section class="content-box">
-        <div class="video">
+      <section class="content-box video">
+        <div class="video__wrapper">
           <header class="content-box-header video__header">
             <h2 class="content-box-header__title video__title">
               Процесс производства
@@ -216,7 +216,7 @@
             По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
           </p>
           <div class="video-box__button-order">
-            <a class="button button--outline " href="#open-modal">
+            <a class="button button--outline open-modal-5" href="form.html">
               Сделать заказ
             </a>
           </div>
@@ -232,9 +232,9 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <div class="main-footer__logo">
-          <a href="index.html" aria-label="Мишка - Интернет-магазин игрушек ручной работы">
+          <a aria-label="Мишка - Интернет-магазин игрушек ручной работы">
             <svg class="main-footer__logo-img" width="102" height="34" role="img">
-              <use xlink:href="img/sprite.svg#logo-footer"></use>
+              <use xlink:href="#logo-footer"></use>
             </svg>
           </a>
         </div>
@@ -245,21 +245,21 @@
             <li class="social-box__item">
               <a class="social-box__link" href="/" target="_blank" aria-label="Мишка в instagram">
                 <svg class="social-box__link-icon" width="21" height="28" role="img">
-                  <use xlink:href="img/sprite.svg#icon-insta"></use>
+                  <use xlink:href="#icon-insta"></use>
                 </svg>
               </a>
             </li>
             <li class="social-box__item">
               <a class="social-box__link" href="/" target="_blank" aria-label="Мишка в facebook">
                 <svg class="social-box__link-icon" width="21" height="28" role="img">
-                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                  <use xlink:href="#icon-fb"></use>
                 </svg>
               </a>
             </li>
             <li class="social-box__item">
               <a class="social-box__link" href="/" target="_blank" aria-label="Мишка в twitter">
                 <svg class="social-box__link-icon" width="21" height="28" role="img">
-                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                  <use xlink:href="#icon-twitter"></use>
                 </svg>
               </a>
             </li>
@@ -270,7 +270,7 @@
 
           <a class="developer__link" aria-label="Переход на страницу HTML-academy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
             <svg class="developer__logo" width="27" height="34" role="img">
-              <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+              <use xlink:href="#logo-htmlacademy"></use>
             </svg>
           </a>
         </div>
@@ -283,9 +283,9 @@
   <!-- ================= /ОБЕРТКА ДЛЯ СТРАНИЦЫ  ================= -->
 
   <!-- модалка заказа -->
-  <div class="modal" id="open-modal">
+  <div class="modal">
     <div class="modal__dialog">
-      <span class="modal__close" aria-label="закрыть окно">X</span>
+
       <form class="order-form" action="https://echo.htmlacademy.ru" method="get">
         <strong class="order-form__title">
           Добавить в корзину

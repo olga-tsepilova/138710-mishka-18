@@ -1,6 +1,6 @@
 .about-us {
   background-image: url("../img/bg-zigzag-line.svg");
-  background-position: top left;
+  background-position: 0 4px;
   background-repeat: repeat-x;
   background-size: 100%;
 
@@ -8,6 +8,7 @@
     display: flex;
     flex-wrap: wrap;
     max-width: $bp-tab;
+    padding-bottom: 30px;
 
     @include gorisontal-center;
     background-size: auto 15px;
@@ -15,12 +16,17 @@
 
   @include bp-desktop {
     max-width: $bp-desk-small;
+    padding: 42px 170px 35px;
     background-size: auto 20px;
   }
 }
 
 .about-us__header {
   padding: 11px 0 0;
+
+  @include bp-tablet {
+    padding: 20px 0 0;
+  }
 
   @include bp-desktop {
     padding: 40px 0 0;
@@ -30,13 +36,13 @@
 .about-us__list {
   list-style-type: none;
   width: 100%;
-  padding: $padding-usual-tab 0 0;
+  padding: 25px 0 0;
 
   @include bp-tablet {
     display: flex;
     flex-wrap: wrap;
     padding: 0 30px 0 0;
-    margin: $padding-usual-tab 0;
+    margin: $padding-usual-tab 0 0;
   }
 
   @include bp-desktop {
@@ -56,7 +62,7 @@
     content: "";
     width: 55px;
     height: 37px;
-    margin: 0 0 20px;
+    margin: 0 0 18px;
   }
 
   &:last-child {
@@ -64,38 +70,43 @@
   }
 
   &--ecology::before {
-    background: url("../img/icon-feature-flower.svg") no-repeat bottom center;
+    background: url("../img/icon-feature-flower.svg") no-repeat 7px 0;
     background-size: auto 37px;
   }
 
   &--style::before {
-    background: url("../img/icon-feature-money.svg") no-repeat bottom center;
+    background: url("../img/icon-feature-money.svg") no-repeat 0 0;
     background-size: 47px 27px;
   }
 
   &--likes::before {
-    background: url("../img/icon-feature-heart.svg") no-repeat bottom center;
+    background: url("../img/icon-feature-heart.svg") no-repeat 6px 6px;
     background-size: 34px 27px;
   }
 
   &--handwork::before {
-    background: url("../img/icon-feature-ball.svg") no-repeat bottom center;
+    background: url("../img/icon-feature-ball.svg") no-repeat 3px 2px;
     background-size: 35px 34px;
   }
 
   &--support::before {
-    background: url("../img/icon-feature-rocket.svg") no-repeat bottom center;
+    background: url("../img/icon-feature-rocket.svg") no-repeat 0 3px;
     background-size: 100% auto;
+    margin-left: -5px;
   }
 
   &--gift::before {
-    background: url("../img/icon-feature-gift.svg") no-repeat bottom center;
+    background: url("../img/icon-feature-gift.svg") no-repeat 3px 0;
     background-size: 33px 32px;
+  }
+
+  &--ecology {
+    padding-right: 30%;
   }
 
   @include bp-tablet {
     width: 50%;
-    padding: 0 10% 50px 0;
+    padding: 0 10% 57px 0;
 
     &--ecology {
       order: 1;
@@ -111,18 +122,51 @@
 
     &--handwork {
       order: 2;
+      padding-left: 13px;
+      padding-right: 2%;
     }
 
     &--support {
       order: 4;
+      padding-left: 13px;
+      padding-right: 2%;
     }
 
     &--gift {
       order: 6;
+      padding-left: 13px;
+      padding-right: 2%;
     }
 
     font-size: 2rem;
     line-height: 1.1;
+
+    &::before {
+      margin: 0 0 12px;
+    }
+
+    &--style::before,
+    &--support::before {
+      margin-bottom: 17px;
+    }
+
+    &--likes::before,
+    &--gift::before {
+      margin-bottom: 17px;
+    }
+
+    &:last-child {
+      padding-left: 13px;
+      padding-right: 2%;
+    }
+  }
+
+  @include bp-desktop {
+    &--handwork,
+    &--support,
+    &--gift {
+      padding-right: 0;
+    }
   }
 }
 

@@ -2,20 +2,25 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+  padding-bottom: 4px;
 }
 
 .slider__item {
   width: 100%;
+
+  @include bp-desktop {
+    padding-right: 50px;
+  }
 }
 
 .slider__control {
   display: flex;
   width: 100%;
-  padding: $padding-usual 0;
+  padding: 35px 0;
 
   @include bp-tablet {
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     right: 0;
     padding: 0;
     width: 175px;
@@ -71,13 +76,14 @@
 .slider__button {
   @include bp-tablet {
     position: absolute;
-    top: 80px;
+    top: 78px;
     right: 50px;
     width: 175px;
     font-size: 1.7rem;
   }
 
   @include bp-desktop {
-    top: 50px;
+    top: 78px;
+    right: 0;
   }
 }

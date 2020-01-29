@@ -13,6 +13,9 @@
   @include bp-tablet {
     display: flex;
     width: 100%;
+    max-width: 668px;
+
+    @include gorisontal-center;
     height: 143px;
   }
 

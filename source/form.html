@@ -59,11 +59,11 @@
                 </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link nav__link--basket" href="/">
+                <a class="nav__link nav__link--basket open-modal-1" href="form.html">
                   <svg class="nav__icon" width="21" height="18" aria-label="Корзина" focusable="false">
                     <use xlink:href="#icon-cart"></use>
                   </svg>
-                  Корзина пока пуста
+                  Корзина: пока пуста
                 </a>
               </li>
             </ul>
@@ -109,7 +109,7 @@
           <!-- тип: Аксессуар / игрушка-->
           <fieldset class="full-order-form__wrapper">
             <div class="full-order-form__fieldset">
-              <strong class="full-order-form__title">
+              <strong class="full-order-form__title full-order-form__title--type">
                 <span class="full-order-form__title-text">Тип</span>
               </strong>
 
@@ -117,7 +117,7 @@
                 <label class="full-order-form__element">
                   <input class="full-order-form__choice" type="radio" name="product-
 type" value="product-type-accessory" checked="">
-                  <span class="full-order-form__value full-order-form__value--radio">Аксессуар для
+                  <span class="full-order-form__value full-order-form__value--radio full-order-form__value--first">Аксессуар для
 интерьера</span>
                 </label>
                 <label class="full-order-form__element">
@@ -132,7 +132,7 @@ type" value="product-type-toy">
 
           <!-- Цвет-->
           <fieldset class="full-order-form__wrapper">
-            <div class="full-order-form__fieldset">
+            <div class="full-order-form__fieldset full-order-form__fieldset--colors">
               <strong class="full-order-form__title">
                 <span class="full-order-form__title-text">Цвет</span>
               </strong>
@@ -207,7 +207,7 @@ type" value="product-type-toy">
 
               <div class="full-order-form__element-box">
                 <label class="full-order-form__element">
-                  <input class="full-order-form__text-input" type="tel" name="customer-name" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required="">
+                  <input class="full-order-form__text-input full-order-form__text-input--phone" type="tel" name="customer-name" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required="">
                   <svg class="full-order-form__icon" width="25" height="24" aria-label="Телефон" focusable="false" role="img">
                     <use xlink:href="img/sprite.svg#icon-phone"></use>
                   </svg>
@@ -226,8 +226,8 @@ type" value="product-type-toy">
 
               <div class="full-order-form__element-box">
                 <label class="full-order-form__element">
-                  <input class="full-order-form__text-input" type="email" name="customer-name" placeholder="Ваш Email*" required="">
-                  <svg class="full-order-form__icon" width="32px" height="32px" aria-label="E-mail" focusable="false" role="img">
+                  <input class="full-order-form__text-input full-order-form__text-input--email" type="email" name="customer-name" placeholder="Ваш Email*" required="">
+                  <svg class="full-order-form__icon full-order-form__icon--email" width="32px" height="32px" aria-label="E-mail" focusable="false" role="img">
                     <use xlink:href="img/sprite.svg#icon-mail"></use>
                   </svg>
                 </label>
@@ -268,9 +268,9 @@ type" value="product-type-toy">
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <div class="main-footer__logo">
-          <a href="index.html" aria-label="Мишка - Интернет-магазин игрушек ручной работы">
+          <a aria-label="Мишка - Интернет-магазин игрушек ручной работы">
             <svg class="main-footer__logo-img" width="102" height="34" role="img">
-              <use xlink:href="img/sprite.svg#logo-footer"></use>
+              <use xlink:href="#logo-footer"></use>
             </svg>
           </a>
         </div>
@@ -281,21 +281,21 @@ type" value="product-type-toy">
             <li class="social-box__item">
               <a class="social-box__link" href="/" target="_blank" aria-label="Мишка в instagram">
                 <svg class="social-box__link-icon" width="21" height="28" role="img">
-                  <use xlink:href="img/sprite.svg#icon-insta"></use>
+                  <use xlink:href="#icon-insta"></use>
                 </svg>
               </a>
             </li>
             <li class="social-box__item">
               <a class="social-box__link" href="/" target="_blank" aria-label="Мишка в facebook">
                 <svg class="social-box__link-icon" width="21" height="28" role="img">
-                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                  <use xlink:href="#icon-fb"></use>
                 </svg>
               </a>
             </li>
             <li class="social-box__item">
               <a class="social-box__link" href="/" target="_blank" aria-label="Мишка в twitter">
                 <svg class="social-box__link-icon" width="21" height="28" role="img">
-                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                  <use xlink:href="#icon-twitter"></use>
                 </svg>
               </a>
             </li>
@@ -306,7 +306,7 @@ type" value="product-type-toy">
 
           <a class="developer__link" aria-label="Переход на страницу HTML-academy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
             <svg class="developer__logo" width="27" height="34" role="img">
-              <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+              <use xlink:href="#logo-htmlacademy"></use>
             </svg>
           </a>
         </div>
@@ -317,6 +317,39 @@ type" value="product-type-toy">
 
   </div>
   <!-- ================= /ОБЕРТКА ДЛЯ СТРАНИЦЫ  ================= -->
+
+  <!-- модалка заказа -->
+  <div class="modal">
+    <div class="modal__dialog">
+
+      <form class="order-form" action="https://echo.htmlacademy.ru" method="get">
+        <strong class="order-form__title">
+          Добавить в корзину
+        </strong>
+        <fieldset class="order-form__item">
+          <legend class="order-form__item-title">Выберите размер:</legend>
+
+          <div class="order-form__item-element-box">
+            <label class="order-form__item-element">
+              <input class="order-form__radio-input" type="radio" name="size" value="size-s">
+              <span class="order-form__item-element-value">s</span>
+            </label>
+            <label class="order-form__item-element">
+              <input class="order-form__radio-input" type="radio" name="size" value="size-m">
+              <span class="order-form__item-element-value">m</span>
+            </label>
+            <label class="order-form__item-element">
+              <input class="order-form__radio-input" type="radio" name="size" value="size-l">
+              <span class="order-form__item-element-value">l</span>
+            </label>
+          </div>
+
+        </fieldset>
+        <button class="button button--green" type="button">Добавить</button>
+      </form>
+    </div>
+  </div>
+  <!-- /модалка заказа -->
 
   <script src="js/script.min.js"></script>
   </body>
