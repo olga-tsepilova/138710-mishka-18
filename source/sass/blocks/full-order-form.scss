@@ -387,7 +387,7 @@
   }
 
   &--first::after {
-    top: 1px;
+    top: 14px;
 
     @include bp-desktop {
       top: 19px;
