@@ -1,15 +1,14 @@
 .catalog {
   width: 100%;
   list-style-type: none;
-  padding: $padding-usual;
+  padding: $padding-usual $padding-usual 0;
   margin: 0 auto;
 
   @include bp-tablet {
     max-width: $bp-tab;
 
     @include gorisontal-center;
-    padding: $padding-usual-tab;
-    padding-bottom: 0;
+    padding: 55px $padding-usual-tab 50px;
   }
 
   @include bp-desktop {
@@ -17,6 +16,8 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     max-width: $bp-desk-big;
+    padding-top: 113px;
+    padding-bottom: 0;
   }
 }
 
@@ -74,9 +75,9 @@
 
   @include bp-desktop {
     flex-direction: column;
-    width: 31%;
+    width: 30%;
     height: auto;
-    margin-right: 3.5%;
+    margin-right: 5%;
     overflow: hidden;
 
     &:last-child {
@@ -104,6 +105,12 @@
       }
     }
   }
+
+  @include bp-ie {
+    position: relative;
+    display: block;
+    padding-top: 450px;
+  }
 }
 
 .catalog__img-wrapper {
@@ -123,6 +130,16 @@
     flex-basis: 316px;
     height: 462px;
   }
+
+  @include bp-ie {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 416px;
+  }
 }
 
 .catalog__img {
@@ -136,18 +153,25 @@
     height: 462px;
     min-width: 325px;
   }
+
+  @include bp-ie {
+    display: block;
+    height: 462px;
+    overflow: hidden;
+  }
 }
 
 .catalog__product-info {
-  padding: $padding-usual;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 22px 27px;
 
   @include transition;
 
   @include bp-tablet {
-    display: flex;
-    flex-direction: column;
     width: 50%;
-    padding: $padding-usual $padding-usual 8px $padding-usual;
+    padding: 25px $padding-usual 8px 27px;
   }
 
   @include bp-desktop {
@@ -190,13 +214,13 @@
 
   @include bp-tablet {
     flex-grow: 1;
-    padding: 20px 0 $padding-usual;
+    padding: 5px 0 $padding-usual;
     font-size: 1.5rem;
     line-height: 2;
   }
 
   @include bp-desktop {
-    padding: 15px 0;
+    padding: 5px 0;
   }
 }
 
@@ -204,12 +228,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: $padding-usual 0 0;
+  width: 100%;
+  padding: 20px 0 10px;
   border-top: 1px solid $white-dark;
   color: $black;
 
   @include bp-tablet {
-    padding: 0;
+    padding: 15px 0 0 0;
   }
 }
 
@@ -231,6 +256,12 @@
     margin-right: -20px;
     width: 64px;
     height: 64px;
+  }
+
+  @include bp-ie {
+    background: url("/img/sprite/icon-cart.svg") no-repeat center;
+    background-size: 20px 19px;
+    opacity: 0.2;
   }
 }
 

@@ -45,6 +45,10 @@
     flex-basis: 175px;
     padding: 0 5% 0 4.5%;
   }
+
+  @include bp-ie {
+    max-width: 203px;
+  }
 }
 
 .product-week__databox {

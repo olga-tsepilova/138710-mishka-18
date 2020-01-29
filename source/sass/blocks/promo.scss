@@ -64,6 +64,10 @@
     font-size: 5.3rem;
     line-height: 1.1;
   }
+
+  @include bp-ie {
+    width: 100%;
+  }
 }
 
 .promo__title-item {

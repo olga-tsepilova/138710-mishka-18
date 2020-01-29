@@ -1,13 +1,13 @@
 .full-order-box {
   width: 100%;
-  padding: $padding-usual;
+  padding: 20px $padding-usual $padding-usual;
 
   @include bp-tablet {
-    padding: $padding-usual-tab 0;
+    padding: $padding-usual-tab 0 40px;
   }
 
   @include bp-desktop {
-    padding: 130px 0 $padding-usual-tab;
+    padding: 105px 0 $padding-usual-tab;
   }
 }
 
@@ -28,6 +28,7 @@
 
   @include bp-desktop {
     max-width: $bp-desk-small;
-    padding: 0 $padding-usual-tab 0 175px;
+    padding: 0 150px 0 175px;
+    line-height: 1.8;
   }
 }

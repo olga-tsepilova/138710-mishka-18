@@ -192,8 +192,8 @@
 
 
       <!-- блок с видео -->
-      <section class="content-box">
-        <div class="video">
+      <section class="content-box video">
+        <div class="video__wrapper">
           <header class="content-box-header video__header">
             <h2 class="content-box-header__title video__title">
               Процесс производства
@@ -232,9 +232,9 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <div class="main-footer__logo">
-          <a href="index.html" aria-label="Мишка - Интернет-магазин игрушек ручной работы">
+          <a aria-label="Мишка - Интернет-магазин игрушек ручной работы">
             <svg class="main-footer__logo-img" width="102" height="34" role="img">
-              <use xlink:href="img/sprite.svg#logo-footer"></use>
+              <use xlink:href="#logo-footer"></use>
             </svg>
           </a>
         </div>
@@ -245,21 +245,21 @@
             <li class="social-box__item">
               <a class="social-box__link" href="/" target="_blank" aria-label="Мишка в instagram">
                 <svg class="social-box__link-icon" width="21" height="28" role="img">
-                  <use xlink:href="img/sprite.svg#icon-insta"></use>
+                  <use xlink:href="#icon-insta"></use>
                 </svg>
               </a>
             </li>
             <li class="social-box__item">
               <a class="social-box__link" href="/" target="_blank" aria-label="Мишка в facebook">
                 <svg class="social-box__link-icon" width="21" height="28" role="img">
-                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                  <use xlink:href="#icon-fb"></use>
                 </svg>
               </a>
             </li>
             <li class="social-box__item">
               <a class="social-box__link" href="/" target="_blank" aria-label="Мишка в twitter">
                 <svg class="social-box__link-icon" width="21" height="28" role="img">
-                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                  <use xlink:href="#icon-twitter"></use>
                 </svg>
               </a>
             </li>
@@ -270,7 +270,7 @@
 
           <a class="developer__link" aria-label="Переход на страницу HTML-academy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
             <svg class="developer__logo" width="27" height="34" role="img">
-              <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+              <use xlink:href="#logo-htmlacademy"></use>
             </svg>
           </a>
         </div>
@@ -285,7 +285,7 @@
   <!-- модалка заказа -->
   <div class="modal">
     <div class="modal__dialog">
-      <span class="modal__close" aria-label="закрыть окно">X</span>
+
       <form class="order-form" action="https://echo.htmlacademy.ru" method="get">
         <strong class="order-form__title">
           Добавить в корзину

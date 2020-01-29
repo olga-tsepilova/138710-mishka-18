@@ -15,8 +15,8 @@
   }
 
   @include bp-desktop {
-    max-width: $bp-tab;
-    padding: 42px 30px 35px;
+    max-width: $bp-desk-small;
+    padding: 42px 170px 35px;
     background-size: auto 20px;
   }
 }

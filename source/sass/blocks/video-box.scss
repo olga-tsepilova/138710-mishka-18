@@ -9,7 +9,7 @@
 
   @include bp-desktop {
     align-items: flex-end;
-    width: 65.5%;
+    width: 682px;
     height: 455px;
     padding: 0;
   }
@@ -51,15 +51,16 @@
 }
 
 .video-box__description {
-  font-size: 1.3rem;
-  line-height: 2;
-  padding: $padding-usual;
+  font-size: 1.35rem;
+  line-height: 1.8;
+  padding: $padding-usual $padding-usual 25px;
   margin: 0;
 
   @include bp-tablet {
-    padding: $padding-usual-tab;
+    padding: $padding-usual-tab 60px 35px;
     padding-top: 0;
     font-size: 1.5rem;
+    line-height: 1.9;
     border-left: 1px solid $white-medium-dark;
     border-right: 1px solid $white-medium-dark;
   }
@@ -69,6 +70,7 @@
     padding: 34px 0 0 78px;
     border-left: none;
     flex-grow: 1;
+    line-height: 2;
   }
 }
 
@@ -76,7 +78,7 @@
   padding: 0 $padding-usual;
 
   @include bp-tablet {
-    padding: 0 $padding-usual-tab $padding-usual-tab;
+    padding: 0 60px $padding-usual-tab;
     border: 1px solid $white-medium-dark;
     border-top: none;
   }
@@ -84,6 +86,6 @@
   @include bp-desktop {
     width: 34.5%;
     border-left: none;
-    padding: 0 $padding-usual-tab 60px 78px;
+    padding: 0 35px 57px 78px;
   }
 }

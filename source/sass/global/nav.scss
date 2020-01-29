@@ -239,6 +239,14 @@
       padding-left: 0;
     }
   }
+
+  @include bp-ie {
+    &--catalog,
+    &--to-form {
+      padding-top: 35px;
+    }
+
+  }
 }
 
 .nav__icon {

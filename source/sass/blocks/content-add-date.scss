@@ -68,6 +68,10 @@
   @include bp-desktop {
     padding: 0 60px 0 0;
   }
+
+  @include bp-ie {
+    padding-top: 30px;
+  }
 }
 
 .content-add-date__delivery-info {
