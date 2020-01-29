@@ -90,7 +90,7 @@
   }
 
   &--support::before {
-    background: url(../img/icon-feature-rocket.svg) no-repeat 0 3px;
+    background: url("../img/icon-feature-rocket.svg") no-repeat 0 3px;
     background-size: 100% auto;
     margin-left: -5px;
   }
@@ -174,4 +174,3 @@
   fill: $tiffany-dark;
   margin: 0 0 1em;
 }
-
